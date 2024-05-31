@@ -1,11 +1,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.js"></script>
+<style>
+    #menu-right {
+        display:none;
+    }
+    #menu-right.opening {
+        display:block;
+    }
+</style>
 <div id="map" class="map" style="width:100%;height:100vh;position:fixed;top:62px"></div>
 <div style="position:fixed;top:70px;right:20px;">
-    <button type="button" class="btn btn-info filter-drop" style="float:right;">
+    <button id="btn-menu-right" type="button" class="btn btn-info filter-drop" style="float:right;">
         <i class="fa-solid fa-bars" style="color:#ffffff;"></i>
     </button>
-    <div class="filter-drop" style="min-width: 350px;
+    <div id="menu-right" class="filter-drop" style="min-width: 350px;
                 max-width: 100%;
                 height: calc(100vh - 160px);
                 background: #ffffff;
@@ -21,6 +29,13 @@
         $('meta[name="keywords"]').attr('content','Openlayer,Pound-DEV,Developer,Programer');
         $('.page-home').addClass('active');
         $('title').text('Openlayer - Pound-DEV');
+        $('#btn-menu-right').on('click',function(){
+            if ($('#menu-right').hasClass('openning')) {
+                $('#menu-right').removeClass('openning');
+            } else {
+                $('#menu-right').addClass('openning');
+            }
+        });
         setTimeout(() => {
             const map = new ol.Map({
                 target: 'map',
