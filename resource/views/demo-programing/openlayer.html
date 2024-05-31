@@ -3,6 +3,17 @@
 <style>
     #menu-right {
         display:none;
+        min-width: 350px;
+        max-width: 100%;
+        height: calc(100vh - 230px);
+        background: #ffffff;
+        border-radius: 15px;
+        margin-top: 45px;
+        padding: 10px;
+        position:fixed;
+        left:5px;
+        right:5px;
+        overflow-y:auto;
     }
     #menu-right.opening {
         display:block;
@@ -13,16 +24,7 @@
     <button id="btn-menu-right" type="button" class="btn btn-primary filter-drop" style="float:right;">
         <i class="fa-solid fa-bars"></i>
     </button>
-    <div id="menu-right" class="filter-drop" style="min-width: 350px;
-                max-width: 100%;
-                height: calc(100vh - 230px);
-                background: #ffffff;
-                border-radius: 15px;
-                margin-top: 45px;
-                padding: 10px;
-                position:fixed;
-                left:5px;
-                right:5px;">
+    <div id="menu-right" class="filter-drop">
         <p>content</p>
     </div>
 </div>
