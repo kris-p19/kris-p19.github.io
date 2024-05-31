@@ -16,19 +16,21 @@
         $('meta[name="keywords"]').attr('content','Openlayer,Pound-DEV,Developer,Programer');
         $('.page-home').addClass('active');
         $('title').text('Openlayer - Pound-DEV');
-        const map = new ol.Map({
-            target: 'map',
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.XYZ({
-                        url:"https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+        setTimeout(() => {
+            const map = new ol.Map({
+                target: 'map',
+                layers: [
+                    new ol.layer.Tile({
+                        source: new ol.source.XYZ({
+                            url:"https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+                        })
                     })
+                ],
+                view: new ol.View({
+                    center: ol.proj.fromLonLat([100.473686, 11.635737]),
+                    zoom: 5
                 })
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([100.473686, 11.635737]),
-                zoom: 5
-            })
-        });
+            }); 
+        }, 1000);
     });
 </script>
