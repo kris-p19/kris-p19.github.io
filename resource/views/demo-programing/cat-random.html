@@ -23,13 +23,19 @@
             $.ajax({
                 url: 'https://api.thecatapi.com/v1/images/search',
                 method: 'GET',
+                beforeSend:function(){
+                    $('#getCat').text('Get a New Cat Picture - กำลังเรียก api...');
+                },
                 success: function(data) {
+                    $('#getCat').text('Get a New Cat Picture');
                     $('#catImage').attr('src', data[0].url);
                 },
                 error: function(error) {
+                    $('#getCat').text('Get a New Cat Picture - Error');
                     console.log('Error fetching cat image:', error);
                 }
             });
         });
+        $('#getCat').trigger('click');
     });
 </script>
