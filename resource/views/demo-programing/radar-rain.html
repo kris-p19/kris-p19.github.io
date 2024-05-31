@@ -1,0 +1,22 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>เรดาร์ฝนหนองจอก (เรียลไทม์)</h1>
+        </div>
+        <div class="offset-md-3 col-md-6">
+            <img id="radar-id" class="img-responsive" style="width:100%;" src="https://weather.bangkok.go.th/Images/Radar/radar.gif" alt="picture radar gif" srcset="https://weather.bangkok.go.th/Images/Radar/radar.gif">
+        </div>
+    </div>
+</div>
+<script type="module">
+    $(document).ready(function(){
+        $('meta[name="description"]').attr('content','เรดาร์ฝนหนองจอก (เรียลไทม์) - Pound-DEV');
+        $('meta[name="keywords"]').attr('content','เรดาร์ฝนหนองจอก (เรียลไทม์),Pound-DEV,Developer,Programer');
+        $('.page-home').addClass('active');
+        $('title').text('เรดาร์ฝนหนองจอก (เรียลไทม์) - Pound-DEV');
+        setInterval(() => {
+            $('#radar-id').attr('src',$('#radar-id').attr('srcset') + '?v=' + Math.random());
+        }, 6000);
+    });
+</script>
