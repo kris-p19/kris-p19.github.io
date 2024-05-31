@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    fetch('/resource/layouts/navbar.html',{ cache: 'force-cache' })
+    fetch('/resource/layouts/navbar.html',{ cache: 'no-store' })
     .then(response => response.text())
     .then(data => {
         $('#navbar-container').html(data);
     })
     .catch(error => console.error('Error loading navbar:', error));
 
-    fetch('/resource/layouts/footer.html',{ cache: 'force-cache' })
+    fetch('/resource/layouts/footer.html',{ cache: 'no-store' })
     .then(response => response.text())
     .then(data => {
         $('#footer-container').html(data);
@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page') || 'home';
-    fetch(`/resource/views/${page}.html`,{ cache: 'force-cache' })
+    fetch(`/resource/views/${page}.html`,{ cache: 'no-store' })
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
