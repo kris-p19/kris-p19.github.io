@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Random Cat Picture</h1>
+        </div>
+        <div class="col-md-12">
+            <button id="getCat" class="btn btn-primary m-2">Get a New Cat Picture</button>
+        </div>
+        <div class="offset-md-3 col-md-6">
+            <img id="catImage" src="" alt="Random Cat" class="img-responsive" style="width:100%;">
+        </div>
+    </div>
+</div>
+<script type="module">
+    $(document).ready(function(){
+        $('meta[name="description"]').attr('content','Openlayer - Pound-DEV');
+        $('meta[name="keywords"]').attr('content','Openlayer,Pound-DEV,Developer,Programer');
+        $('.page-home').addClass('active');
+        $('title').text('Openlayer - Pound-DEV');
+        $('#getCat').on('click',function(){
+            $.ajax({
+                url: 'https://api.thecatapi.com/v1/images/search',
+                method: 'GET',
+                success: function(data) {
+                    $('#catImage').attr('src', data[0].url);
+                },
+                error: function(error) {
+                    console.log('Error fetching cat image:', error);
+                }
+            });
+        });
+    });
+</script>
