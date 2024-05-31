@@ -18,34 +18,4 @@
         <changefreq>weekly</changefreq>
         <priority>0.3</priority>
     </url>
-    <url>
-        <loc>https://kris-p19.github.io/index.html?page=generate-qrcode&path=demo-programing</loc>
-        <lastmod>2024-05-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    <url>
-        <loc>https://kris-p19.github.io/index.html?page=radar-rain&path=demo-programing</loc>
-        <lastmod>2024-05-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://kris-p19.github.io/index.html?page=openlayer&path=demo-programing</loc>
-        <lastmod>2024-05-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://kris-p19.github.io/index.html?page=cat-random&path=demo-programing</loc>
-        <lastmod>2024-05-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://kris-p19.github.io/index.html?page=dog-random&path=demo-programing</loc>
-        <lastmod>2024-05-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
