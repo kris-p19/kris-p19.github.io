@@ -1,3 +1,8 @@
+<style>
+    .buttons button {
+        margin:3px;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -5,8 +10,8 @@
         </div>
         <div class="col-md-12 text-center">
             <div class="calculator">
-                <input type="text" id="display" readonly class="form-control">
-                <div>
+                <input type="text" id="display" readonly class="form-control input-lg">
+                <div class="buttons">
                     <button class="btn btn-dark" onclick="clearDisplay()">C</button>
                     <button class="btn btn-dark" onclick="appendToDisplay('/')">/</button>
                     <button class="btn btn-dark" onclick="appendToDisplay('*')">*</button>
@@ -44,7 +49,7 @@
             display.value = 'Error';
         }
     }
-    
+
 </script>
 <script type="module">
     $(document).ready(function(){
