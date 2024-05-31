@@ -31,6 +31,10 @@ $(document).ready(function(){
                 .attr('cite','https://www.tiktok.com/@' + user)
                 .attr('data-unique-id', user);
             $('#content-container').find('blockquote section a').attr('href','https://www.tiktok.com/@' + user + '?refer=creator_embed');
+            $('#content-container').find('#title').text('@' + user);
+            $('meta[name="description"]').attr('content',user);
+            $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
+            $('title').text( user + ' - Pound-DEV');
         }
     })
     .catch(error => {
