@@ -7,9 +7,9 @@ $(document).ready(function(){
     .catch(error => console.error('Error loading navbar:', error));
 
     fetch('/resource/layouts/footer.html?no-cache=' + Math.random(),{ cache: 'no-store' })
-    .then(response => response.text())
-    .then(data => {
-        $('#footer-container').html(data);
+    .then(response2 => response2.text())
+    .then(data2 => {
+        $('#footer-container').html(data2);
     })
     .catch(error => console.error('Error loading footer:', error));
 
@@ -18,14 +18,14 @@ $(document).ready(function(){
     const path = params.get('path') || '/';
     const user = params.get('user') || '';
     fetch(`/resource/views/${path}/${page}.html?no-cache=${Math.random()}`,{ cache: 'no-store' })
-    .then(response => {
-        if (!response.ok) {
+    .then(response3 => {
+        if (!response3.ok) {
             throw new Error('Network response was not ok');
         }
-        return response.text();
+        return response3.text();
     })
-    .then(data => {
-        $('#content-container').html(data);
+    .then(data3 => {
+        $('#content-container').html(data3);
         if (user!=undefined&&user!='') {
             $('#content-container').find('blockquote')
                 .attr('cite','https://www.tiktok.com/@' + user)
