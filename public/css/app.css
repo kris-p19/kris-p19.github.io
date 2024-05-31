@@ -3,3 +3,7 @@ body {
     padding-bottom: 75px;
     font-family: "Mitr", sans-serif;
 }
+
+.filter-drop {
+    filter: drop-shadow(1px 1px 2px black);
+}
