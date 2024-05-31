@@ -15,8 +15,8 @@ $(document).ready(function(){
 
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page') || 'home';
-    const path = params.get('path') || 'views';
-    fetch(`/resource/${path}/${page}.html?no-cache=${Math.random()}`,{ cache: 'no-store' })
+    const path = params.get('path') || '/';
+    fetch(`/resource/views/${path}/${page}.html?no-cache=${Math.random()}`,{ cache: 'no-store' })
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
