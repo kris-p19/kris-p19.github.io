@@ -8,6 +8,11 @@
             <center><canvas id="qrcode" class="m-2" style="display:flex;"></canvas></center>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <pre id="example-code"></pre>
+        </div>
+    </div>
 </div>
 <script type="module">
     $(document).ready(function(){
@@ -23,5 +28,6 @@
                 size: 200,
             });
         });
+        $('#example-code').html(escapeHtml("<p>1234</p>"));
     });
 </script>
