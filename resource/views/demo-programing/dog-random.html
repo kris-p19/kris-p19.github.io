@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Random Cat Picture</h1>
+        </div>
+        <div class="col-md-12 text-center">
+            <button id="getDog" class="btn btn-primary m-2">Get a New Dog Picture</button>
+        </div>
+        <div class="offset-md-4 col-md-4">
+            <img id="dogImage" src="" alt="Random Dog" class="img-responsive" style="width:100%;">
+        </div>
+    </div>
+</div>
+<script type="module">
+    $(document).ready(function(){
+        $('meta[name="description"]').attr('content','Openlayer - Pound-DEV');
+        $('meta[name="keywords"]').attr('content','Openlayer,Pound-DEV,Developer,Programer');
+        $('.page-home').addClass('active');
+        $('title').text('Openlayer - Pound-DEV');
+        $('#getDog').on('click',function(){
+            $.ajax({
+                url: 'https://dog.ceo/api/breeds/image/random',
+                method: 'GET',
+                beforeSend:function(){
+                    $('#getDog').text('Get a New Dog Picture - กำลังเรียก api...');
+                },
+                success: function(data) {
+                    $('#getDog').text('Get a New Dog Picture');
+                    $('#dogImage').attr('src', data.message);
+                },
+                error: function(error) {
+                    $('#getDog').text('Get a New Dog Picture - Error');
+                    console.log('Error fetching dog image:', error);
+                }
+            });
+        });
+        $('#getCat').trigger('click');
+    });
+</script>
