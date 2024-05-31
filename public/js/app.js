@@ -16,6 +16,7 @@ $(document).ready(function(){
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page') || 'home';
     const path = params.get('path') || '/';
+    const user = params.get('user') || '';
     fetch(`/resource/views/${path}/${page}.html?no-cache=${Math.random()}`,{ cache: 'no-store' })
     .then(response => {
         if (!response.ok) {
@@ -25,6 +26,12 @@ $(document).ready(function(){
     })
     .then(data => {
         $('#content-container').html(data);
+        if (user!=undefined&&user!='') {
+            $('#content-container').find('blockquote')
+                .attr('cite','https://www.tiktok.com/@' + user)
+                .attr('data-unique-id', user);
+            $('#content-container').find('blockquote section a').attr('href','https://www.tiktok.com/@' + user + '?refer=creator_embed');
+        }
     })
     .catch(error => {
         $('#content-container').html('<p>Sorry, the requested page could not be loaded.</p>');
