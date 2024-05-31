@@ -4,7 +4,7 @@
         <div class="col-md-12 text-center">
             <h1>QR Code Generator</h1>
             <input class="form-control" type="text" id="text" placeholder="Enter text or URL">
-            <button class="btn btn-primary" id="btn-generate">Generate QR Code</button>
+            <button class="btn btn-primary mt-2" id="btn-generate">Generate QR Code</button>
             <div id="qrcode"></div>
         </div>
     </div>
@@ -14,6 +14,7 @@
         $('meta[name="description"]').attr('content','QR Code Generator - Pound-DEV');
         $('meta[name="keywords"]').attr('content','QR Code Generator,Pound-DEV,Developer,Programer');
         $('.page-home').addClass('active');
+        $('title').text('QR Code Generator - Pound-DEV');
         $('#btn-generate').on('click',function(){
             const text = document.getElementById("text").value;
             const qr = new QRious({
