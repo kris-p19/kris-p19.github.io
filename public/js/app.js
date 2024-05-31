@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function(){
     fetch('/resouce/layout/navbar.html')
         .then(response => response.text())
         .then(data => {
