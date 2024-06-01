@@ -4,6 +4,9 @@
             <h1>บทความ</h1>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12" id="article-content"></div>
+    </div>
 </div>
 <script type="module">
     $(document).ready(function(){
@@ -11,5 +14,15 @@
         $('meta[name="keywords"]').attr('content','บทความ,Pound-DEV,Developer,Programer');
         $('title').text('บทความ - Pound-DEV');
         $('.page-article').addClass('active');
+        $('#article-content').append(`
+            <div class="d-flex">
+                <div class="flex-shrink-0">
+                    <img src="/public/image/my-logo-pound.png" alt="Logo Pound-DEV">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                    This is some content from a media component. You can replace this with any content and adjust it as needed.
+                </div>
+            </div>
+        `);
     });
 </script>
