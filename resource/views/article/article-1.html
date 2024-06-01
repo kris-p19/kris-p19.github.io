@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>บทความ 1</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-md-1 col-md-10">เนื้อหา 1</div>
+    </div>
+</div>
+<script type="module">
+    $(document).ready( async function(){
+        await $('meta[name="description"]').attr('content','เนื้อหา 1');
+        await $('meta[name="keywords"]').attr('content','เนื้อหา 1,Pound-DEV,Developer,Programer');
+        await $('title').text('เนื้อหา 1 - Pound-DEV');
+        await $('.page-article').addClass('active');
+    });
+</script>
