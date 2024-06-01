@@ -9,13 +9,13 @@
     </div>
 </div>
 <script type="module">
-    $(document).ready(function(){
-        $('meta[name="description"]').attr('content','บทความ');
-        $('meta[name="keywords"]').attr('content','บทความ,Pound-DEV,Developer,Programer');
-        $('title').text('บทความ - Pound-DEV');
-        $('.page-article').addClass('active');
-        $('#article-content').append(`
-            <div class="d-flex">
+    $(document).ready( async function(){
+        await $('meta[name="description"]').attr('content','บทความ');
+        await $('meta[name="keywords"]').attr('content','บทความ,Pound-DEV,Developer,Programer');
+        await $('title').text('บทความ - Pound-DEV');
+        await $('.page-article').addClass('active');
+        await $('#article-content').append(`
+            <div class="d-flex article-item" data-href="/index.html?page=read-article&article=name">
                 <div class="flex-shrink-0">
                     <img src="/public/image/my-logo-pound-dev.png" alt="Logo Pound-DEV" style="width:150px;height:100px;object-fit:cover;">
                 </div>
@@ -24,5 +24,8 @@
                 </div>
             </div>
         `);
+        await $('#article-item').on('click',function(){
+            window.location.href = $(this).data('href');
+        });
     });
 </script>
