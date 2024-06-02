@@ -41,6 +41,7 @@ $(document).ready(function(){
             $('#content-container').find('blockquote')
                 .attr('cite','https://www.tiktok.com/@' + tiktokUser + '/video/' + tiktokVideo + '?time=' + Math.random())
                 .attr('data-video-id', tiktokVideo);
+            $('#content-container').find('#title').text('@' + tiktokUser);
             $('meta[name="description"]').attr('content',tiktokUser);
             $('meta[name="keywords"]').attr('content', tiktokUser + ',Pound-DEV,Developer,Programer');
             $('title').text(tiktokUser + ' - Pound-DEV');
