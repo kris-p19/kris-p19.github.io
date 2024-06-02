@@ -12,6 +12,14 @@
     $(document).ready( async function(){
         const articleList = [
             {
+                title:"สเปรย์กำจัดขน",
+                image:"/public/image/my-logo-pound-dev.png",
+                pages:"tiktok-video",
+                user:"tiichas",
+                vedio:"7353477883920190728",
+                descript:"ลองเข้ามาดูสินค้า [มี qr code] Tiny Me ไทนี่มี มูสขจัดขน ครีมขน อ่อนโยน มูสโฟม รักแร้ ขาหนีบ จุดซ่อนเร้น ถนอมผิว เนียนนุ่ม 100ml ขายในราคา ฿390 - ฿1,650 ซื้อได้ในแอป Shopee ตอนนี้เลย! <a href='https://s.shopee.co.th/1qGZIw2Gui'>พิกัดสินค้า</a>"
+            },
+            {
                 title:"หน่วยประมวลผลกลาง (Central Processing Unit หรือ CPU)",
                 image:"/public/image/my-logo-pound-dev.png",
                 pages:"article-2"
@@ -28,7 +36,7 @@
         await $('.page-article').addClass('active');
         await $.each(articleList, async (k,v) => {
             await $('#article-content').append(`
-                <div class="d-flex article-item" data-href="/index.html?page=${v.pages}&path=article" style="cursor:pointer;margin-bottom:10px;">
+                <div class="d-flex article-item" data-href="/index.html?page=${v.pages}&tiktokUser=${v.user}&tiktokVideo=${v.vedio}" style="cursor:pointer;margin-bottom:10px;">
                     <div class="flex-shrink-0">
                         <img src="${v.image}" alt="Logo Pound-DEV" style="width:150px;height:100px;object-fit:cover;border-radius:15px;filter:drop-shadow(0px 0px 1px black);">
                     </div>
