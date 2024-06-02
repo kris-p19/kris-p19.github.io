@@ -36,7 +36,7 @@ $(document).ready(function(){
             $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
             $('title').text( user + ' - Pound-DEV');
             setTimeout(() => {
-                $('#content-container').find('blockquote').trigger('click'); 
+                $('#content-container').find('blockquote vedio:eq(0)').trigger('click'); 
             }, 1000);
         }
     })
