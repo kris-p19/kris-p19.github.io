@@ -17,6 +17,8 @@ $(document).ready(function(){
     const page = params.get('page') || 'home';
     const path = params.get('path') || '/';
     const user = params.get('user') || '';
+    const tiktokVideo = params.get('tiktokVideo') || '';
+    const tiktokUser = params.get('tiktokUser') || '';
     fetch(`/resource/views/${path}/${page}.html?no-cache=${Math.random()}`,{ cache: 'no-store' })
     .then(response3 => {
         if (!response3.ok) {
@@ -35,6 +37,13 @@ $(document).ready(function(){
             $('meta[name="description"]').attr('content',user);
             $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
             $('title').text( user + ' - Pound-DEV');
+        } else if(tiktokVideo!=undefined&&tiktokVideo!=''&&tiktokUser!=undefined&&tiktokUser!='') {
+            $('#content-container').find('blockquote')
+                .attr('cite','https://www.tiktok.com/@' + tiktokUser + '/video/' + tiktokVideo + '?time=' + Math.random())
+                .attr('data-video-id', tiktokVideo);
+            $('meta[name="description"]').attr('content',tiktokUser);
+            $('meta[name="keywords"]').attr('content', tiktokUser + ',Pound-DEV,Developer,Programer');
+            $('title').text(tiktokUser + ' - Pound-DEV');
         }
     })
     .catch(error => {
