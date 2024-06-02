@@ -35,9 +35,6 @@ $(document).ready(function(){
             $('meta[name="description"]').attr('content',user);
             $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
             $('title').text( user + ' - Pound-DEV');
-            setTimeout(() => {
-                $('#content-container blockquote iframe').find('.video-player:eq(0)').trigger('click'); 
-            }, 1000);
         }
     })
     .catch(error => {
