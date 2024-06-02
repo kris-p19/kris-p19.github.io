@@ -40,7 +40,7 @@
                     <div class="flex-shrink-0">
                         <img src="${v.image}" alt="Logo Pound-DEV" style="width:150px;height:100px;object-fit:cover;border-radius:15px;filter:drop-shadow(0px 0px 1px black);">
                     </div>
-                    <div class="flex-grow-1 ms-3">${v.title}</div>
+                    <div class="flex-grow-1 ms-3">${v.title}${v.descript!=undefined?'<br>'+v.descript:''}</div>
                 </div>
             `);
         });
