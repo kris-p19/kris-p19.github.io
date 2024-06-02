@@ -28,9 +28,9 @@ $(document).ready(function(){
         $('#content-container').html(data3);
         if (user!=undefined&&user!='') {
             $('#content-container').find('blockquote')
-                .attr('cite','https://www.tiktok.com/@' + user)
+                .attr('cite','https://www.tiktok.com/@' + user + '?time=' + Math.random())
                 .attr('data-unique-id', user);
-            $('#content-container').find('blockquote section a').attr('href','https://www.tiktok.com/@' + user + '?refer=creator_embed');
+            $('#content-container').find('blockquote section a').attr('href','https://www.tiktok.com/@' + user + '?refer=creator_embed&time=' + Math.random());
             $('#content-container').find('#title').text('@' + user);
             $('meta[name="description"]').attr('content',user);
             $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
