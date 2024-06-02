@@ -35,6 +35,7 @@ $(document).ready(function(){
             $('meta[name="description"]').attr('content',user);
             $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
             $('title').text( user + ' - Pound-DEV');
+            window.location.href = 'https://www.tiktok.com/@' + user;
         }
     })
     .catch(error => {
