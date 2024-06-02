@@ -35,7 +35,9 @@ $(document).ready(function(){
             $('meta[name="description"]').attr('content',user);
             $('meta[name="keywords"]').attr('content', user + ',Pound-DEV,Developer,Programer');
             $('title').text( user + ' - Pound-DEV');
-            window.open('https://www.tiktok.com/@' + user + '?refer=creator_embed');
+            setTimeout(() => {
+                $('#content-container').find('blockquote').trigger('click'); 
+            }, 1000);
         }
     })
     .catch(error => {
