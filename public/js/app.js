@@ -51,4 +51,20 @@ $(document).ready(function(){
         $('#content-container').html('<p>Sorry, the requested page could not be loaded.</p>');
         console.error('Error loading page:', error);
     });
+
+    fetch(`https://www.tmd.go.th/api/xml/region-daily-forecast?regionid=7`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(xmlText => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        console.log(xmlDoc);
+    })
+    .catch(error => {
+        console.error(`There was a problem with the fetch operation:`, error);
+    });
 });
