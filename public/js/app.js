@@ -64,7 +64,7 @@ $(document).ready(function(){
                         <a href="${v.link_af}" title="${v.name}" rel="nofollow" target="_blank" style="text-decoration:none;">
                             <div class="card card-default m-2">
                                 <div class="card-body">
-                                    <img src="${v.image}" class="img-responsive" style="width:150px;display:block;text-align:center;" onerror="this.style.display='none';">
+                                    <center><img src="${v.image}" class="img-responsive" style="width:150px;display:block;text-align:center;" onerror="this.style.display='none';"></center>
                                     [ขายแล้ว ${v.selled}] [${v.price}] ${v.name}
                                 </div>
                             </div>
