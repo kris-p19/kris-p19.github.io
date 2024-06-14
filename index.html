@@ -124,6 +124,7 @@
                 const snapshot = await get(child(dbRef, 'path/to/data'));
                 if (snapshot.exists()) {
                     const data = snapshot.val();
+                    console.log(data);
                     document.getElementById('data').innerText = JSON.stringify(data, null, 2);
                 } else {
                     console.log("No data available");
