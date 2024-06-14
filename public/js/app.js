@@ -58,6 +58,19 @@ $(document).ready(function(){
             dynamicTyping: true
         });
         $(parsedData.data).each(function(k,v){
+            if (k < (((parsedData.data).length)-1)) {
+                $('#products-list').append(`
+                    <div class="col-md-4 product-list-lsf">
+                        <a href="${v.link_af}" title="${v.name}" rel="nofollow" target="_blank" style="text-decoration:none;">
+                            <div class="card card-default m-2">
+                                <div class="card-body">
+                                    [ขายแล้ว ${v.selled}] [${v.price}] ${v.name}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                `);
+            }
             console.log(v);
         });
     });
