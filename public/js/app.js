@@ -81,7 +81,7 @@ const database = getDatabase(app);
 async function getData() {
     const dbRef = ref(database);
     try {
-        const snapshot = await get(child(dbRef, 'path/to/data'));
+        const snapshot = await get(child(dbRef, 'data/feed-news'));
         if (snapshot.exists()) {
             const data = snapshot.val();
             console.log(data);
