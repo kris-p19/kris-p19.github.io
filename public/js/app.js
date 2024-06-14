@@ -52,3 +52,45 @@ $(document).ready(function(){
         console.error('Error loading page:', error);
     });
 });
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyASF5IWGzjY1DKiEqx8Awn-vcExAfhdUbE",
+  authDomain: "feed-news-app-ab616.firebaseapp.com",
+  databaseURL: "https://feed-news-app-ab616-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "feed-news-app-ab616",
+  storageBucket: "feed-news-app-ab616.appspot.com",
+  messagingSenderId: "192503559869",
+  appId: "1:192503559869:web:8cd14c9e8023be802369d4",
+  measurementId: "G-0PD254KV58"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const database = getDatabase(app);
+
+async function getData() {
+    const dbRef = ref(database);
+    try {
+        const snapshot = await get(child(dbRef, 'path/to/data'));
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            console.log(data);
+            document.getElementById('data').innerText = JSON.stringify(data, null, 2);
+        } else {
+            console.log("No data available");
+        }
+    } catch (error) {
+        console.error("Error getting data:", error);
+    }
+}
+getData();
