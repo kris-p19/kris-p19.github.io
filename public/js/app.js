@@ -86,11 +86,13 @@ $(document).ready(function(){
         const d = JSON.parse(data3);
         $(d.rss.channel).each(function(k,v){
             $('#snook-feed').append(`
-                <h2 class="text-center">
-                    ${v.title[0]}
-                    <small style="display:block;">${v.description[0]}</small>
-                    <small style="display:block;">${v.pubDate[0]}</small>
-                </h2>
+                <div class="col-md-12">
+                    <h2 class="text-center">
+                        ${v.title[0]}
+                        <small style="font-weight:normal;display:block;">${v.description[0]}</small>
+                        <small style="font-weight:normal;display:block;">${v.pubDate[0]}</small>
+                    </h2>
+                </div>
             `);
             $(v.item).each(function(k2,v2){
                 $('#snook-feed').append(`
