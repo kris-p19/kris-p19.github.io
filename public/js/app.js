@@ -86,7 +86,7 @@ $(document).ready(function(){
         const d = JSON.parse(data3);
         $(d.rss.channel).each(function(k,v){
             $('#snook-feed').append(`
-                <div class="col-md-12">
+                <div class="col-md-12 mt-4">
                     <h2 class="text-center" style="font-weight:blod;">
                         ${v.title[0]}
                         <small style="font-weight:normal;display:block;">${v.description[0]}</small>
