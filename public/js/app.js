@@ -83,7 +83,15 @@ $(document).ready(function(){
         return response3.text();
     })
     .then(data3 => {
-        console.log(JSON.parse(data3));
+        const d = JSON.parse(data3);
+        $(d.rss.channel).each(function(k,v){
+            console.log(v.description[0]);
+            console.log(v.title[0]);
+            console.log(v.pubDate[0]);
+            $(v.item,function(k2,v2){
+                console.log(v2);
+            });
+        });
     })
     .catch(error => {
         console.error('Error loading page:', error);
