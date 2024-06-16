@@ -88,11 +88,14 @@ $(document).ready(function(){
             console.log(v.description[0]);
             console.log(v.title[0]);
             console.log(v.pubDate[0]);
+
             $(v.item).each(function(k2,v2){
-                console.log([
-                    v2.enclosure[0].$.url,
-                    v2.title[0]
-                ]);
+                $('#snook-feed').append(`
+                    <div class="col">
+                        <img src="${v2.enclosure[0].$.url}">
+                        <p>${v2.title[0]}</p>
+                    </div>
+                `);
             });
         });
     })
