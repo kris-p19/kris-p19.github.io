@@ -87,7 +87,7 @@ $(document).ready(function(){
         $(d.rss.channel).each(function(k,v){
             $('#snook-feed').append(`
                 <div class="col-md-12">
-                    <h2 class="text-center">
+                    <h2 class="text-center" style="font-weight:blod;">
                         ${v.title[0]}
                         <small style="font-weight:normal;display:block;">${v.description[0]}</small>
                         <small style="font-weight:normal;display:block;">${v.pubDate[0]}</small>
