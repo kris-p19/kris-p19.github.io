@@ -83,7 +83,7 @@ $(document).ready(function(){
         return response3.text();
     })
     .then(data3 => {
-        console.log(data3);
+        console.log(JSON.parse(data3));
     })
     .catch(error => {
         console.error('Error loading page:', error);
