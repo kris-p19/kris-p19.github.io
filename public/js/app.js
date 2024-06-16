@@ -75,9 +75,7 @@ $(document).ready(function(){
         });
     });
 
-    fetch(`https://marinemap.dmcr.go.th/go/load-xml`,{
-        url:"https://rssfeeds.sanook.com/rss/feeds/sanook/news.index.xml"
-    })
+    fetch(`https://marinemap.dmcr.go.th/go/load-xml?url=https://rssfeeds.sanook.com/rss/feeds/sanook/news.index.xml`)
     .then(response3 => {
         if (!response3.ok) {
             throw new Error('Network response was not ok');
