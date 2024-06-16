@@ -111,6 +111,6 @@ $(document).ready(function(){
     })
     .catch(error => {
         console.error('Error loading page:', error);
-    });;
+    });
 
 });
