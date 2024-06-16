@@ -88,6 +88,7 @@ $(document).ready(function(){
             console.log(v.description[0]);
             console.log(v.title[0]);
             console.log(v.pubDate[0]);
+            console.log(v);
             $(v.item,function(k2,v2){
                 console.log(v2);
             });
