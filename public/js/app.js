@@ -92,7 +92,7 @@ $(document).ready(function(){
             $(v.item).each(function(k2,v2){
                 console.log(v2);
                 $('#snook-feed').append(`
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="card h-100">
                             <img src="${v2.enclosure[0].$.url}" class="card-img-top" alt="${v2.title[0]}">
                             <div class="card-body">
