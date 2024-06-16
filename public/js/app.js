@@ -75,4 +75,10 @@ $(document).ready(function(){
         });
     });
 
+    $.get(`https://marinemap.dmcr.go.th/go/load-xml`,{
+        url:"https://rssfeeds.sanook.com/rss/feeds/sanook/news.index.xml"
+    }, function(data){
+        console.log(data);
+    });
+
 });
