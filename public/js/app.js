@@ -75,10 +75,20 @@ $(document).ready(function(){
         });
     });
 
-    $.get(`https://marinemap.dmcr.go.th/go/load-xml`,{
+    fetch(`https://marinemap.dmcr.go.th/go/load-xml`,{
         url:"https://rssfeeds.sanook.com/rss/feeds/sanook/news.index.xml"
-    }, function(data){
-        console.log(data);
-    });
+    })
+    .then(response3 => {
+        if (!response3.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response3.text();
+    })
+    .then(data3 => {
+        console.log(data3);
+    })
+    .catch(error => {
+        console.error('Error loading page:', error);
+    });;
 
 });
