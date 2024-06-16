@@ -85,9 +85,9 @@ $(document).ready(function(){
     .then(data3 => {
         const d = JSON.parse(data3);
         $(d.rss.channel).each(function(k,v){
-            console.log(v.description[0]);
-            console.log(v.title[0]);
-            console.log(v.pubDate[0]);
+            console.log("description : " + v.description[0]);
+            console.log("title : " + v.title[0]);
+            console.log("pubDate : " + v.pubDate[0]);
 
             $(v.item).each(function(k2,v2){
                 console.log(v2);
