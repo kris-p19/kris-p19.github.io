@@ -85,12 +85,14 @@ $(document).ready(function(){
     .then(data3 => {
         const d = JSON.parse(data3);
         $(d.rss.channel).each(function(k,v){
-            console.log("description : " + v.description[0]);
-            console.log("title : " + v.title[0]);
-            console.log("pubDate : " + v.pubDate[0]);
-
+            $('#snook-feed').append(`
+                <h2 class="text-center">
+                    ${v.title[0]}
+                    <small style="display:block;">${v.description[0]}</small>
+                    <small style="display:block;">${v.pubDate[0]}</small>
+                </h2>
+            `);
             $(v.item).each(function(k2,v2){
-                console.log(v2);
                 $('#snook-feed').append(`
                     <div class="col-md-4">
                         <div class="card h-100">
