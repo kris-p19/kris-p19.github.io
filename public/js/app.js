@@ -92,8 +92,14 @@ $(document).ready(function(){
             $(v.item).each(function(k2,v2){
                 $('#snook-feed').append(`
                     <div class="col">
-                        <img src="${v2.enclosure[0].$.url}">
-                        <p>${v2.title[0]}</p>
+                        <div class="card h-100">
+                            <img src="${v2.enclosure[0].$.url}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${v2.title[0]}</h5>
+                                <p class="card-text">Brief description or excerpt of the news article.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
                     </div>
                 `);
             });
