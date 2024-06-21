@@ -62,7 +62,7 @@ $(document).ready(function(){
                 $('#products-list').append(`
                     <div class="col-md-4 product-list-lsf">
                         <a href="${v.link_af}" title="${v.name}" rel="nofollow" target="_blank" style="text-decoration:none;">
-                            <div class="card card-default m-2">
+                            <div class="card card-default m-2 h-100">
                                 <div class="card-body">
                                     <center><img src="${v.image==null||v.image==undefined?'https://shop24hr.vercel.app/asset/images/messageImage_1718372326078.jpg':v.image}" class="img-responsive" style="width:150px;display:block;text-align:center;" onerror="this.style.display='none';"></center>
                                     [ขายแล้ว ${v.selled}] [${v.price}] ${v.name}
