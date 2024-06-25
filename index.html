@@ -32,6 +32,21 @@
         gtag('config', 'G-DZ3LG1VY11');
     </script>
     <title>แชร์ประสบการณ์ด้านคอมพิวเตอร์ ข้อมูลสารสนเทศ รวมถึงการพัฒนาเว็บไซต์ </title>
+    <style>
+        .clock {
+  text-align: center;
+}
+
+.time {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+    </style>
 </head>
 <body>
     <main>
@@ -39,7 +54,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div id="clock"></div>
+                    <div class="clock">
+                        <div class="time" id="time"></div>
+                        <div class="date" id="date"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,6 +121,7 @@
 
             function updateClock() {
               let now = new Date();
+            
               let hours = now.getHours();
               let minutes = now.getMinutes();
               let seconds = now.getSeconds();
@@ -113,7 +132,12 @@
             
               let timeString = hours + ':' + minutes + ':' + seconds;
             
-              document.getElementById('clock').textContent = timeString;
+              document.getElementById('time').textContent = timeString;
+            
+              let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+              let dateString = now.toLocaleDateString('en-US', options);
+            
+              document.getElementById('date').textContent = dateString;
             }
             
             // Update the clock every second
@@ -121,6 +145,7 @@
             
             // Initial call to display the clock immediately upon page load
             updateClock();
+
         });
     </script>
 </body>
