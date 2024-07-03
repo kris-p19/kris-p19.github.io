@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg bg-secondary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
-                    <img src="/public/image/icons8-read-96.png" alt="Logo" width="30" height="24">
+                    <img src="/public/image/icons8-read-96.png" alt="Logo" width="30" height="24" style="object-fit:cover;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -54,32 +54,41 @@
         </section>
 
         <section id="articles" class="text-center">
-            <h2>บทความล่าสุด</h2>
             <article>
-                <img class="img-responsive" src="/public/image/newspaper-2253409_1280.jpg" alt="Article Image">
-                <h3>หัวข้อบทความ</h3>
-                <p>เนื้อหาบทความ...</p>
-                <a href="#" class="read-more">อ่านเพิ่มเติม</a>
+                <div class="card mb-3">
+                    <img src="/public/image/newspaper-2253409_1280.jpg" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title">หัวข้อบทความ</h5>
+                        <p class="card-text">เนื้อหาบทความ...</p>
+                        <p class="card-text"><small class="text-body-secondary">บทความล่าสุด</small></p>
+                    </div>
+                </div>
             </article>
         </section>
 
         <section id="novels" class="text-center">
-            <h2>นิยายใหม่</h2>
             <article>
-                <img class="img-responsive" src="/public/image/books-2582889_1280.jpg" alt="Novel Image">
-                <h3>ชื่อนิยาย</h3>
-                <p>เนื้อหานิยาย...</p>
-                <a href="#" class="read-more">อ่านเพิ่มเติม</a>
+                <div class="card mb-3">
+                    <img src="/public/image/books-2582889_1280.jpg" class="card-img-top" alt="Novel Image">
+                    <div class="card-body">
+                        <h5 class="card-title">ชื่อนิยาย</h5>
+                        <p class="card-text">เนื้อหานิยาย...</p>
+                        <p class="card-text"><small class="text-body-secondary">นิยายใหม่</small></p>
+                    </div>
+                </div>
             </article>
         </section>
 
         <section id="blog" class="text-center">
-            <h2>Blog Post ล่าสุด</h2>
             <article>
-                <img class="img-responsive" src="/public/image/blog-372771_1280.jpg" alt="Blog Image">
-                <h3>หัวข้อ Blog Post</h3>
-                <p>เนื้อหา Blog Post...</p>
-                <a href="#" class="read-more">อ่านเพิ่มเติม</a>
+                <div class="card mb-3">
+                    <img src="/public/image/blog-372771_1280.jpg" class="card-img-top" alt="Blog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">หัวข้อ Blog Post</h5>
+                        <p class="card-text">เนื้อหา Blog Post...</p>
+                        <p class="card-text"><small class="text-body-secondary">Blog Post ล่าสุด</small></p>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
