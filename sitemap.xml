@@ -1,62 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://feed-news-one.vercel.app/index.html</loc>
-        <lastmod>2024-06-22</lastmod>
+        <loc>https://kris-p19.github.io/page/articles.html</loc>
+        <lastmod>2024-07-08</lastmod>
         <changefreq>day</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://feed-news-one.vercel.app/news-crime.html</loc>
-        <lastmod>2024-06-22</lastmod>
+        <loc>https://kris-p19.github.io/page/novels.html</loc>
+        <lastmod>2024-07-08</lastmod>
         <changefreq>day</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://feed-news-one.vercel.app/news-entertain.html</loc>
-        <lastmod>2024-06-22</lastmod>
-        <changefreq>day</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://feed-news-one.vercel.app/news-politic.html</loc>
-        <lastmod>2024-06-22</lastmod>
-        <changefreq>day</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://mycollection.shop/kmall</loc>
-        <lastmod>2024-06-22</lastmod>
-        <changefreq>day</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://shop24hr.vercel.app</loc>
-        <lastmod>2024-06-22</lastmod>
-        <changefreq>day</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://amflow.vercel.app</loc>
-        <lastmod>2024-06-22</lastmod>
-        <changefreq>day</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://generate-password-secure.vercel.app</loc>
-        <lastmod>2024-06-22</lastmod>
-        <changefreq>day</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://nodejsapix.vercel.app</loc>
-        <lastmod>2024-06-22</lastmod>
+        <loc>https://kris-p19.github.io/page/blog.html</loc>
+        <lastmod>2024-07-08</lastmod>
         <changefreq>day</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://kris-p19.github.io</loc>
-        <lastmod>2024-06-22</lastmod>
+        <lastmod>2024-07-08</lastmod>
         <changefreq>day</changefreq>
         <priority>1</priority>
     </url>
