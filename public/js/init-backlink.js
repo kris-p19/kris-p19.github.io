@@ -35,3 +35,8 @@ function createBacklink(obj) {
 backlink.forEach(element => {
     createBacklink(element);
 });
+
+$('a').each(function(k,v){
+    var noCaches = new Date().getTime();
+    $(this).attr('href',$(this).attr('href') + '?nocache=' + noCaches);
+});
