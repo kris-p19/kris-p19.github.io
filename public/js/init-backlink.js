@@ -22,6 +22,12 @@ let backlink = [
         text:"พนักงานราชการ นักวิชาการสหกรณ์ กรมส่งเสริมสหกรณ์",
         target:"_blank",
         rel:"noopener noreferrer"
+    },
+    {
+        href:"/post/2024/07/09/blog-003.html?nocache=" + Math.random(),
+        text:"สำนักงานปลัดกระทรวงสาธารณสุข ข้าราชการ พยาบาลวิชาชีพปฏิบัติการ",
+        target:"_blank",
+        rel:"noopener noreferrer"
     }
 ];
 
