@@ -104,6 +104,15 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var noCache = new Date().getTime();
+            // สร้างและเพิ่มแท็ก script สำหรับ JavaScript
+            var script = document.createElement('script');
+            script.src = '/public/js/init-backlink.js?v=' + noCache;
+            document.body.appendChild(script);
+        });
+    </script>
 </body>
 
 </html>
