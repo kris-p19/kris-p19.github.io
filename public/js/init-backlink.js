@@ -69,3 +69,7 @@ $('a').each(function(k,v){
     $(this).attr('href',$(this).attr('href') + '?nocache=' + noCaches)
     .attr('title',$(this).text());
 });
+
+$('#body-content').find('img').each(function(){
+    $(this).css({'max-width':'100%'});
+});
