@@ -37,7 +37,7 @@ backlink.forEach(element => {
     createBacklink(element);
 });
 
-$('.navbar-brand').append('KRIS-P19');
+$('.navbar-brand').append('KRIS-P19').css({'color':'white'});
 
 $('a').each(function(k,v){
     var noCaches = new Date().getTime();
