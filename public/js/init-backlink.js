@@ -34,6 +34,12 @@ let backlink = [
         text:"วิธีสร้างรหัสผ่านที่ปลอดภัย",
         target:"_blank",
         rel:"noopener noreferrer"
+    },
+    {
+        href:"/post/2024/07/09/Samsung Galaxy S23 Ultra (5G).html",
+        text:"Samsung Galaxy S23 Ultra (5G)",
+        target:"_blank",
+        rel:"noopener noreferrer"
     }
 ];
 
