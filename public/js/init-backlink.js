@@ -24,6 +24,7 @@ function createBacklink(obj) {
     var backlink = document.createElement('a');
     backlink.href = obj.href;  // URL ของ Backlink
     backlink.textContent = obj.text;
+    backlink.title = obj.text;
     // backlink.target = obj.target;  // เปิดลิงก์ในแท็บใหม่
     // backlink.rel = obj.rel;  // เพิ่มความปลอดภัย
 
