@@ -1,30 +1,30 @@
 let backlink = [
     {
-        href:"/post/2024/07/03/article-001.html?nocache=" + Math.random(),
+        href:"/post/2024/07/03/article-001.html",
         text:"คอมพิวเตอร์ตั้งแต่กำเนิดจนถึงปัจจุบัน",
         target:"_blank",
         rel:"noopener noreferrer"
     },
     {
-        href:"/post/2024/07/03/blog-001.html?nocache=" + Math.random(),
+        href:"/post/2024/07/03/blog-001.html",
         text:"ที่ติดไวรัสเข้ากับคอมพิวเตอร์ของคุณ",
         target:"_blank",
         rel:"noopener noreferrer"
     },
     {
-        href:"/post/2024/07/03/novel-001.html?nocache=" + Math.random(),
+        href:"/post/2024/07/03/novel-001.html",
         text:"กระต่ายกับเต่า เวอร์ชันใหม่",
         target:"_blank",
         rel:"noopener noreferrer"
     },
     {
-        href:"/post/2024/07/09/blog-002.html?nocache=" + Math.random(),
+        href:"/post/2024/07/09/blog-002.html",
         text:"พนักงานราชการ นักวิชาการสหกรณ์ กรมส่งเสริมสหกรณ์",
         target:"_blank",
         rel:"noopener noreferrer"
     },
     {
-        href:"/post/2024/07/09/blog-003.html?nocache=" + Math.random(),
+        href:"/post/2024/07/09/blog-003.html",
         text:"สำนักงานปลัดกระทรวงสาธารณสุข ข้าราชการ พยาบาลวิชาชีพปฏิบัติการ",
         target:"_blank",
         rel:"noopener noreferrer"
