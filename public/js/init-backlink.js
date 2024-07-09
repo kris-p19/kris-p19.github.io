@@ -40,6 +40,6 @@ backlink.forEach(element => {
 $('.navbar-brand').append('KRIS-P19').css({'color':'white'});
 
 $('a').each(function(k,v){
-    var noCaches = new Date().getTime();
+    var noCaches = new Date().getTime() + '-' + k;
     $(this).attr('href',$(this).attr('href') + '?nocache=' + noCaches);
 });
