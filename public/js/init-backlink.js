@@ -16,8 +16,13 @@ let backlink = [
         text:"กระต่ายกับเต่า เวอร์ชันใหม่",
         target:"_blank",
         rel:"noopener noreferrer"
+    },
+    {
+        href:"/post/2024/07/09/blog-002.html?nocache=" + Math.random(),
+        text:"พนักงานราชการ นักวิชาการสหกรณ์ กรมส่งเสริมสหกรณ์",
+        target:"_blank",
+        rel:"noopener noreferrer"
     }
-    
 ];
 
 function createBacklink(obj) {
@@ -25,6 +30,7 @@ function createBacklink(obj) {
     backlink.href = obj.href;  // URL ของ Backlink
     backlink.textContent = obj.text;
     backlink.title = obj.text;
+    backlink.style.padding = "5px";
     // backlink.target = obj.target;  // เปิดลิงก์ในแท็บใหม่
     // backlink.rel = obj.rel;  // เพิ่มความปลอดภัย
 
