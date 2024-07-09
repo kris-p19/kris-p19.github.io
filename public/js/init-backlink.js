@@ -28,6 +28,12 @@ let backlink = [
         text:"สำนักงานปลัดกระทรวงสาธารณสุข ข้าราชการ พยาบาลวิชาชีพปฏิบัติการ",
         target:"_blank",
         rel:"noopener noreferrer"
+    },
+    {
+        href:"/post/2024/07/09/article-001.html",
+        text:"วิธีสร้างรหัสผ่านที่ปลอดภัย",
+        target:"_blank",
+        rel:"noopener noreferrer"
     }
 ];
 
