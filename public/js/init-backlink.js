@@ -27,9 +27,10 @@ function createBacklink(obj) {
     backlink.target = obj.target;  // เปิดลิงก์ในแท็บใหม่
     backlink.rel = obj.rel;  // เพิ่มความปลอดภัย
 
-    // เลือกตำแหน่งที่ต้องการเพิ่ม Backlink
-    var content = document.getElementById('content-backlink');
-    content.appendChild(backlink);
+    try {
+        var content = document.getElementById('content-backlink');
+        content.appendChild(backlink);
+    } catch (error) { }
 }
 
 backlink.forEach(element => {
