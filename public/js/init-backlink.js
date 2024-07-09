@@ -1,10 +1,23 @@
 let backlink = [
     {
-        href:"/post/2024/07/03/article-001/html?nocache=" + Math.random(),
+        href:"/post/2024/07/03/article-001.html?nocache=" + Math.random(),
         text:"คอมพิวเตอร์ตั้งแต่กำเนิดจนถึงปัจจุบัน",
         target:"_blank",
         rel:"noopener noreferrer"
+    },
+    {
+        href:"/post/2024/07/03/blog-001.html?nocache=" + Math.random(),
+        text:"ที่ติดไวรัสเข้ากับคอมพิวเตอร์ของคุณ",
+        target:"_blank",
+        rel:"noopener noreferrer"
+    },
+    {
+        href:"/post/2024/07/03/novel-001.html?nocache=" + Math.random(),
+        text:"กระต่ายกับเต่า เวอร์ชันใหม่",
+        target:"_blank",
+        rel:"noopener noreferrer"
     }
+    
 ];
 
 function createBacklink(obj) {
