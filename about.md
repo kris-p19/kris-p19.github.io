@@ -4,4 +4,4 @@ title: "เกี่ยวกับเรา"
 description: "test about"
 navAbout: "active"
 ---
-<div class="col-md-12">about us</div>
+<div class="col-md-12 mb-2">about us</div>

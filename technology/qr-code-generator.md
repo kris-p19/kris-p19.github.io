@@ -4,7 +4,7 @@ title: "QR Code Generator"
 description: "QR Code Generator"
 navTechnology: "active"
 ---
-<div class="col-md-12">technology</div>
+<div class="col-md-12 mb-2">technology</div>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 <div class="col-md-6 offset-md-3">

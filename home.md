@@ -4,10 +4,10 @@ title: "หน้าแรก"
 description: "test"
 navIndex: "active"
 ---
-<div class="col-md-12">ยินดีต้อนรับสู่เว็บไซต์!</div>
+<div class="col-md-12 m-2">ยินดีต้อนรับสู่เว็บไซต์!</div>
 
 <div class="col-md-6">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
         <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary-emphasis">Thailand</strong>
             <h3 class="mb-0">QR Code Generator</h3>
@@ -21,7 +21,7 @@ navIndex: "active"
 </div>
 
 <div class="col-md-6">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
         <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary-emphasis">Thailand</strong>
             <h3 class="mb-0">การลงทุนในหุ้นไทย SET อย่างละเอียด</h3>
