@@ -32,14 +32,27 @@ navTechnology: "active"
         });
     }
     function downloadQRCode() {
-        const img = document.querySelector('#qrcode img');
-        if (!img) {
+        const canvas = document.querySelector('#qrcode canvas');
+        if (!canvas) {
             alert("กรุณาสร้าง QR Code ก่อนดาวน์โหลด");
             return;
         }
+        const border = 40; // ขนาดกรอบขาว (px)
+        const qrSize = canvas.width;
+        const newSize = qrSize + border * 2;
+        const borderedCanvas = document.createElement('canvas');
+        borderedCanvas.width = newSize;
+        borderedCanvas.height = newSize;
+        const ctx = borderedCanvas.getContext('2d');
+        // เติมพื้นหลังสีขาว
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, newSize, newSize);
+        // วาด QR code ตรงกลาง
+        ctx.drawImage(canvas, border, border);
+        // ดาวน์โหลด
         const link = document.createElement('a');
-        link.href = img.src;
-        link.download = 'qrcode.png';
+        link.href = borderedCanvas.toDataURL('image/png');
+        link.download = 'kris-p19-qr-code.png';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
