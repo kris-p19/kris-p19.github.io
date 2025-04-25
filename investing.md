@@ -19,7 +19,7 @@ investing
             </a>
         </div>
         <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="https://www.set.or.th/images/logo.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img src="https://www.set.or.th/images/logo.png">
         </div>
     </div>
 </div>
