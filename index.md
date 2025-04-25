@@ -4,7 +4,7 @@ title: "หน้าแรก"
 description: "test"
 navIndex: "active"
 ---
-ยินดีต้อนรับสู่เว็บไซต์!
+<div class="col-md-12">ยินดีต้อนรับสู่เว็บไซต์!</div>
 
 <div class="col-md-6">
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">

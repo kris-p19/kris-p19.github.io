@@ -4,7 +4,7 @@ title: "การลงทุน"
 description: "investing"
 navInvesting: "active"
 ---
-investing
+<div class="col-md-12">investing</div>
 
 <div class="col-md-6">
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">

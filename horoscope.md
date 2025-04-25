@@ -4,4 +4,4 @@ title: "ดูดวง"
 description: "horoscope"
 navHoroscope: "active"
 ---
-horoscope
+<div class="col-md-12">horoscope</div>
