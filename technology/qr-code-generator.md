@@ -37,7 +37,7 @@ navTechnology: "active"
             alert("กรุณาสร้าง QR Code ก่อนดาวน์โหลด");
             return;
         }
-        const border = 40; // ขนาดกรอบขาว (px)
+        const border = 10; // ขนาดกรอบขาว (px)
         const qrSize = canvas.width;
         const newSize = qrSize + border * 2;
         const borderedCanvas = document.createElement('canvas');
