@@ -1,0 +1,5 @@
+title: "ชื่อเว็บไซต์ของคุณ"
+description: "คำอธิบายเว็บไซต์"
+baseurl: "" # ใช้ในกรณีที่ repository ของคุณไม่ได้ชื่อเป็น root (โปรเจกต์ย่อย)
+url: "kris-p19.github.io" # URL ของ GitHub Pages
+theme: jekyll-theme-slate # เลือกธีม Jekyll ที่ต้องการ
