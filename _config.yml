@@ -1,5 +1,5 @@
-title: "ชื่อเว็บไซต์ของคุณ"
-description: "คำอธิบายเว็บไซต์"
+title: "Fin Tech X Hub"
+description: "ผสมผสานระหว่างการเงิน (Finance) และเทคโนโลยี (Technology)"
 baseurl: "" # ใช้ในกรณีที่ repository ของคุณไม่ได้ชื่อเป็น root (โปรเจกต์ย่อย)
-url: "kris-p19.github.io" # URL ของ GitHub Pages
+url: "kris-p19.github.io" # URL ของ GitHub Pages fintechxhub.com
 theme: jekyll-theme-slate # เลือกธีม Jekyll ที่ต้องการ
