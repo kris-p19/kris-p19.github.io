@@ -10,8 +10,8 @@ navTechnology: "active"
 <div class="col-md-6 offset-md-3">
     <div class="text-center">
         <input type="text" id="text" placeholder="ใส่ข้อความที่นี่" class="form-control input-lg m-3">
-        <button class="btn btn-success btn-lg" onclick="generateQRCode()">สร้าง QR Code</button>
-        <button class="btn btn-primary btn-lg" onclick="downloadQRCode()">ดาวน์โหลด QR Code</button>
+        <button class="btn btn-success btn-lg m-1" onclick="generateQRCode()">สร้าง QR Code</button>
+        <button class="btn btn-primary btn-lg m-1" onclick="downloadQRCode()">ดาวน์โหลด QR Code</button>
         <center>
             <div id="qrcode" style="margin:20px;"></div>
         </center>
