@@ -5,7 +5,7 @@ description: "สรุปรวมคำสั่งคีย์ลัด (Keyb
 navTechnology: "active"
 ---
 <h2>🎯 คีย์ลัดพื้นฐาน (Basic Shortcuts)</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>Ctrl + C</td><td>คัดลอก (Copy)</td></tr>
     <tr><td>Ctrl + X</td><td>ตัด (Cut)</td></tr>
@@ -17,7 +17,7 @@ navTechnology: "active"
     <tr><td>Ctrl + P</td><td>พิมพ์ (Print)</td></tr>
 </table>
 <h2>💻 การควบคุมหน้าต่าง / แอป</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>Alt + Tab</td><td>สลับแอประหว่างใช้งาน</td></tr>
     <tr><td>Win + D</td><td>แสดงหรือซ่อนหน้า Desktop</td></tr>
@@ -29,7 +29,7 @@ navTechnology: "active"
     <tr><td>Win + ← / →</td><td>จัดหน้าต่างไปซ้ายหรือขวา</td></tr>
 </table>
 <h2>🔍 การค้นหา / ระบบ</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>Win + S / Win</td><td>เปิดแถบค้นหา Start Menu</td></tr>
     <tr><td>Win + R</td><td>เปิด Run (เช่น cmd, regedit)</td></tr>
@@ -39,7 +39,7 @@ navTechnology: "active"
     <tr><td>Win + Pause</td><td>เปิด System Properties</td></tr>
 </table>
 <h2>🌐 เบราว์เซอร์ (Edge / Chrome / Firefox)</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>Ctrl + T</td><td>เปิดแท็บใหม่</td></tr>
     <tr><td>Ctrl + W</td><td>ปิดแท็บปัจจุบัน</td></tr>
@@ -49,7 +49,7 @@ navTechnology: "active"
     <tr><td>Ctrl + L / Alt + D</td><td>โฟกัสที่แถบ URL</td></tr>
 </table>
 <h2>🎥 คีย์ลัดจับภาพหน้าจอ</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>PrtScn</td><td>จับภาพหน้าจอทั้งหมด</td></tr>
     <tr><td>Alt + PrtScn</td><td>จับภาพหน้าต่างที่ใช้งานอยู่</td></tr>
@@ -57,7 +57,7 @@ navTechnology: "active"
     <tr><td>Win + G</td><td>เปิด Xbox Game Bar</td></tr>
 </table>
 <h2>👨‍💻 Multitasking / Virtual Desktop</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>Win + Tab</td><td>เปิด Task View</td></tr>
     <tr><td>Win + Ctrl + D</td><td>สร้าง Virtual Desktop ใหม่</td></tr>
@@ -65,7 +65,7 @@ navTechnology: "active"
     <tr><td>Win + Ctrl + F4</td><td>ปิด Virtual Desktop ปัจจุบัน</td></tr>
 </table>
 <h2>🔒 ล็อก / ออกจากระบบ / ปิดเครื่อง</h2>
-<table>
+<table class="table" style="width:100%;">
     <tr><th>คีย์ลัด</th><th>คำอธิบาย</th></tr>
     <tr><td>Ctrl + Alt + Del</td><td>เปิดหน้าจอความปลอดภัย</td></tr>
     <tr><td>Alt + F4</td><td>ปิดโปรแกรม / เปิดเมนูปิดเครื่อง</td></tr>
