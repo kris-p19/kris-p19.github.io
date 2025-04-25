@@ -37,19 +37,16 @@ navTechnology: "active"
             alert("กรุณาสร้าง QR Code ก่อนดาวน์โหลด");
             return;
         }
-        const border = 10; // ขนาดกรอบขาว (px)
+        const border = 10;
         const qrSize = canvas.width;
         const newSize = qrSize + border * 2;
         const borderedCanvas = document.createElement('canvas');
         borderedCanvas.width = newSize;
         borderedCanvas.height = newSize;
         const ctx = borderedCanvas.getContext('2d');
-        // เติมพื้นหลังสีขาว
         ctx.fillStyle = '#ffffff';
         ctx.fillRect(0, 0, newSize, newSize);
-        // วาด QR code ตรงกลาง
         ctx.drawImage(canvas, border, border);
-        // ดาวน์โหลด
         const link = document.createElement('a');
         link.href = borderedCanvas.toDataURL('image/png');
         link.download = 'kris-p19-qr-code.png';
