@@ -1,9 +1,0 @@
-body {
-    padding-top: 75px;
-    padding-bottom: 75px;
-    font-family: "Mitr", sans-serif;
-}
-
-.filter-drop {
-    filter: drop-shadow(0px 0px 2px black);
-}
