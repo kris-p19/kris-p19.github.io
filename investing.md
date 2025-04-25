@@ -18,8 +18,5 @@ investing
                 <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
             </a>
         </div>
-        <div class="col-auto d-none d-lg-block">
-            <img src="https://www.set.or.th/images/logo.png">
-        </div>
     </div>
 </div>
