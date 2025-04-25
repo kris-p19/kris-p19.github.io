@@ -2,5 +2,6 @@
 layout: default
 title: "เกี่ยวกับเรา"
 description: "test about"
+navAbout: "active"
 ---
-ยินดีต้อนรับสู่เว็บไซต์!
+about us

@@ -1,11 +1,11 @@
 <div class="container">
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/home" class="nav-link active" aria-current="page">หน้าหลัก</a></li>
-            <li class="nav-item"><a href="/horoscope" class="nav-link">ดูดวง</a></li>
-            <li class="nav-item"><a href="/investing" class="nav-link">การลงทุน</a></li>
-            <li class="nav-item"><a href="/technology" class="nav-link">เทคโนโลยี</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">เกี่ยวกับเรา</a></li>
+            <li class="nav-item"><a href="/home" class="nav-link {{ page.navIndex }}">หน้าหลัก</a></li>
+            <li class="nav-item"><a href="/horoscope" class="nav-link {{ page.navHoroscope }}">ดูดวง</a></li>
+            <li class="nav-item"><a href="/investing" class="nav-link {{ page.navInvesting }}">การลงทุน</a></li>
+            <li class="nav-item"><a href="/technology" class="nav-link {{ page.navTechnology }}">เทคโนโลยี</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link {{ page.navAbout }}">เกี่ยวกับเรา</a></li>
         </ul>
     </header>
 </div>
