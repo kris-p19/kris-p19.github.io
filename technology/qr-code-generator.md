@@ -7,10 +7,13 @@ navTechnology: "active"
 technology
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-<input type="text" id="text" placeholder="ใส่ข้อความที่นี่">
-<button onclick="generateQRCode()">สร้าง QR Code</button>
-
-<div id="qrcode" style="margin-top: 20px;"></div>
+<div class="text-center">
+    <input type="text" id="text" placeholder="ใส่ข้อความที่นี่" class="form-control">
+    <button class="btn btn-success btn-lg" onclick="generateQRCode()">สร้าง QR Code</button>
+    <center>
+        <div id="qrcode" style="margin:20px;"></div>
+    </center>
+</div>
 
 <script>
     function generateQRCode() {
