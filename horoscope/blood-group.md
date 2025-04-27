@@ -4,9 +4,9 @@ title: "ทายนิสัยตามกรุ๊ปเลือด"
 description: "horoscope"
 navHoroscope: "active"
 ---
-<div class="col-md-4 col-lg-4 col-sm-6">
+<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
     <div class="card text-center group h-100">
-        <img src="/images/blood-type-a.png" class="card-img-top" alt="กรุ๊ป A">
+        <img src="/images/blood-type-a.png" class="card-img-top p-3" style="100px;" alt="กรุ๊ป A">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป A</h5>
             <p class="card-text"><b>นิสัยทั่วไป:</b> คนกรุ๊ป A มักจะเป็นคนที่มีระเบียบ มีความละเอียดรอบคอบในทุก ๆ การกระทำ พวกเขามีความรับผิดชอบสูง และมักจะทำทุกสิ่งอย่างตั้งใจ รู้จักคิดก่อนทำ มีความรอบคอบและจัดการเรื่องต่าง ๆ ได้ดี</p>
@@ -17,9 +17,9 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col-md-4 col-lg-4 col-sm-6">
+<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
     <div class="card text-center group h-100">
-        <img src="/images/blood-type-b.png" class="card-img-top" alt="กรุ๊ป B">
+        <img src="/images/blood-type-b.png" class="card-img-top p-3" style="100px;" alt="กรุ๊ป B">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป B</h5>
             <p class="card-text"><b>นิสัยทั่วไป:</b> คนกรุ๊ป B เป็นคนที่ชอบความเป็นอิสระ มีความคิดสร้างสรรค์ และรักในการผจญภัย พวกเขามักจะมองโลกในแง่บวกและชอบคิดนอกกรอบ รักการทดลองสิ่งใหม่ ๆ และมีไหวพริบดีในการหาทางออกในสถานการณ์ที่ท้าทาย</p>
@@ -30,9 +30,9 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col-md-4 col-lg-4 col-sm-6">
+<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
     <div class="card text-center group h-100">
-        <img src="/images/blood-type-ab.png" class="card-img-top" alt="กรุ๊ป AB">
+        <img src="/images/blood-type-ab.png" class="card-img-top p-3" style="100px;" alt="กรุ๊ป AB">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป AB</h5>
             <p class="card-text"><b>นิสัยทั่วไป:</b> คนกรุ๊ป AB เป็นคนที่มีความสมดุลระหว่างความคิดและการกระทำ พวกเขามักจะมีการวางแผนที่ดีแต่ก็ยังสามารถปรับตัวได้เมื่อสถานการณ์เปลี่ยนแปลง พวกเขามีมุมมองที่ลึกซึ้งและค่อนข้างมีความคิดที่หลากหลาย</p>
@@ -43,9 +43,9 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col-md-4 col-lg-4 col-sm-6">
+<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
     <div class="card text-center group h-100">
-        <img src="/images/blood-type-o.png" class="card-img-top" alt="กรุ๊ป O">
+        <img src="/images/blood-type-o.png" class="card-img-top p-3" style="100px;" alt="กรุ๊ป O">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป O</h5>
             <p class="card-text"><b>นิสัยทั่วไป:</b> คนกรุ๊ป O เป็นคนที่มีความมั่นใจในตัวเองและมีความเป็นผู้นำ พวกเขาชอบการผจญภัยและมักจะกล้าตัดสินใจในสถานการณ์ที่ไม่แน่นอน พวกเขามักจะเป็นคนที่มีจิตใจอิสระและรักการเดินทาง</p>
