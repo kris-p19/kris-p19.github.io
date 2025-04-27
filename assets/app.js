@@ -1,20 +1,16 @@
-function search() {
-    const query = document.getElementById('searchQuery').value.trim();
-    const engine = document.getElementById('searchEngine').value;
-    const iframe = document.getElementById('searchFrame');
-
+function searchDuckDuckGo() {
+    const query = document.getElementById('searchInput').value.trim();
     if (!query) {
-        alert('Please enter a search query!');
+        alert('Please enter a search term');
         return;
     }
 
-    let url = '';
-
-    if (engine === 'duckduckgo') {
-        url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
-    } else if (engine === 'bing') {
-        url = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
-    }
-
-    iframe.src = url;
+    fetch(`https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&pretty=1`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }

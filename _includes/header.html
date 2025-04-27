@@ -7,13 +7,8 @@
             <li class="nav-item"><a href="/technology" class="nav-link {{ page.navTechnology }}">เทคโนโลยี</a></li>
             <li class="nav-item"><a href="/about" class="nav-link {{ page.navAbout }}">เกี่ยวกับเรา</a></li>
             <div class="search-box">
-                <h1>Multi Search (Free)</h1>
-                <input type="text" id="searchQuery" placeholder="Search something...">
-                <select id="searchEngine">
-                    <option value="duckduckgo">DuckDuckGo</option>
-                    <option value="bing">Bing</option>
-                </select>
-                <button onclick="search()">Search</button>
+                <input type="text" id="searchInput" placeholder="Enter your search">
+                <button onclick="searchDuckDuckGo()">Search</button>
             </div>
         </ul>
     </header>
