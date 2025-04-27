@@ -5,7 +5,7 @@ description: "horoscope"
 navHoroscope: "active"
 ---
 <div class="col">
-    <div class="card text-center group">
+    <div class="card text-center group h-100">
         <img src="/images/blood-type-a.png" class="card-img-top" alt="กรุ๊ป A">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป A</h5>
@@ -18,7 +18,7 @@ navHoroscope: "active"
 </div>
 
 <div class="col">
-    <div class="card text-center group">
+    <div class="card text-center group h-100">
         <img src="/images/blood-type-b.png" class="card-img-top" alt="กรุ๊ป B">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป B</h5>
@@ -31,7 +31,7 @@ navHoroscope: "active"
 </div>
 
 <div class="col">
-    <div class="card text-center group">
+    <div class="card text-center group h-100">
         <img src="/images/blood-type-ab.png" class="card-img-top" alt="กรุ๊ป AB">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป AB</h5>
@@ -44,7 +44,7 @@ navHoroscope: "active"
 </div>
 
 <div class="col">
-    <div class="card text-center group">
+    <div class="card text-center group h-100">
         <img src="/images/blood-type-o.png" class="card-img-top" alt="กรุ๊ป O">
         <div class="card-body">
             <h5 class="card-title">กรุ๊ป O</h5>
