@@ -4,7 +4,7 @@ title: "ทายนิสัยตามกรุ๊ปเลือด"
 description: "horoscope"
 navHoroscope: "active"
 ---
-<div class="col">
+<div class="col-md-4 col-lg-4 col-sm-6">
     <div class="card text-center group h-100">
         <img src="/images/blood-type-a.png" class="card-img-top" alt="กรุ๊ป A">
         <div class="card-body">
@@ -17,7 +17,7 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col">
+<div class="col-md-4 col-lg-4 col-sm-6">
     <div class="card text-center group h-100">
         <img src="/images/blood-type-b.png" class="card-img-top" alt="กรุ๊ป B">
         <div class="card-body">
@@ -30,7 +30,7 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col">
+<div class="col-md-4 col-lg-4 col-sm-6">
     <div class="card text-center group h-100">
         <img src="/images/blood-type-ab.png" class="card-img-top" alt="กรุ๊ป AB">
         <div class="card-body">
@@ -43,7 +43,7 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col">
+<div class="col-md-4 col-lg-4 col-sm-6">
     <div class="card text-center group h-100">
         <img src="/images/blood-type-o.png" class="card-img-top" alt="กรุ๊ป O">
         <div class="card-body">
