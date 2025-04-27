@@ -1,64 +1,45 @@
-function search() {
-    const query = document.getElementById('searchQuery').value.trim();
-    const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = '';
+// ฟังก์ชันค้นหา
+function searchWikipedia() {
+    // รับค่าคำค้นหาจาก input
+    const searchTerm = document.getElementById('search-term').value;
 
-    if (!query) {
-        alert('กรุณากรอกคำค้นหา');
+    // ถ้าไม่มีการกรอกคำค้นหาจะไม่ทำการค้นหา
+    if (!searchTerm) {
+        alert('Please enter a search term.');
         return;
     }
 
-    fetch(`https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&pretty=1`)
+    // URL ของ Wikipedia API Search
+    const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${searchTerm}&utf8=1`;
+
+    // เรียกใช้ API
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            // เช็ค Abstract (ข้อมูลหลัก)
-            if (data.AbstractText && data.AbstractURL) {
-                const item = document.createElement('div');
-                item.className = 'result-item';
-                item.innerHTML = `
-            <a href="${data.AbstractURL}" target="_blank">${data.Heading}</a>
-            <small>${data.AbstractURL}</small>
-            <p>${data.AbstractText}</p>
-          `;
-                resultsDiv.appendChild(item);
-            }
+            const searchResults = data.query.search;
 
-            // เช็ค RelatedTopics (ลิงก์อื่น ๆ)
-            if (data.RelatedTopics && data.RelatedTopics.length > 0) {
-                data.RelatedTopics.forEach(topic => {
-                    // บางที RelatedTopics มี nested Topics ซ้ำ ต้องเช็ค
-                    if (topic.Topics) {
-                        topic.Topics.forEach(subTopic => {
-                            if (subTopic.FirstURL && subTopic.Text) {
-                                const item = document.createElement('div');
-                                item.className = 'result-item';
-                                item.innerHTML = `
-                    <a href="${subTopic.FirstURL}" target="_blank">${subTopic.Text}</a>
-                    <small>${subTopic.FirstURL}</small>
-                  `;
-                                resultsDiv.appendChild(item);
-                            }
-                        });
-                    } else {
-                        if (topic.FirstURL && topic.Text) {
-                            const item = document.createElement('div');
-                            item.className = 'result-item';
-                            item.innerHTML = `
-                  <a href="${topic.FirstURL}" target="_blank">${topic.Text}</a>
-                  <small>${topic.FirstURL}</small>
-                `;
-                            resultsDiv.appendChild(item);
-                        }
-                    }
+            // ถ้ามีผลลัพธ์
+            if (searchResults.length > 0) {
+                let resultsHTML = '<h2>Search Results:</h2>';
+
+                // loop แสดงผลลัพธ์
+                searchResults.forEach(result => {
+                    resultsHTML += `
+              <div>
+                <h3><a href="https://en.wikipedia.org/?curid=${result.pageid}" target="_blank">${result.title}</a></h3>
+                <p>${result.snippet}...</p>
+              </div>
+            `;
                 });
-            }
 
-            if (resultsDiv.innerHTML === '') {
-                resultsDiv.innerHTML = '<p>ไม่พบผลลัพธ์ที่เกี่ยวข้อง</p>';
+                // แสดงผลลัพธ์
+                document.getElementById('wiki-content').innerHTML = resultsHTML;
+            } else {
+                document.getElementById('wiki-content').innerHTML = '<p>No results found.</p>';
             }
         })
         .catch(error => {
-            console.error('เกิดข้อผิดพลาด:', error);
-            resultsDiv.innerHTML = '<p>เกิดข้อผิดพลาดในการค้นหา</p>';
+            console.error('Error fetching data:', error);
+            document.getElementById('wiki-content').innerHTML = '<p>There was an error fetching the data.</p>';
         });
 }
