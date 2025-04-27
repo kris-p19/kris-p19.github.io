@@ -8,14 +8,16 @@ navTechnology: "active"
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 <div class="col-md-6 offset-md-3">
-    <div class="text-center">
-        <input type="text" id="text" autofocus placeholder="ใส่ข้อความที่นี่" class="form-control input-lg m-3">
-        <button class="btn btn-success btn-lg m-1" onclick="generateQRCode()">สร้าง QR Code</button>
-        <button class="btn btn-primary btn-lg m-1" onclick="downloadQRCode()">ดาวน์โหลด QR Code</button>
-        <center>
-            <div id="qrcode" style="margin:20px;"></div>
-        </center>
+    <div class="form-group m-2">
+        <input type="text" id="text" autofocus placeholder="ใส่ข้อความที่นี่" class="form-control">
     </div>
+</div>
+<div class="col-md-12 text-center">
+    <button class="btn btn-success btn-lg m-1" onclick="generateQRCode()">สร้าง QR Code</button>
+    <button class="btn btn-primary btn-lg m-1" onclick="downloadQRCode()">ดาวน์โหลด QR Code</button>
+    <center>
+        <div id="qrcode" style="margin:20px;"></div>
+    </center>
 </div>
 <script>
     function generateQRCode() {
