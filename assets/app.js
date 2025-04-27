@@ -69,3 +69,9 @@ document.getElementById('search').onclick = function (e) {
     e.preventDefault();
     searchWikipedia();
 };
+document.getElementById('search-term').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        searchWikipedia();
+    }
+});
