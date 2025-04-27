@@ -9,11 +9,13 @@ function searchWikipedia() {
         return;
     }
 
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const targetUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${searchTerm}&utf8=1`;
     // URL ของ Wikipedia API Search
     const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${searchTerm}&utf8=1`;
 
     // เรียกใช้ API
-    fetch(apiUrl)
+    fetch(proxyUrl + targetUrl)
         .then(response => response.json())
         .then(data => {
             const searchResults = data.query.search;
