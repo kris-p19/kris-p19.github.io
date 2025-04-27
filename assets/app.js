@@ -1,7 +1,26 @@
-// CORS Anywhere Proxy URL
-var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+var cors_api_url = 'https://cors-anywhere.herokuapp.com/';  // ใช้ CORS Anywhere ที่ได้รับการอนุญาต
+function doCORSRequest(options, printResult) {
+    var x = new XMLHttpRequest();
+    x.open(options.method, cors_api_url + options.url);
+    x.onload = x.onerror = function () {
+        try {
+            var jsonResponse = JSON.parse(x.responseText);  // ตรวจสอบการแปลงเป็น JSON
+            printResult(jsonResponse);
+        } catch (e) {
+            printResult(
+                options.method + ' ' + options.url + '\n' +
+                x.status + ' ' + x.statusText + '\n\n' +
+                (x.responseText || '')
+            );
+        }
+    };
+    if (/^POST/i.test(options.method)) {
+        x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    }
+    x.send(options.data);
+}
 
-// ฟังก์ชันค้นหา
+// ฟังก์ชันการค้นหา Wikipedia
 function searchWikipedia() {
     const searchTerm = document.getElementById('search-term').value;
 
@@ -19,44 +38,30 @@ function searchWikipedia() {
         url: targetUrl,
         data: null
     }, function printResult(result) {
-        const data = JSON.parse(result);
-        const searchResults = data.query.search;
-        console.log(data);
-        if (searchResults.length > 0) {
-            let resultsHTML = '<h2>Search Results:</h2>';
+        if (result && result.query && result.query.search) {
+            const searchResults = result.query.search;
 
-            // Loop แสดงผลลัพธ์การค้นหา
-            searchResults.forEach(result => {
-                resultsHTML += `
-          <div>
-            <h3><a href="https://en.wikipedia.org/?curid=${result.pageid}" target="_blank">${result.title}</a></h3>
-            <p>${result.snippet}...</p>
-          </div>
-        `;
-            });
+            if (searchResults.length > 0) {
+                let resultsHTML = '<h2>Search Results:</h2>';
 
-            document.getElementById('wiki-content').innerHTML = resultsHTML;
+                // Loop แสดงผลลัพธ์การค้นหา
+                searchResults.forEach(result => {
+                    resultsHTML += `
+            <div>
+              <h3><a href="https://en.wikipedia.org/?curid=${result.pageid}" target="_blank">${result.title}</a></h3>
+              <p>${result.snippet}...</p>
+            </div>
+          `;
+                });
+
+                document.getElementById('wiki-content').innerHTML = resultsHTML;
+            } else {
+                document.getElementById('wiki-content').innerHTML = '<p>No results found.</p>';
+            }
         } else {
-            document.getElementById('wiki-content').innerHTML = '<p>No results found.</p>';
+            document.getElementById('wiki-content').innerHTML = '<p>Error fetching results.</p>';
         }
     });
-}
-
-// ฟังก์ชัน CORS Request
-function doCORSRequest(options, printResult) {
-    var x = new XMLHttpRequest();
-    x.open(options.method, cors_api_url + options.url);
-    x.onload = x.onerror = function () {
-        printResult(
-            options.method + ' ' + options.url + '\n' +
-            x.status + ' ' + x.statusText + '\n\n' +
-            (x.responseText || '')
-        );
-    };
-    if (/^POST/i.test(options.method)) {
-        x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    }
-    x.send(options.data);
 }
 
 // Bind event
