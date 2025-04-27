@@ -21,7 +21,7 @@ function searchWikipedia() {
     }, function printResult(result) {
         const data = JSON.parse(result);
         const searchResults = data.query.search;
-
+        console.log(data);
         if (searchResults.length > 0) {
             let resultsHTML = '<h2>Search Results:</h2>';
 
