@@ -5,30 +5,71 @@ description: "investing"
 keywords: ""
 navInvesting: "active"
 ---
-<div class="col-md-12 mb-2">investing</div>
-<div class="col-md-6 mt-2">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
-        <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary-emphasis">Investing</strong>
-            <h3 class="mb-0">Exness - โบรเกอร์สำหรับเทรด Forex, Crypto</h3>
-            <div class="mb-1 text-body-secondary">28 April 2025</div>
-            <p class="card-text mb-auto">การสนับสนุนที่รวดเร็วและมีประสิทธิภาพจากทีมงาน</p>
-            <a href="/investing/forex-exness" class="icon-link gap-1 icon-link-hover stretched-link">
-                Continue reading
-            </a>
-        </div>
+<section id="category-section" class="category-section section" style="padding-top:0px;">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Category Investing Section</h2>
+        <div><span class="description-title">Category Investing Section</span></div>
     </div>
-</div>
-<div class="col-md-6 mt-2">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
-        <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary-emphasis">Investing</strong>
-            <h3 class="mb-0">การลงทุนในหุ้นไทย SET อย่างละเอียด</h3>
-            <div class="mb-1 text-body-secondary">25 April 2025</div>
-            <p class="card-text mb-auto">ก่อนที่คุณจะเริ่มลงทุนในหุ้นไทย คุณควรเข้าใจพื้นฐานการลงทุนในหุ้น.</p>
-            <a href="/investing/thai-set" class="icon-link gap-1 icon-link-hover stretched-link">
-                Continue reading
-            </a>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 mb-4">
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
+                        <img src="https://cdn.pixabay.com/photo/2021/04/09/13/27/chart-6164414_1280.png" alt="" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Investing</span>
+                            <div class="author-meta">
+                                <span class="post-date">28 April 2025</span>
+                            </div>
+                        </div>
+                        <h2 class="title">
+                            <a href="/investing/forex-exness">Exness - โบรเกอร์สำหรับเทรด Forex, Crypto</a>
+                        </h2>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
+                        <img src="https://www.set.or.th/images/logo.png" alt="" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Investing</span>
+                            <div class="author-meta">
+                                <span class="post-date">25 April 2025</span>
+                            </div>
+                        </div>
+                        <h2 class="title">
+                            <a href="/investing/thai-set">ก่อนที่คุณจะเริ่มลงทุนในหุ้นไทย คุณควรเข้าใจพื้นฐานการลงทุนในหุ้น.</a>
+                        </h2>
+                    </div>
+                </article>
+            </div>
         </div>
+        <!-- List Posts -->
+        <!-- <div class="row">
+            <div class="col-xl-4 col-lg-6">
+                <article class="list-post">
+                    <div class="post-img">
+                        <img src="https://www.set.or.th/images/logo.png" alt="" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Investing</span>
+                        </div>
+                        <h3 class="title">
+                            <a href="/investing/thai-set">ก่อนที่คุณจะเริ่มลงทุนในหุ้นไทย คุณควรเข้าใจพื้นฐานการลงทุนในหุ้น.</a>
+                        </h3>
+                        <div class="post-meta">
+                            <span class="post-date">25 April 2025</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div> -->
     </div>
-</div>
+</section>
+<!-- /Category Section Section -->
