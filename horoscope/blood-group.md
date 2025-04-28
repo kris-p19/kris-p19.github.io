@@ -7,7 +7,7 @@ urlx: "https://fintechxhub.com/horoscope/blood-group"
 image: "https://cdn.pixabay.com/photo/2017/01/10/07/09/blood-1968457_1280.png"
 navHoroscope: "active"
 ---
-<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
+<div class="col-md-12 mt-2">
     <div class="card text-center group h-100">
         <img src="/assets/img/blood-type-a.png" class="card-img-top p-3" style="width:100px;" alt="กรุ๊ป A">
         <div class="card-body">
@@ -20,7 +20,7 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
+<div class="col-md-12 mt-2">
     <div class="card text-center group h-100">
         <img src="/assets/img/blood-type-b.png" class="card-img-top p-3" style="width:100px;" alt="กรุ๊ป B">
         <div class="card-body">
@@ -33,7 +33,7 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
+<div class="col-md-12 mt-2">
     <div class="card text-center group h-100">
         <img src="/assets/img/blood-type-ab.png" class="card-img-top p-3" style="width:100px;" alt="กรุ๊ป AB">
         <div class="card-body">
@@ -46,7 +46,7 @@ navHoroscope: "active"
     </div>
 </div>
 
-<div class="col-md-4 col-lg-4 col-sm-6 mt-2">
+<div class="col-md-12 mt-2">
     <div class="card text-center group h-100">
         <img src="/assets/img/blood-type-o.png" class="card-img-top p-3" style="width:100px;" alt="กรุ๊ป O">
         <div class="card-body">
