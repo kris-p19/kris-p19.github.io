@@ -13,8 +13,9 @@ navTechnology: "active"
         font-size: 30px;
         font-family: 'Courier New', Courier, monospace;
         background: #222;
-        padding: 30px 60px;
-        border-radius: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 20px;
         box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc inset;
     }
 </style>
