@@ -2,6 +2,7 @@
 layout: default
 title: "การลงทุน"
 description: "investing"
+keywords: ""
 navInvesting: "active"
 ---
 <div class="col-md-12 mb-2">investing</div>

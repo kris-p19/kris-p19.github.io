@@ -2,6 +2,7 @@
 layout: default
 title: "การลงทุนในหุ้นไทย SET อย่างละเอียด"
 description: "การลงทุนในหุ้นไทย SET อย่างละเอียด"
+keywords: ""
 navInvesting: "active"
 ---
 <div class="col-md-12 mt-2">

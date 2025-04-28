@@ -2,6 +2,7 @@
 layout: default
 title: "ทายนิสัยตามกรุ๊ปเลือด"
 description: "horoscope"
+keywords: ""
 navHoroscope: "active"
 ---
 <div class="col-md-4 col-lg-4 col-sm-6 mt-2">

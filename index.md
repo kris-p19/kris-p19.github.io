@@ -2,6 +2,7 @@
 layout: default
 title: "หน้าแรก"
 description: "test"
+keywords: ""
 navIndex: "active"
 ---
 <div class="col-md-12 mb-2">ยินดีต้อนรับสู่เว็บไซต์</div>

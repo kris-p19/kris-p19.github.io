@@ -2,6 +2,7 @@
 layout: default
 title: "Exness - โบรเกอร์สำหรับเทรด Forex, Crypto"
 description: "โบรเกอร์ Exness เทรด Forex, Crypto, อื่น ๆ"
+keywords: ""
 navInvesting: "active"
 ---
 <div class="col-md-12">

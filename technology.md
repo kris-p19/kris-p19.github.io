@@ -2,6 +2,7 @@
 layout: default
 title: "เทคโนโลยี"
 description: "technology"
+keywords: ""
 navTechnology: "active"
 ---
 <div class="col-md-12 mb-2">technology</div>
