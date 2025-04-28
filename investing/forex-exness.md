@@ -5,6 +5,7 @@ description: "โบรเกอร์ Exness เทรด Forex, Crypto, อื
 navInvesting: "active"
 ---
 <div class="col-md-12">
+    <img src="https://shazagroup.wordpress.com/wp-content/uploads/2016/12/exness-affiliate-banner.png" class="img-responsive ms-2">
     <p>หากคุณกำลังมองหาโบรเกอร์ที่สามารถรองรับการเทรดหลากหลายประเภท Exness คือคำตอบ! ด้วยแพลตฟอร์มที่ทันสมัยและการสนับสนุนการเทรดทั้ง <strong>Forex</strong>, <strong>Crypto</strong> และสินทรัพย์อื่น ๆ รวมถึงการบริการลูกค้าตลอด 24 ชั่วโมง ทำให้ Exness เป็นที่นิยมในหมู่นักเทรดทั่วโลก</p>
     <h2>ทำไมต้องเลือก Exness?</h2>
     <ul>
