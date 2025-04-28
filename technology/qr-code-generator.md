@@ -1,3 +1,12 @@
+---
+layout: default
+title: "QR Code Generator"
+description: "QR Code Generator"
+keywords: ""
+urlx: "https://fintechxhub.com/technology/qr-code-generator"
+image: "https://cdn.pixabay.com/photo/2020/07/18/13/53/alipay-5417264_1280.jpg"
+navTechnology: "active"
+---
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 <div class="col-md-6 offset-md-3">
     <div class="search-widget widget-item">
