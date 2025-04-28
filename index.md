@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "หน้าแรก"
-description: "test"
-keywords: ""
+description: "เรามุ่งมั่นในการนำเสนอข้อมูลที่ทันสมัยและเป็นประโยชน์เกี่ยวกับเทคโนโลยีทางการเงิน (Fintech) ทั้งในด้านข่าวสาร บทความ การวิเคราะห์ และความรู้ต่างๆ เพื่อช่วยให้ผู้อ่านของเราเข้าใจโลกฟินเทคที่เต็มไปด้วยการเปลี่ยนแปลงและนวัตกรรมใหม่ๆ อยู่เสมอ"
+keywords: "fintechxhub,fin tech,tech,technology,investing"
 navIndex: "active"
 ---
 <section id="category-section" class="category-section section" style="padding-top:10px;">
