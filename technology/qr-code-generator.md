@@ -7,12 +7,13 @@ urlx: "https://fintechxhub.com/technology/qr-code-generator"
 image: "https://cdn.pixabay.com/photo/2020/07/18/13/53/alipay-5417264_1280.jpg"
 navTechnology: "active"
 ---
-<div class="col-md-12 mb-2">technology</div>
-
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 <div class="col-md-6 offset-md-3">
-    <div class="form-group m-2">
-        <input type="text" id="text" autofocus placeholder="ใส่ข้อความที่นี่" class="form-control">
+    <div class="search-widget widget-item">
+        <h3 class="widget-title">Search</h3>
+        <form action="">
+            <input type="text" id="text" autofocus placeholder="ใส่ข้อความที่นี่">
+        </form>
     </div>
 </div>
 <div class="col-md-12 text-center">
