@@ -5,7 +5,7 @@ description: "test"
 keywords: ""
 navIndex: "active"
 ---
-<section id="category-section" class="category-section section" style="padding-top:0px;">
+<section id="category-section" class="category-section section" style="padding-top:10px;">
     <div class="container section-title" data-aos="fade-up">
         <h2>Category Section</h2>
         <div><span class="description-title">Category Section</span></div>
@@ -108,7 +108,7 @@ navIndex: "active"
             <div class="col-xl-4 col-lg-6">
                 <article class="list-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://cdn.pixabay.com/photo/2020/07/18/13/53/alipay-5417264_1280.jpg" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">

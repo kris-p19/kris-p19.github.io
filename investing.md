@@ -5,7 +5,7 @@ description: "investing"
 keywords: ""
 navInvesting: "active"
 ---
-<section id="category-section" class="category-section section" style="padding-top:0px;">
+<section id="category-section" class="category-section section" style="padding-top:10px;">
     <div class="container section-title" data-aos="fade-up">
         <h2>Category Investing Section</h2>
         <div><span class="description-title">Category Investing Section</span></div>
