@@ -79,7 +79,7 @@ navIndex: "active"
                             <span class="post-category">Technology</span>
                         </div>
                         <h3 class="title">
-                            <a href="/technology/keyboard-shortcuts">Random Strong Password Generator</a>
+                            <a href="/technology/password">Random Strong Password Generator</a>
                         </h3>
                         <div class="post-meta">
                             <span class="post-date">28 April 2025</span>
