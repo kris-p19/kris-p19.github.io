@@ -10,7 +10,7 @@ navTechnology: "active"
         <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary-emphasis">Technology</strong>
             <h3 class="mb-0">คอมพิวเตอร์: การพัฒนา บทบาท และแนวโน้มในอนาคต</h3>
-            <div class="mb-1 text-body-secondary">25 April 2025</div>
+            <div class="mb-1 text-body-secondary">28 April 2025</div>
             <a href="/technology/computer" class="icon-link gap-1 icon-link-hover stretched-link">
                 Continue reading
             </a>
