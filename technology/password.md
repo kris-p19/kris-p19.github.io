@@ -47,7 +47,7 @@ navTechnology: "active"
             </div>
             <div class="mb-3">
                 <label for="generatedPassword" class="form-label">Generated Password</label>
-                <input type="text" class="form-control" id="generatedPassword" readonly>
+                <input type="text" class="form-control" id="generatedPassword" readonly onclick="copyToClipboard()">
             </div>
         </div>
     </div>
@@ -77,4 +77,15 @@ navTechnology: "active"
             const password = generatePassword(length, useNumbers, useUppercase, useLowercase, useSymbols);
             document.getElementById('generatedPassword').value = password;
         });
+    // Function to copy the generated password to clipboard
+        function copyToClipboard() {
+            const passwordField = document.getElementById('generatedPassword');
+            passwordField.select();
+            passwordField.setSelectionRange(0, 99999);  // For mobile devices
+            navigator.clipboard.writeText(passwordField.value).then(() => {
+                alert('copied to clipboard!'); // Alert message
+            }).catch((error) => {
+                alert('เกิดข้อผิดพลาดในการคัดลอกข้อความ: ' + error);
+            });
+        }
 </script>

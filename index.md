@@ -72,6 +72,24 @@ navIndex: "active"
             <div class="col-xl-4 col-lg-6">
                 <article class="list-post">
                     <div class="post-img">
+                        <img src="https://cdn.pixabay.com/photo/2017/04/29/22/47/password-2271736_1280.jpg" alt="" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Technology</span>
+                        </div>
+                        <h3 class="title">
+                            <a href="/technology/keyboard-shortcuts">Random Strong Password Generator</a>
+                        </h3>
+                        <div class="post-meta">
+                            <span class="post-date">28 April 2025</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+                <article class="list-post">
+                    <div class="post-img">
                         <img src="https://cdn.pixabay.com/photo/2017/01/10/07/09/blood-1968457_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
