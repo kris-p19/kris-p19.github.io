@@ -15,7 +15,7 @@ navIndex: "active"
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://cdn.pixabay.com/photo/2021/04/09/13/27/chart-6164414_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
@@ -33,7 +33,7 @@ navIndex: "active"
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-7.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://cdn.pixabay.com/photo/2021/11/30/06/02/aquarius-6834518_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
@@ -51,7 +51,7 @@ navIndex: "active"
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-5.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://cdn.pixabay.com/photo/2019/04/26/07/13/laptop-4156928_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
@@ -72,7 +72,7 @@ navIndex: "active"
             <div class="col-xl-4 col-lg-6">
                 <article class="list-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/10/07/09/blood-1968457_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
@@ -90,14 +90,14 @@ navIndex: "active"
             <div class="col-xl-4 col-lg-6">
                 <article class="list-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Technology</span>
                         </div>
                         <h3 class="title">
-                            <a href="/technology/keyboard-shortcuts">สรุปรวมคำสั่งคีย์ลัด (Keyboard Shortcuts) ที่ใช้บ่อยในระบบปฏิบัติการ Windows โดยจัดกลุ่มตามหมวดหมู่ เพื่อให้ใช้งานและจดจำได้ง่ายขึ้น</a>
+                            <a href="/technology/keyboard-shortcuts">🔑 รวมคีย์ลัดของระบบปฏิบัติการ Windows</a>
                         </h3>
                         <div class="post-meta">
                             <span class="post-date">25 April 2025</span>
@@ -126,7 +126,7 @@ navIndex: "active"
             <div class="col-xl-4 col-lg-6">
                 <article class="list-post">
                     <div class="post-img">
-                        <img src="/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                        <img src="https://www.set.or.th/images/logo.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
