@@ -18,11 +18,13 @@ navTechnology: "active"
         box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc inset;
     }
 </style>
-<div class="tags-widget widget-item">
-    <div class="clock">
-        <span id="hours">00</span> :
-        <span id="minutes">00</span> :
-        <span id="seconds">00</span>
+<div class="col-md-6 offset-md-3">
+    <div class="tags-widget widget-item">
+        <div class="clock text-center">
+            <span id="hours">00</span> :
+            <span id="minutes">00</span> :
+            <span id="seconds">00</span>
+        </div>
     </div>
 </div>
 <script>
