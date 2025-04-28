@@ -72,6 +72,24 @@ navTechnology: "active"
             <div class="col-xl-4 col-lg-6">
                 <article class="list-post">
                     <div class="post-img">
+                        <img src="https://cdn.pixabay.com/photo/2015/12/03/22/16/clock-1075801_1280.jpg" alt="" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Technology</span>
+                        </div>
+                        <h3 class="title">
+                            <a href="/technology/time">O'clock Digital Clock</a>
+                        </h3>
+                        <div class="post-meta">
+                            <span class="post-date">28 April 2025</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+                <article class="list-post">
+                    <div class="post-img">
                         <img src="https://cdn.pixabay.com/photo/2017/04/29/22/47/password-2271736_1280.jpg" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
