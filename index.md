@@ -10,7 +10,7 @@ navIndex: "active"
         <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary-emphasis">Horoscope</strong>
             <h3 class="mb-0">ดูดวง 12 ราศี ประจำวันนี้</h3>
-            <div class="mb-1 text-body-secondary">27 April 2025</div>
+            <div class="mb-1 text-body-secondary">28 April 2025</div>
             <p class="card-text mb-auto">28 เมษายน 2568</p>
             <a href="/horoscope/myhoro-28-04-2568" class="icon-link gap-1 icon-link-hover stretched-link">
                 Continue reading
