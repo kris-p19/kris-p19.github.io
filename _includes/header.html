@@ -1,16 +1,23 @@
-<div class="container-fluid bg-body-secondary" style="filter:drop-shadow(0px 0px 1px black);">
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link {{ page.navIndex }}">หน้าหลัก</a></li>
-            <li class="nav-item"><a href="/horoscope" class="nav-link {{ page.navHoroscope }}">ดูดวง</a></li>
-            <li class="nav-item"><a href="/investing" class="nav-link {{ page.navInvesting }}">การลงทุน</a></li>
-            <li class="nav-item"><a href="/technology" class="nav-link {{ page.navTechnology }}">เทคโนโลยี</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link {{ page.navAbout }}">เกี่ยวกับเรา</a></li>
-            <li class="nav-item"><a href="/contact" class="nav-link {{ page.navContact }}">ติดต่อเรา</a></li>
-            <div class="d-flex m-1">
-                <input type="text" class="form-control me-2" style="border-radius:15px;" id="search-term" placeholder="ค้นหา...">
-                <button class="btn btn-primary" id="search">ค้นหา</button>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">fin tech x hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" id="search-term" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button" id="search">Search</button>
+        </form>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link {{ page.navIndex }}" href="/">หน้าหลัก</a>
+                <a href="/horoscope" class="nav-link {{ page.navHoroscope }}">ดูดวง</a>
+                <a href="/investing" class="nav-link {{ page.navInvesting }}">การลงทุน</a>
+                <a href="/technology" class="nav-link {{ page.navTechnology }}">เทคโนโลยี</a>
+                <a href="/about" class="nav-link {{ page.navAbout }}">เกี่ยวกับเรา</a>
+                <a href="/contact" class="nav-link {{ page.navContact }}">ติดต่อเรา</a>
             </div>
-        </ul>
-    </header>
-</div>
+        </div>
+    </div>
+</nav>
