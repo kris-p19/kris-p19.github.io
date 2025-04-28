@@ -10,7 +10,7 @@ navTechnology: "active"
 <style>
     .clock {
         color: #00ffcc;
-        font-size: 80px;
+        font-size: 30px;
         font-family: 'Courier New', Courier, monospace;
         background: #222;
         padding: 30px 60px;
