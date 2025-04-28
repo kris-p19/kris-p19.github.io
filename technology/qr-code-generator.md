@@ -3,6 +3,8 @@ layout: default
 title: "QR Code Generator"
 description: "QR Code Generator"
 keywords: ""
+urlx: "https://fintechxhub.com/technology/qr-code-generator"
+image: "https://cdn.pixabay.com/photo/2020/07/18/13/53/alipay-5417264_1280.jpg"
 navTechnology: "active"
 ---
 <div class="col-md-12 mb-2">technology</div>

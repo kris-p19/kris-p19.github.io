@@ -3,6 +3,8 @@ layout: default
 title: "การลงทุนในหุ้นไทย SET อย่างละเอียด"
 description: "การลงทุนในหุ้นไทย SET อย่างละเอียด"
 keywords: ""
+urlx: "https://fintechxhub.com/investing/thai-set"
+image: "https://www.set.or.th/images/logo.png"
 navInvesting: "active"
 ---
 <div class="col-md-12 mt-2">

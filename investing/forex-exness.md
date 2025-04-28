@@ -3,6 +3,8 @@ layout: default
 title: "Exness - โบรเกอร์สำหรับเทรด Forex, Crypto"
 description: "โบรเกอร์ Exness เทรด Forex, Crypto, อื่น ๆ"
 keywords: ""
+urlx: "https://fintechxhub.com/investing/forex-exness"
+image: "https://cdn.pixabay.com/photo/2021/04/09/13/27/chart-6164414_1280.png"
 navInvesting: "active"
 ---
 <div class="col-md-12">

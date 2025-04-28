@@ -3,6 +3,8 @@ layout: default
 title: "ทายนิสัยตามกรุ๊ปเลือด"
 description: "horoscope"
 keywords: ""
+urlx: "https://fintechxhub.com/horoscope/blood-group"
+image: "https://cdn.pixabay.com/photo/2017/01/10/07/09/blood-1968457_1280.png"
 navHoroscope: "active"
 ---
 <div class="col-md-4 col-lg-4 col-sm-6 mt-2">
