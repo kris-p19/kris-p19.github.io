@@ -8,7 +8,7 @@ image: "https://cdn.pixabay.com/photo/2021/04/09/13/27/chart-6164414_1280.png"
 navInvesting: "active"
 ---
 <div class="col-md-12">
-    <a href="https://one.exnesstrack.org/a/rql59dgwb3" target="_blank">
+    <a href="https://one.exnesstrack.org/a/rql59dgwb3" target="_blank" rel="noopener noreferrer">
         <img src="https://shazagroup.wordpress.com/wp-content/uploads/2016/12/exness-affiliate-banner.png" class="img-fluid mb-2">
     </a>
     <p>หากคุณกำลังมองหาโบรเกอร์ที่สามารถรองรับการเทรดหลากหลายประเภท Exness คือคำตอบ! ด้วยแพลตฟอร์มที่ทันสมัยและการสนับสนุนการเทรดทั้ง <strong>Forex</strong>, <strong>Crypto</strong> และสินทรัพย์อื่น ๆ รวมถึงการบริการลูกค้าตลอด 24 ชั่วโมง ทำให้ Exness เป็นที่นิยมในหมู่นักเทรดทั่วโลก</p>
@@ -22,7 +22,7 @@ navInvesting: "active"
     </ul>
     <h2>ขั้นตอนการสมัคร Exness</h2>
     <p>การสมัครใช้งานกับ Exness ง่ายมาก! เพียงคลิกที่ลิงค์ด้านล่างเพื่อเริ่มต้นการสมัคร:</p>
-    <a href="https://one.exnesstrack.org/a/rql59dgwb3" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">สมัครใช้งาน Exness ที่นี่</a>
+    <a href="https://one.exnesstrack.org/a/rql59dgwb3" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none; font-weight: bold;">สมัครใช้งาน Exness ที่นี่</a>
     <h2>สิ่งที่คุณจะได้รับจากการสมัครกับ Exness</h2>
     <ul>
         <li><strong>โบนัสต้อนรับ</strong> สำหรับสมาชิกใหม่</li>
