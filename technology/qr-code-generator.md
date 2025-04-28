@@ -58,7 +58,7 @@ navTechnology: "active"
         ctx.drawImage(canvas, border, border);
         const link = document.createElement('a');
         link.href = borderedCanvas.toDataURL('image/png');
-        link.download = 'kris-p19-qr-code.png';
+        link.download = 'fintechxhub-qrcode.png';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
