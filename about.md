@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "เกี่ยวกับเรา"
-description: "about"
+description: "ศูนย์กลางข้อมูลและความรู้ด้านฟินเทคที่ทันสมัย"
 keywords: ""
 navAbout: "active"
 ---
