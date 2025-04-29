@@ -3,9 +3,9 @@ layout: default
 title: "คำนวณหุ้นปันผล"
 description: "คำนวณหุ้นปันผล Stock Market"
 keywords: "คำนวณหุ้นปันผล,Stock Market"
-urlx: "https://fintechxhub.com/technology/calculate-dividend-shares"
+urlx: "https://fintechxhub.com/investing/calculate-dividend-shares"
 image: "https://s6.imgcdn.dev/YwB7uN.jpg"
-navTechnology: "active"
+navInvesting: "active"
 ---
 <div class="col-md-6 offset-md-3">
     <div class="tags-widget widget-item">

@@ -19,13 +19,13 @@ navIndex: "active"
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
-                            <span class="post-category">Technology</span>
+                            <span class="post-category">Investing</span>
                             <div class="author-meta">
                                 <span class="post-date">29 April 2025</span>
                             </div>
                         </div>
                         <h2 class="title">
-                            <a href="/technology/calculate-dividend-shares">คำนวณหุ้นปันผล</a>
+                            <a href="/investing/calculate-dividend-shares">คำนวณหุ้นปันผล</a>
                         </h2>
                     </div>
                 </article>
