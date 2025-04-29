@@ -12,24 +12,24 @@ keywords: "ข่าวประเทศไทย, ข่าวด่วน, �
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 mb-4">
-        <div class="col-lg-4">
-            <article class="featured-post">
-                <div class="post-img">
-                    <img src="https://s6.imgcdn.dev/YwGRgG.jpg" alt="ข่าวเด่นประเทศไทย" class="img-fluid" loading="lazy">
-                </div>
-                <div class="post-content">
-                    <div class="category-meta">
-                    <span class="post-category">Thailand News</span>
-                    <div class="author-meta">
-                        <span class="post-date">29 April 2025</span>
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
+                        <img src="https://s6.imgcdn.dev/YwGRgG.jpg" alt="ข่าวเด่นประเทศไทย" class="img-fluid" loading="lazy">
                     </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Thailand News</span>
+                            <div class="author-meta">
+                                <span class="post-date">29 April 2025</span>
+                            </div>
+                        </div>
+                        <h2 class="title">
+                            <a href="/thailand-news/สถานการณ์ภัยแล้ง-2568-วิกฤติน้ำทั่วไทย">สถานการณ์ภัยแล้ง 2568: วิกฤติน้ำทั่วไทยและแนวทางรับมือของภาครัฐ</a>
+                        </h2>
                     </div>
-                    <h2 class="title">
-                    <a href="/thailand-news/สถานการณ์ภัยแล้ง-2568-วิกฤติน้ำทั่วไทย">สถานการณ์ภัยแล้ง 2568: วิกฤติน้ำทั่วไทยและแนวทางรับมือของภาครัฐ</a>
-                    </h2>
-                </div>
-            </article>
-        </div>
+                </article>
+            </div>
         </div>
     </div>
 </section>
