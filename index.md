@@ -5,7 +5,7 @@ description: "เรามุ่งมั่นในการนำเสนอ
 keywords: "fintechxhub,fin tech,tech,technology,investing"
 navIndex: "active"
 ---
-<section id="category-section" class="category-section section" style="padding-top:10px;">
+<section id="category-section" class="category-section section pt-1">
     <div class="container section-title" data-aos="fade-up">
         <h2>Category Section</h2>
         <div><span class="description-title">Category Section</span></div>
