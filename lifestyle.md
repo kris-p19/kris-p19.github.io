@@ -18,7 +18,7 @@ keywords: "ไลฟ์สไตล์, สุขภาพ, ความงา�
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
-                            <span class="post-category">Technology</span>
+                            <span class="post-category">Life Style</span>
                             <div class="author-meta">
                                 <span class="post-date">29 April 2025</span>
                             </div>
