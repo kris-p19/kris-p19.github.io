@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "คำนวณหุ้นปันผล"
-description: "คำนวณหุ้นปันผล"
-keywords: "คำนวณหุ้นปันผล"
+description: "คำนวณหุ้นปันผล Stock Market"
+keywords: "คำนวณหุ้นปันผล,Stock Market"
 urlx: "https://fintechxhub.com/technology/calculate-dividend-shares"
 image: "https://s6.imgcdn.dev/YwB7uN.jpg"
 navTechnology: "active"
