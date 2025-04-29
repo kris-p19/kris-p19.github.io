@@ -15,7 +15,7 @@ keywords: "ข่าวประเทศไทย, ข่าวด่วน, �
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
-                        <img src="https://s6.imgcdn.dev/YwGRgG.jpg" alt="ข่าวเด่นประเทศไทย" class="img-fluid" loading="lazy">
+                        <img src="https://s6.imgcdn.dev/YwGlT2.webp" alt="ข่าวเด่นประเทศไทย" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
                         <div class="category-meta">
