@@ -15,6 +15,24 @@ navIndex: "active"
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
+                        <img src="https://s6.imgcdn.dev/YwBzin.jpg" alt="" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Technology</span>
+                            <div class="author-meta">
+                                <span class="post-date">29 April 2025</span>
+                            </div>
+                        </div>
+                        <h2 class="title">
+                            <a href="/technology/dns">สอนตั้งค่า Public DNS: Google, Cloudflare และผู้ให้บริการอื่น ๆ</a>
+                        </h2>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
                         <img src="https://cdn.pixabay.com/photo/2021/04/09/13/27/chart-6164414_1280.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
