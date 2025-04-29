@@ -15,6 +15,24 @@ navIndex: "active"
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
+                        <img src="https://s6.imgcdn.dev/YwGlT2.webp" alt="ข่าวเด่นประเทศไทย" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Thailand News</span>
+                            <div class="author-meta">
+                                <span class="post-date">29 April 2025</span>
+                            </div>
+                        </div>
+                        <h2 class="title">
+                            <a href="/thailand-news/สถานการณ์ภัยแล้ง-2568-วิกฤติน้ำทั่วไทย">สถานการณ์ภัยแล้ง 2568: วิกฤติน้ำทั่วไทยและแนวทางรับมือของภาครัฐ</a>
+                        </h2>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
                         <img src="https://s6.imgcdn.dev/YwGN9L.jpg" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
