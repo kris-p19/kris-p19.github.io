@@ -14,6 +14,26 @@ keywords: "ไลฟ์สไตล์, สุขภาพ, ความงา�
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
+                    <img src="https://s6.imgcdn.dev/YwSbGe.jpg" alt="ซุปไก่สกัด แบรนด์ สูตรต้นตำรับ" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                    <div class="category-meta">
+                        <span class="post-category">โปรโมชั่นพิเศษ</span>
+                        <div class="author-meta">
+                        <span class="post-date">30 เมษายน 2025</span>
+                        </div>
+                    </div>
+                    <h2 class="title">
+                        <a href="/lifestyle/ซุปไก่สกัดสูตรต้นตำรับ-ลดราคา-Shopee" target="_blank" rel="nofollow">
+                        🔥 ซุปไก่สกัด แบรนด์ สูตรต้นตำรับ ลด 23% เหลือเพียง ฿3,949.- (ยกลัง)
+                        </a>
+                    </h2>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
                         <img src="https://s6.imgcdn.dev/YwGN9L.jpg" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
