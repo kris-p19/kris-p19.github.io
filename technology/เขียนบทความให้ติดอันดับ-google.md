@@ -6,7 +6,7 @@ keywords: "SEO, เขียนบทความ, ติดอันดับ G
 author: "FintechXHub"
 canonical: "https://fintechxhub.com/technology/เขียนบทความให้ติดอันดับ-google"
 urlx: "https://fintechxhub.com/technology/เขียนบทความให้ติดอันดับ-google"
-image: ""
+image: "https://s6.imgcdn.dev/YwWQrd.png"
 ---
 <div class="container py-5">
     <h1 class="mb-4">How-to เขียนบทความให้ติดอันดับ Google (SEO Content Writing)</h1>
