@@ -25,7 +25,7 @@ navIndex: "active"
                         </div>
                     </div>
                     <h2 class="title">
-                        <a href="/forex/how-to-start-forex-trading">How-to เรียนรู้ Forex สำหรับมือใหม่</a>
+                        <a href="/investing/how-to-start-forex-trading">How-to เรียนรู้ Forex สำหรับมือใหม่</a>
                     </h2>
                     </div>
                 </article>

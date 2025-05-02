@@ -4,8 +4,8 @@ title: "How-to เรียนรู้ Forex สำหรับมือให�
 description: "เริ่มต้นเทรด Forex อย่างถูกวิธีสำหรับมือใหม่ ครอบคลุมพื้นฐาน เครื่องมือ เทคนิค และกลยุทธ์"
 keywords: "เรียนรู้ Forex, เทรด Forex สำหรับมือใหม่, วิธีเล่น Forex, Forex คืออะไร, บัญชีทดลอง Forex, กลยุทธ์ Forex, ตลาด Forex, เทรดเดอร์มือใหม่, Forex MT5, Forex MT4"
 author: "FintechXHub"
-canonical: "https://fintechxhub.com/technology/how-to-start-forex-trading"
-urlx: "https://fintechxhub.com/technology/how-to-start-forex-trading"
+canonical: "https://fintechxhub.com/investing/how-to-start-forex-trading"
+urlx: "https://fintechxhub.com/investing/how-to-start-forex-trading"
 image: "https://s6.imgcdn.dev/YwWn4h.jpg"
 ---
 <div class="container my-5">
