@@ -15,24 +15,6 @@ keywords: "ข่าวประเทศไทย, ข่าวด่วน, �
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
-                        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1E2J8b.img" alt="อัปเดตสถานการณ์โรคแอนแทรกซ์ พบป่วยเพิ่ม 1 ราย เสี่ยงสัมผัส 638 ราย" class="img-fluid" loading="lazy">
-                    </div>
-                    <div class="post-content">
-                        <div class="category-meta">
-                            <span class="post-category">Thailand News</span>
-                            <div class="author-meta">
-                                <span class="post-date">2 May 2025</span>
-                            </div>
-                        </div>
-                        <h2 class="title">
-                            <a href="/thailand-news/anthrax-mukdahan-update">อัปเดตโรคแอนแทรกซ์ พบป่วยเพิ่ม 1 ราย กลุ่มเสี่ยง 638 ราย</a>
-                        </h2>
-                    </div>
-                </article>
-            </div>
-            <div class="col-lg-4">
-                <article class="featured-post">
-                    <div class="post-img">
                         <img src="https://s6.imgcdn.dev/YwSRf8.jpg" alt="ซิมไม่ตรงชื่อ Mobile Banking เสี่ยงถูกปิดบัญชี" class="img-fluid" loading="lazy">
                     </div>
                     <div class="post-content">
