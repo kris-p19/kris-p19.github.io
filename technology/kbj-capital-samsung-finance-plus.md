@@ -10,7 +10,7 @@ image: ""
     .iframe-container {
       position: relative;
       width: 100%;
-      height: 450px;
+      height: 600px;
       overflow: hidden;
     }
     .iframe-container iframe {
