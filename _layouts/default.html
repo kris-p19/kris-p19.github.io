@@ -57,9 +57,6 @@
             </div>
         </div>
     </div>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     <header id="header" class="header position-relative">
         <div class="container-fluid container-xl position-relative">
 
@@ -259,7 +256,12 @@
 
     <!-- Main JS File -->
     <script src="/assets/js/main.js"></script>
-
+    <script>
+        (adsbygoogle = window.adsbygoogle || []);
+        document.querySelectorAll('.adsbygoogle').forEach(() => {
+          adsbygoogle.push({});
+        });
+    </script>      
 </body>
 
 </html>
