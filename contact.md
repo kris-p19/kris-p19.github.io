@@ -5,10 +5,14 @@ description: "ติดต่อเรา - ติดต่อทีมงาน
 keywords: ""
 navContact: "active"
 ---
-<div class="col-md-12 mb-2">contact</div>
-<section class="container">
-    <h2>ข้อมูลติดต่อ</h2>
-    <address>
-        <p>ที่อยู่: ประเทศไทย</p>
-    </address>
+<section class="text-center my-4">
+    <a href="https://www.facebook.com/profile.php?id=61575500563169&sk=followers"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary fw-bold px-4 py-2">
+        🔵 ติดตามฉันบน Facebook
+    </a>
+    <p class="mt-2 text-muted small">
+        กดติดตามเพื่อไม่พลาดเรื่องราวและอัปเดตจากเรา
+    </p>
 </section>
