@@ -25,7 +25,7 @@ navIndex: "active"
                         </div>
                     </div>
                     <h2 class="title">
-                        <a href="/investing/มนวิธาน">การท่องบทสวดมนต์ที่ควรทำเป็นประจำ</a>
+                        <a href="/lifestyle/มนวิธาน">การท่องบทสวดมนต์ที่ควรทำเป็นประจำ</a>
                     </h2>
                     </div>
                 </article>
