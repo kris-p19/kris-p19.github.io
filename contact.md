@@ -5,7 +5,7 @@ description: "ติดต่อเรา - ติดต่อทีมงาน
 keywords: ""
 navContact: "active"
 ---
-<section class="text-center my-4">
+<div class="text-center my-4">
     <a href="https://www.facebook.com/profile.php?id=61575500563169&sk=followers"
         target="_blank"
         rel="noopener noreferrer"
@@ -15,4 +15,4 @@ navContact: "active"
     <p class="mt-2 text-muted small">
         กดติดตามเพื่อไม่พลาดเรื่องราวและอัปเดตจากเรา
     </p>
-</section>
+</div>
