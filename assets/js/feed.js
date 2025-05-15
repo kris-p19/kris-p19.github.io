@@ -1,4 +1,4 @@
-const feedUrl = 'https://www.matichon.co.th/feed'; // ใส่ URL feed ของคุณ
+const feedUrl = 'https://rssfeeds.sanook.com/rss/feeds/sanook/news.index.xml'; // ใส่ URL feed ของคุณ
 const container = document.getElementById('feed-container');
 
 async function fetchFeed() {
