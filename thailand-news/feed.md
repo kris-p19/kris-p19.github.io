@@ -12,4 +12,4 @@ urlx: "https://fintechxhub.com/thailand-news/feed"
     กำลังโหลดข่าว...
 </div>
 
-<script src="/asset/js/feed.js"></script>
+<script src="/assets/js/feed.js"></script>
