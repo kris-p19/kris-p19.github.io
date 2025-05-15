@@ -6,10 +6,9 @@ keywords: ข่าว, RSS, feed, XML, ข่าวล่าสุด, ข่�
 urlx: "https://fintechxhub.com/thailand-news/feed"
 ---
 
-# 📰 ข่าวล่าสุด
-
 <div class="row">
     <div class="col-md-8 offset-md-2">
+        # 📰 ข่าวล่าสุด
         <div id="feed-container">
             กำลังโหลดข่าว...
         </div>
