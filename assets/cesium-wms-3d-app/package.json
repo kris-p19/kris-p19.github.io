@@ -1,0 +1,22 @@
+{
+  "name": "cesium-wms-3d-app",
+  "version": "1.0.0",
+  "description": "A web application that displays WMS in 3D using Cesium.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "http-server ./src",
+    "build": "echo 'Build step not defined'"
+  },
+  "dependencies": {
+    "cesium": "^1.92.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "Cesium",
+    "WMS",
+    "3D",
+    "mapping"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
