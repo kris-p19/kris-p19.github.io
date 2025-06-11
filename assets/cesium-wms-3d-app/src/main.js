@@ -19,8 +19,8 @@ const osmLayer = viewer.imageryLayers.addImageryProvider(
 // เพิ่ม WMS Layer จาก GeoServer
 const wmsLayer = viewer.imageryLayers.addImageryProvider(
     new Cesium.WebMapServiceImageryProvider({
-        url: 'https://geo.dla.go.th/geoserver/dla/ows',
-        layers: 'amp_tam',
+        url: 'https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms',
+        layers: 'etc_coastal_status_2566_2',
         parameters: {
             service: 'WMS',
             transparent: true,
@@ -31,7 +31,7 @@ const wmsLayer = viewer.imageryLayers.addImageryProvider(
 
 // กำหนดศูนย์กลางกล้อง + ความสูง
 viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 200000),
+    destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 300000),
     // orientation: {
     //     heading: Cesium.Math.toRadians(0),    // หันไปทิศเหนือ
     //     pitch: Cesium.Math.toRadians(-30),    // ก้มกล้องลง
