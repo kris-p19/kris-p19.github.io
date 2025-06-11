@@ -3,8 +3,8 @@ const viewer = new Cesium.Viewer('cesiumContainer', {
 });
 
 const wmsLayer = viewer.imageryLayers.addImageryProvider(new Cesium.WebMapServiceImageryProvider({
-    url : 'https://gis.dmcr.go.th/geoserver/dmcr-wms-public/wms',
-    layers : 'area_coral',
+    url : 'https://geo.dla.go.th/geoserver/dla/ows',
+    layers : 'amp_tam',
     parameters : {
         transparent : true,
         format : 'image/png'
