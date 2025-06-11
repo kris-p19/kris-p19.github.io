@@ -1,3 +1,4 @@
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyNmYxNjI0ZS1mNzU4LTQzZTMtYjU1Ni04OGJiZjhmNWMxY2UiLCJpZCI6MzExMzA0LCJpYXQiOjE3NDk2NDUwMDd9.4sMNJxu7V9T1ZxF-1oclDemUKICc1T1aqRZvYId16gE';
 const viewer = new Cesium.Viewer("cesiumContainer", {
   terrain: Cesium.Terrain.fromWorldTerrain(), // ใช้แบบนี้แทน
   baseLayerPicker: false
