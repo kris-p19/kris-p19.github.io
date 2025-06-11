@@ -1,5 +1,5 @@
 // ตั้งค่า Access Token ของ Cesium Ion
-Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyNmYxNjI0ZS1mNzU4LTQzZTMtYjU1Ni04OGJiZjhmNWMxY2UiLCJpZCI6MzExMzA0LCJpYXQiOjE3NDk2NDUwMDd9.4sMNJxu7V9T1ZxF-1oclDemUKICc1T1aqRZvYId16gE';
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlNzdmMDIwOS0zZTViLTRhMTItOWYyOS01OWYyMmM4MTBjNTgiLCJpZCI6MzExMzA0LCJpYXQiOjE3NDk2NDY1MzB9.OkebqwZnlttjqT-wNs_8OrVK2KEZ1GLmHLGml-JQpZY';
 
 // สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
 const viewer = new Cesium.Viewer("cesiumContainer", {
