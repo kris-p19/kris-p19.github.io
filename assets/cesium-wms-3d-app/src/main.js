@@ -29,12 +29,25 @@ const wmsLayer = viewer.imageryLayers.addImageryProvider(
     })
 );
 
+Promise.all([
+  Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Coasalline.geojson', {
+    stroke: Cesium.Color.RED,
+    fill: Cesium.Color.RED.withAlpha(0.5),
+    strokeWidth: 2
+  }),
+  Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Transect.geojson', {
+    stroke: Cesium.Color.BLUE,
+    fill: Cesium.Color.BLUE.withAlpha(0.5),
+    strokeWidth: 2
+  })
+]).then((dataSources) => {
+  dataSources.forEach((dataSource) => viewer.dataSources.add(dataSource));
+  
+  // บินไปยังข้อมูลชั้นแรก
+  viewer.flyTo(dataSources[0]);
+});
+
 // กำหนดศูนย์กลางกล้อง + ความสูง
 viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 2000000),
-    // orientation: {
-    //     heading: Cesium.Math.toRadians(0),    // หันไปทิศเหนือ
-    //     pitch: Cesium.Math.toRadians(-30),    // ก้มกล้องลง
-    //     roll: 0
-    // }
+    destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 2000000)
 });
