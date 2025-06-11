@@ -31,9 +31,9 @@ const wmsLayer = viewer.imageryLayers.addImageryProvider(
 // กำหนดศูนย์กลางกล้อง + ความสูง
 viewer.camera.flyTo({
     destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 1500),
-    orientation: {
-        heading: Cesium.Math.toRadians(0),    // หันไปทิศเหนือ
-        pitch: Cesium.Math.toRadians(-30),    // ก้มกล้องลง
-        roll: 0
-    }
+    // orientation: {
+    //     heading: Cesium.Math.toRadians(0),    // หันไปทิศเหนือ
+    //     pitch: Cesium.Math.toRadians(-30),    // ก้มกล้องลง
+    //     roll: 0
+    // }
 });
