@@ -4,29 +4,30 @@ Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOi
 // สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
 const viewer = new Cesium.Viewer("cesiumContainer", {
     terrain: Cesium.Terrain.fromWorldTerrain(),
-    //baseLayerPicker: false,
-    //imageryProvider: false // ปิด basemap เริ่มต้นของ Cesium
+    baseLayerPicker: false,
+    imageryProvider: false // ปิด basemap เริ่มต้นของ Cesium
 
-    animation: true,
-    timeline: true,
-    baseLayerPicker: true,
-    fullscreenButton: true,
-    geocoder: true,
-    homeButton: true,
-    infoBox: true,
-    sceneModePicker: true,
-    selectionIndicator: true,
-    navigationHelpButton: true,
-    navigationInstructionsInitiallyVisible: true
+    // animation: true,
+    // timeline: true,
+    // baseLayerPicker: true,
+    // fullscreenButton: true,
+    // geocoder: true,
+    // homeButton: true,
+    // infoBox: true,
+    // sceneModePicker: true,
+    // selectionIndicator: true,
+    // navigationHelpButton: true,
+    // navigationInstructionsInitiallyVisible: true
 });
 
 // เพิ่มแผนที่พื้นหลังจาก OpenStreetMap
-// const osmLayer = viewer.imageryLayers.addImageryProvider(
-//     new Cesium.UrlTemplateImageryProvider({
-//         url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-//         subdomains: ['a', 'b', 'c']
-//     })
-// );
+const osmLayer = viewer.imageryLayers.addImageryProvider(
+    new Cesium.UrlTemplateImageryProvider({
+        url: "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
+        // url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+        // subdomains: ['a', 'b', 'c']
+    })
+);
 
 // เพิ่ม WMS Layer จาก GeoServer
 const wmsLayer = viewer.imageryLayers.addImageryProvider(
