@@ -4,33 +4,33 @@ Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOi
 // สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
 const viewer = new Cesium.Viewer("cesiumContainer", {
     terrain: Cesium.Terrain.fromWorldTerrain(),
-    baseLayerPicker: false,
-    imageryProvider: false // ปิด basemap เริ่มต้นของ Cesium
-
-    // animation: true,
-    // timeline: true,
-    // baseLayerPicker: true,
-    // fullscreenButton: true,
-    // geocoder: true,
-    // homeButton: true,
-    // infoBox: true,
-    // sceneModePicker: true,
-    // selectionIndicator: true,
-    // navigationHelpButton: true,
-    // navigationInstructionsInitiallyVisible: true
+    baseLayerPicker: false
 });
 
-// เพิ่มแผนที่พื้นหลังจาก OpenStreetMap
-const osmLayer = viewer.imageryLayers.addImageryProvider(
-    new Cesium.UrlTemplateImageryProvider({
-        url: "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
-        // url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-        // subdomains: ['a', 'b', 'c']
-    })
-);
+// เก็บ basemap layers ไว้เพื่อสลับ
+const osmLayer = new Cesium.UrlTemplateImageryProvider({
+    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    subdomains: ['a', 'b', 'c']
+});
+const googleLayer = new Cesium.UrlTemplateImageryProvider({
+    url: "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+});
+
+// เพิ่ม OSM เป็นค่าเริ่มต้น
+const baseLayer = viewer.imageryLayers.addImageryProvider(osmLayer);
+
+// ฟังก์ชันสลับ basemap
+function switchBaseMap(provider) {
+    viewer.imageryLayers.remove(baseLayer, false);
+    viewer.imageryLayers.addImageryProvider(provider, 0);
+}
+
+// จัดการปุ่ม
+document.getElementById('osmBtn').onclick = () => switchBaseMap(osmLayer);
+document.getElementById('googleBtn').onclick = () => switchBaseMap(googleLayer);
 
 // เพิ่ม WMS Layer จาก GeoServer
-const wmsLayer = viewer.imageryLayers.addImageryProvider(
+viewer.imageryLayers.addImageryProvider(
     new Cesium.WebMapServiceImageryProvider({
         url: 'https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms',
         layers: 'etc_coastal_status_2566_2',
@@ -42,22 +42,26 @@ const wmsLayer = viewer.imageryLayers.addImageryProvider(
     })
 );
 
+// ปรับ Scene เพื่อให้ GeoJSON ชัดเจน
+viewer.scene.globe.depthTestAgainstTerrain = false;
+
+// โหลด GeoJSON และจัดการ Error
 Promise.all([
-  Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Coasalline.geojson', {
-    stroke: Cesium.Color.RED,
-    fill: Cesium.Color.RED.withAlpha(0.5),
-    strokeWidth: 2
-  }),
-  Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Transect.geojson', {
-    stroke: Cesium.Color.BLUE,
-    fill: Cesium.Color.BLUE.withAlpha(0.5),
-    strokeWidth: 2
-  })
+    Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Coasalline.geojson', {
+        stroke: Cesium.Color.RED,
+        fill: Cesium.Color.RED.withAlpha(0.5),
+        strokeWidth: 2
+    }),
+    Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Transect.geojson', {
+        stroke: Cesium.Color.BLUE,
+        fill: Cesium.Color.BLUE.withAlpha(0.5),
+        strokeWidth: 2
+    })
 ]).then((dataSources) => {
-  dataSources.forEach((dataSource) => viewer.dataSources.add(dataSource));
-  
-  // บินไปยังข้อมูลชั้นแรก
-  viewer.flyTo(dataSources[0]);
+    dataSources.forEach((dataSource) => viewer.dataSources.add(dataSource));
+    // viewer.flyTo(dataSources[0]);
+}).catch((error) => {
+    console.error("เกิดข้อผิดพลาดในการโหลด GeoJSON:", error);
 });
 
 // กำหนดศูนย์กลางกล้อง + ความสูง
