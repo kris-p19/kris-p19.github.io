@@ -61,12 +61,12 @@ Promise.all([
     })
 ]).then((dataSources) => {
     dataSources.forEach((dataSource) => viewer.dataSources.add(dataSource));
-    // viewer.flyTo(dataSources[0]);
+    viewer.flyTo(dataSources[0]);
 }).catch((error) => {
     console.error("เกิดข้อผิดพลาดในการโหลด GeoJSON:", error);
 });
 
 // กำหนดศูนย์กลางกล้อง + ความสูง
-viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 2000000)
-});
+// viewer.camera.flyTo({
+//     destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 2000000)
+// });
