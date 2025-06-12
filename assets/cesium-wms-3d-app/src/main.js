@@ -20,11 +20,11 @@ const googleLayer = new Cesium.UrlTemplateImageryProvider({
 let currentBaseLayer = viewer.imageryLayers.addImageryProvider(osmLayer);
 
 // ฟังก์ชันสลับ basemap
-function switchBaseMap(provider) {
+async function switchBaseMap(provider) {
     // if (currentBaseLayer) {
-    viewer.imageryLayers.remove(currentBaseLayer, false);
+    await viewer.imageryLayers.remove(currentBaseLayer, false);
     // }
-    currentBaseLayer = viewer.imageryLayers.addImageryProvider(provider, 0);
+    currentBaseLayer = await viewer.imageryLayers.addImageryProvider(provider, 0);
 }
 
 // จัดการปุ่ม
