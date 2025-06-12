@@ -3,7 +3,7 @@ Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOi
 
 // สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
 const viewer = new Cesium.Viewer("cesiumContainer", {
-    //terrain: Cesium.Terrain.fromWorldTerrain(),
+    terrain: Cesium.Terrain.fromWorldTerrain(),
     //baseLayerPicker: false,
     //imageryProvider: false // ปิด basemap เริ่มต้นของ Cesium
 
@@ -17,8 +17,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
     sceneModePicker: true,
     selectionIndicator: true,
     navigationHelpButton: true,
-    navigationInstructionsInitiallyVisible: true,
-    terrainProvider: Cesium.createWorldTerrain()
+    navigationInstructionsInitiallyVisible: true
 });
 
 // เพิ่มแผนที่พื้นหลังจาก OpenStreetMap
