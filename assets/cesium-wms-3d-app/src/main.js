@@ -22,12 +22,12 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 });
 
 // เพิ่มแผนที่พื้นหลังจาก OpenStreetMap
-const osmLayer = viewer.imageryLayers.addImageryProvider(
-    new Cesium.UrlTemplateImageryProvider({
-        url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-        subdomains: ['a', 'b', 'c']
-    })
-);
+// const osmLayer = viewer.imageryLayers.addImageryProvider(
+//     new Cesium.UrlTemplateImageryProvider({
+//         url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+//         subdomains: ['a', 'b', 'c']
+//     })
+// );
 
 // เพิ่ม WMS Layer จาก GeoServer
 const wmsLayer = viewer.imageryLayers.addImageryProvider(
