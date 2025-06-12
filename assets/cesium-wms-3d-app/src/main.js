@@ -21,9 +21,9 @@ let currentBaseLayer = viewer.imageryLayers.addImageryProvider(osmLayer);
 
 // ฟังก์ชันสลับ basemap
 function switchBaseMap(provider) {
-    if (currentBaseLayer) {
-        viewer.imageryLayers.remove(currentBaseLayer, false);
-    }
+    // if (currentBaseLayer) {
+    viewer.imageryLayers.remove(currentBaseLayer, false);
+    // }
     currentBaseLayer = viewer.imageryLayers.addImageryProvider(provider, 0);
 }
 
