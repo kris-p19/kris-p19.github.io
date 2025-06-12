@@ -17,12 +17,14 @@ const googleLayer = new Cesium.UrlTemplateImageryProvider({
 });
 
 // เพิ่ม OSM เป็นค่าเริ่มต้น
-const baseLayer = viewer.imageryLayers.addImageryProvider(osmLayer);
+let currentBaseLayer = viewer.imageryLayers.addImageryProvider(osmLayer);
 
 // ฟังก์ชันสลับ basemap
 function switchBaseMap(provider) {
-    viewer.imageryLayers.remove(baseLayer, false);
-    viewer.imageryLayers.addImageryProvider(provider, 0);
+    if (currentBaseLayer) {
+        viewer.imageryLayers.remove(currentBaseLayer, false);
+    }
+    currentBaseLayer = viewer.imageryLayers.addImageryProvider(provider, 0);
 }
 
 // จัดการปุ่ม
