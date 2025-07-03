@@ -73,6 +73,11 @@ body,
     cursor: pointer;
 }
 
+#toolbar button.active {
+    background-color: rgb(154, 101, 2);
+    color: white;
+}
+
 #coords {
     position: absolute;
     bottom: 10px;

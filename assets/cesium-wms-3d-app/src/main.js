@@ -155,6 +155,18 @@ document.getElementById("resetView").addEventListener("click", () => {
     });
 });
 
+const buttons = document.querySelectorAll('#toolbar button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // เอาคลาส active ออกจากทุกปุ่มก่อน
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // ใส่คลาส active ให้ปุ่มที่ถูกกด
+        button.classList.add('active');
+    });
+});
+
 /**
  * ฟังก์ชันหมุนกล้องไปตาม heading ที่ต้องการ
  */
