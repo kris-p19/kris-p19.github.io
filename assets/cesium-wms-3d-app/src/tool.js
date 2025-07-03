@@ -23,7 +23,7 @@ export function startDraw(viewer, mode) {
                 activeShape = viewer.entities.add({
                     polyline: {
                         positions: new Cesium.CallbackProperty(() => activeShapePoints, false),
-                        width: 3,
+                        width: 1,
                         material: Cesium.Color.YELLOW
                     }
                 });
