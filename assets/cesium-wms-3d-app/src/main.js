@@ -120,10 +120,14 @@ viewer.camera.flyTo({
     }
 });
 // ปรับภาพให้เร็วขึ้น (ลดความละเอียดลงเล็กน้อย)
-viewer.resolutionScale = 0.75;
+// viewer.resolutionScale = 0.75;
 viewer.scene.fxaa = false;
 viewer.scene.postProcessStages.fxaa.enabled = false;
 viewer.scene.highDynamicRange = false;
+
+viewer.resolutionScale = window.devicePixelRatio; // ใช้ความละเอียดสูงสุดของหน้าจอ
+viewer.scene.globe.maximumScreenSpaceError = 1;   // ลดค่า error ทำให้โหลด tile ละเอียดมากขึ้น
+viewer.scene.globe.tileCacheSize = 1000;          // เพิ่ม cache เพื่อเก็บ tile มากขึ้น
 
 // ผูกปุ่มกับฟังก์ชันเครื่องมือ
 document.getElementById("drawPoint").addEventListener("click", () => startDraw(viewer, "point"));

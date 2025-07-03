@@ -19,7 +19,8 @@ body,
 .cesium-viewer-timelineContainer,
 .cesium-viewer-fullscreenContainer,
 .cesium-viewer-bottom,
-.cesium-viewer-toolbar {
+.cesium-viewer-toolbar,
+.cesium-button.cesium-infoBox-camera {
     display: none !important;
 }
 
