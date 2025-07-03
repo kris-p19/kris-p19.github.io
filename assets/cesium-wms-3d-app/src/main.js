@@ -20,16 +20,16 @@ const googleLayer = new Cesium.UrlTemplateImageryProvider({
 let currentBaseLayer = viewer.imageryLayers.addImageryProvider(googleLayer);
 
 // ฟังก์ชันสลับ basemap
-async function switchBaseMap(provider) {
-    // if (currentBaseLayer) {
-    await viewer.imageryLayers.remove(currentBaseLayer, false);
-    // }
-    currentBaseLayer = await viewer.imageryLayers.addImageryProvider(provider, 0);
-}
+// async function switchBaseMap(provider) {
+//     // if (currentBaseLayer) {
+//     await viewer.imageryLayers.remove(currentBaseLayer, false);
+//     // }
+//     currentBaseLayer = await viewer.imageryLayers.addImageryProvider(provider, 0);
+// }
 
 // จัดการปุ่ม
-document.getElementById('osmBtn').onclick = () => switchBaseMap(osmLayer);
-document.getElementById('googleBtn').onclick = () => switchBaseMap(googleLayer);
+// document.getElementById('osmBtn').onclick = () => switchBaseMap(osmLayer);
+// document.getElementById('googleBtn').onclick = () => switchBaseMap(googleLayer);
 
 // เพิ่ม WMS Layer จาก GeoServer
 viewer.imageryLayers.addImageryProvider(
