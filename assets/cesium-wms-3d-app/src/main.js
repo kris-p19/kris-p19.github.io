@@ -3,8 +3,11 @@ Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOi
 
 // สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
 const viewer = new Cesium.Viewer("cesiumContainer", {
-    terrain: Cesium.Terrain.fromWorldTerrain(),
-    baseLayerPicker: false
+    //terrain: Cesium.Terrain.fromWorldTerrain(),
+    terrain: false,
+    baseLayerPicker: false,
+    requestRenderMode: true, // render เมื่อมี interaction เท่านั้น
+    maximumRenderTimeChange: Infinity // ไม่ต้อง re-render เองเลย
 });
 
 // เก็บ basemap layers ไว้เพื่อสลับ
@@ -66,9 +69,10 @@ Promise.all([
     console.error("เกิดข้อผิดพลาดในการโหลด GeoJSON:", error);
 });
 
-viewer.scene.fxaa = true; // เปิด Antialiasing
-viewer.scene.postProcessStages.fxaa.enabled = true;
-viewer.resolutionScale = window.devicePixelRatio; // ใช้ scale ตามจอแสดงผลจริง
+viewer.resolutionScale = 0.75; // ค่า 0.5 – 1.0 (1.0 = คมชัดสุด, แต่ช้า) | window.devicePixelRatio ใช้ scale ตามจอแสดงผลจริง
+viewer.scene.fxaa = false;
+viewer.scene.postProcessStages.fxaa.enabled = false;
+viewer.scene.highDynamicRange = false;
 
 // กำหนดศูนย์กลางกล้อง + ความสูง
 viewer.camera.flyTo({
