@@ -24,18 +24,22 @@
     </div>
     <div id="layerControls">
         <strong>เลือกชั้นข้อมูล (TCS.WMS):</strong><br>
-        <label><input type="checkbox" value="coastline_2567_final">CM. Line ปี พ.ศ. 2567</label>
-        <label><input type="checkbox" value="coastline_2566_nopord">CM. Line ปี พ.ศ. 2566</label>
-        <label><input type="checkbox" value="coastline_2565_final_v2">CM. Line ปี พ.ศ. 2565</label>
-        <label><input type="checkbox" value="coastline_2564_v2">CM. Line ปี พ.ศ. 2564</label>
-        <label><input type="checkbox" value="coastline_2563">CM. Line ปี พ.ศ. 2563</label>
-        <label><input type="checkbox" value="coastline_2562">CM. Line ปี พ.ศ. 2562</label>
-        <label><input type="checkbox" value="shoreline_2559">Shoreline ปี พ.ศ. 2559</label>
-        <label><input type="checkbox" value="shoreline_2558">Shoreline ปี พ.ศ. 2558</label>
-        <label><input type="checkbox" value="shoreline_2557">Shoreline ปี พ.ศ. 2557</label>
-        <label><input type="checkbox" value="shoreline_2556">Shoreline ปี พ.ศ. 2556</label>
-        <label><input type="checkbox" value="shoreline_2554">Shoreline ปี พ.ศ. 2554</label>
-        <label><input type="checkbox" value="shoreline_2548">Shoreline ปี พ.ศ. 2548</label>
+        <label><input type="checkbox" class="wms-layer" value="coastline_2567_final">CM. Line ปี พ.ศ. 2567</label>
+        <label><input type="checkbox" class="wms-layer" value="coastline_2566_nopord">CM. Line ปี พ.ศ. 2566</label>
+        <label><input type="checkbox" class="wms-layer" value="coastline_2565_final_v2">CM. Line ปี พ.ศ. 2565</label>
+        <label><input type="checkbox" class="wms-layer" value="coastline_2564_v2">CM. Line ปี พ.ศ. 2564</label>
+        <label><input type="checkbox" class="wms-layer" value="coastline_2563">CM. Line ปี พ.ศ. 2563</label>
+        <label><input type="checkbox" class="wms-layer" value="coastline_2562">CM. Line ปี พ.ศ. 2562</label>
+        <label><input type="checkbox" class="wms-layer" value="shoreline_2559">Shoreline ปี พ.ศ. 2559</label>
+        <label><input type="checkbox" class="wms-layer" value="shoreline_2558">Shoreline ปี พ.ศ. 2558</label>
+        <label><input type="checkbox" class="wms-layer" value="shoreline_2557">Shoreline ปี พ.ศ. 2557</label>
+        <label><input type="checkbox" class="wms-layer" value="shoreline_2556">Shoreline ปี พ.ศ. 2556</label>
+        <label><input type="checkbox" class="wms-layer" value="shoreline_2554">Shoreline ปี พ.ศ. 2554</label>
+        <label><input type="checkbox" class="wms-layer" value="shoreline_2548">Shoreline ปี พ.ศ. 2548</label>
+        <hr>
+        <strong>GeoJSON Layers:</strong><br>
+        <label><input type="checkbox" class="geojson-layer" data-name="Coasalline" data-url="/assets/cesium-wms-3d-app/Coasalline.geojson">Coasalline</label>
+        <label><input type="checkbox" class="geojson-layer" data-name="Transect" data-url="/assets/cesium-wms-3d-app/Transect.geojson">Transect</label>
     </div>
     <div id="toolbar">
         <button id="drawPoint">📍 Marker</button>

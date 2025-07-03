@@ -64,6 +64,7 @@ function switchBaseMap(type) {
 
 // Object to keep track of which layers are on
 const activeLayers = {};
+const geojsonSources = {};
 
 function addWmsLayer(layerName) {
     return new Cesium.WebMapServiceImageryProvider({
@@ -92,19 +93,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.querySelectorAll('#layerControls input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', function () {
+    checkbox.addEventListener('change', async function () {
         const layerName = this.value;
 
-        if (this.checked) {
-            // Add layer
-            const provider = addWmsLayer(layerName);
-            const imageryLayer = viewer.imageryLayers.addImageryProvider(provider);
-            activeLayers[layerName] = imageryLayer;
-        } else {
-            // Remove layer
-            if (activeLayers[layerName]) {
-                viewer.imageryLayers.remove(activeLayers[layerName], true);
-                delete activeLayers[layerName];
+        // WMS LAYER
+        if (this.classList.contains('wms-layer')) {
+            if (this.checked) {
+                const provider = addWmsLayer(layerName);
+                const imageryLayer = viewer.imageryLayers.addImageryProvider(provider);
+                activeLayers[layerName] = imageryLayer;
+            } else {
+                if (activeLayers[layerName]) {
+                    viewer.imageryLayers.remove(activeLayers[layerName], true);
+                    delete activeLayers[layerName];
+                }
+            }
+        }
+
+        // GEOJSON LAYER
+        if (this.classList.contains('geojson-layer')) {
+            const name = this.dataset.name || layerName;
+            const url = this.dataset.url;
+
+            if (this.checked) {
+                const dataSource = await Cesium.GeoJsonDataSource.load(url, {
+                    stroke: Cesium.Color.RED,
+                    fill: Cesium.Color.YELLOW.withAlpha(0.3),
+                    strokeWidth: 2
+                });
+                geojsonSources[name] = dataSource;
+                viewer.dataSources.add(dataSource);
+                // viewer.flyTo(dataSource); // เพิ่มถ้าต้องการให้กล้องบินไป
+            } else {
+                if (geojsonSources[name]) {
+                    viewer.dataSources.remove(geojsonSources[name], true);
+                    delete geojsonSources[name];
+                }
             }
         }
     });
