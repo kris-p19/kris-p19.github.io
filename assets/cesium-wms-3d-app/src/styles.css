@@ -18,5 +18,5 @@
       .cesium-viewer-timelineContainer,
       .cesium-viewer-fullscreenContainer,
       .cesium-viewer-bottom {
-            display:none;
+            display:none !important;
       }
