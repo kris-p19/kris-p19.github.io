@@ -66,26 +66,16 @@ function switchBaseMap(type) {
 const activeLayers = {};
 const geojsonSources = {};
 
-function addWmsLayer(layerName) {
+function addWmsLayer(wmsUrl, layerName) {
     return new Cesium.WebMapServiceImageryProvider({
-        url: 'https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms',
-        layers: `dmcr_postgres:${layerName}`,
+        url: wmsUrl,
+        layers: `${layerName}`,
         parameters: {
             service: 'WMS',
             transparent: true,
             format: 'image/png'
         }
     });
-}
-
-function computeHeading(from, to) {
-    const cartoFrom = Cesium.Cartographic.fromCartesian(from);
-    const cartoTo = Cesium.Cartographic.fromCartesian(to);
-    const dLon = cartoTo.longitude - cartoFrom.longitude;
-    const y = Math.sin(dLon) * Math.cos(cartoTo.latitude);
-    const x = Math.cos(cartoFrom.latitude) * Math.sin(cartoTo.latitude) -
-        Math.sin(cartoFrom.latitude) * Math.cos(cartoTo.latitude) * Math.cos(dLon);
-    return Math.atan2(y, x);
 }
 
 
@@ -106,11 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
 document.querySelectorAll('#layerControls input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', async function () {
         const layerName = this.value;
+        const wmsUrl = this.dataset.wmsuri || '';
 
         // WMS LAYER
         if (this.classList.contains('wms-layer')) {
             if (this.checked) {
-                const provider = addWmsLayer(layerName);
+                const provider = addWmsLayer(wmsUrl,layerName);
                 const imageryLayer = viewer.imageryLayers.addImageryProvider(provider);
                 activeLayers[layerName] = imageryLayer;
             } else {
