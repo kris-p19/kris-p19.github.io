@@ -72,7 +72,7 @@ viewer.resolutionScale = window.devicePixelRatio; // ใช้ scale ตาม�
 
 // กำหนดศูนย์กลางกล้อง + ความสูง
 viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(100.523186, 13.736717, 1500000),
+    destination: Cesium.Cartesian3.fromDegrees(11.330682, 100.634357, 2000000),
     orientation: {
         heading: Cesium.Math.toRadians(0.0),
         pitch: Cesium.Math.toRadians(-90.0),
