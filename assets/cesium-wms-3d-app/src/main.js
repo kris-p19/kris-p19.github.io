@@ -17,7 +17,7 @@ const googleLayer = new Cesium.UrlTemplateImageryProvider({
 });
 
 // เพิ่ม OSM เป็นค่าเริ่มต้น
-let currentBaseLayer = viewer.imageryLayers.addImageryProvider(osmLayer);
+let currentBaseLayer = viewer.imageryLayers.addImageryProvider(googleLayer);
 
 // ฟังก์ชันสลับ basemap
 async function switchBaseMap(provider) {
@@ -61,7 +61,7 @@ Promise.all([
     })
 ]).then((dataSources) => {
     dataSources.forEach((dataSource) => viewer.dataSources.add(dataSource));
-    viewer.flyTo(dataSources[0]);
+    // viewer.flyTo(dataSources[0]);
 }).catch((error) => {
     console.error("เกิดข้อผิดพลาดในการโหลด GeoJSON:", error);
 });
