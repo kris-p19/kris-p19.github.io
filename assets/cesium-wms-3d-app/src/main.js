@@ -78,6 +78,17 @@ function addWmsLayer(layerName) {
     });
 }
 
+function computeHeading(from, to) {
+    const cartoFrom = Cesium.Cartographic.fromCartesian(from);
+    const cartoTo = Cesium.Cartographic.fromCartesian(to);
+    const dLon = cartoTo.longitude - cartoFrom.longitude;
+    const y = Math.sin(dLon) * Math.cos(cartoTo.latitude);
+    const x = Math.cos(cartoFrom.latitude) * Math.sin(cartoTo.latitude) -
+        Math.sin(cartoFrom.latitude) * Math.cos(cartoTo.latitude) * Math.cos(dLon);
+    return Math.atan2(y, x);
+}
+
+
 // Event listener สำหรับ Basemap dropdown
 document.addEventListener('DOMContentLoaded', function () {
     const select = document.getElementById("basemapSelect");
@@ -115,6 +126,7 @@ document.querySelectorAll('#layerControls input[type="checkbox"]').forEach(check
             const name = this.dataset.name || layerName;
             const url = this.dataset.url;
             const stroke = this.dataset.stroke || '#FFFFFF';
+            const label = this.dataset.label || layerName;
 
             if (this.checked) {
                 const dataSource = await Cesium.GeoJsonDataSource.load(url, {
@@ -125,6 +137,47 @@ document.querySelectorAll('#layerControls input[type="checkbox"]').forEach(check
                 geojsonSources[name] = dataSource;
                 viewer.dataSources.add(dataSource);
                 viewer.flyTo(dataSource); // เพิ่มถ้าต้องการให้กล้องบินไป
+                // ===== 🎯 เพิ่ม Labels ตามแนวเส้น =====
+                dataSource.entities.values.forEach(entity => {
+                    if (entity.polyline) {
+                        const positions = entity.polyline.positions.getValue(Cesium.JulianDate.now());
+                        if (positions.length >= 2) {
+                            const midIndex = Math.floor(positions.length / 2);
+                            const start = positions[midIndex - 1];
+                            const end = positions[midIndex];
+                            const mid = Cesium.Cartesian3.midpoint(start, end, new Cesium.Cartesian3());
+
+                            // คำนวณ heading (radians)
+                            const cartoStart = Cesium.Cartographic.fromCartesian(start);
+                            const cartoEnd = Cesium.Cartographic.fromCartesian(end);
+                            const heading = Math.atan2(
+                                Cesium.Math.toDegrees(cartoEnd.longitude - cartoStart.longitude),
+                                Cesium.Math.toDegrees(cartoEnd.latitude - cartoStart.latitude)
+                            );
+
+                            viewer.entities.add({
+                                position: mid,
+                                label: {
+                                    text: label,
+                                    font: '12px sans-serif',
+                                    fillColor: Cesium.Color.WHITE,
+                                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                                    outlineColor: Cesium.Color.BLACK,
+                                    outlineWidth: 2,
+                                    verticalOrigin: Cesium.VerticalOrigin.CENTER,
+                                    horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+                                    pixelOffset: new Cesium.Cartesian2(0, 0),
+                                    scale: 1.0,
+                                    showBackground: false,
+                                    backgroundColor: Cesium.Color.BLACK.withAlpha(0.5),
+                                    distanceDisplayCondition: new Cesium.DistanceDisplayCondition(0.0, 500000.0),
+                                    rotation: -heading * (Math.PI / 180),  // <== ใช้ rotation!
+                                    disableDepthTestDistance: Number.POSITIVE_INFINITY
+                                }
+                            });
+                        }
+                    }
+                });
             } else {
                 if (geojsonSources[name]) {
                     viewer.dataSources.remove(geojsonSources[name], true);
