@@ -10,6 +10,14 @@
 </head>
 <body>
     <div id="cesiumContainer" style="width: 100%; height: 100vh;"></div>
+    <div id="basemapControls">
+        <label for="basemapSelect">🗺️ Basemap:</label>
+        <select id="basemapSelect">
+            <option value="google">Google Satellite</option>
+            <option value="osm">OpenStreetMap</option>
+            <option value="esri">Esri World Imagery</option>
+        </select>
+    </div>
     <div id="layerControls">
         <strong>เลือกชั้นข้อมูล (TCS.WMS):</strong><br>
         <label><input type="checkbox" value="coastline_2567_final">CM. Line ปี พ.ศ. 2567</label>
@@ -25,6 +33,20 @@
         <label><input type="checkbox" value="shoreline_2554">Shoreline ปี พ.ศ. 2554</label>
         <label><input type="checkbox" value="shoreline_2548">Shoreline ปี พ.ศ. 2548</label>
     </div>
-    <script src="/assets/cesium-wms-3d-app/src/main.js"></script>
+    <div id="toolbar">
+        <button id="drawPoint">📍 Marker</button>
+        <button id="drawLine">📏 Line</button>
+        <button id="drawPolygon">🔺 Polygon</button>
+        <button id="measure">📐 วัดระยะ</button>
+        <button id="clearDrawings">🗑️ ล้างทั้งหมด</button>
+    </div>
+    <div id="coords"></div>
+    <div id="cameraControls">
+        <button id="rotateLeft">↶ หมุนซ้าย</button>
+        <button id="rotateRight">↷ หมุนขวา</button>
+        <button id="resetView">🔄 รีเซ็ตมุมกล้อง</button>
+    </div>
+
+    <script type="module" src="/assets/cesium-wms-3d-app/src/main.js"></script>
 </body>
 </html>
