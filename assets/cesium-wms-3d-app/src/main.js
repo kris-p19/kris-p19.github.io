@@ -1,12 +1,6 @@
 // ตั้งค่า Access Token ของ Cesium Ion
 Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlNzdmMDIwOS0zZTViLTRhMTItOWYyOS01OWYyMmM4MTBjNTgiLCJpZCI6MzExMzA0LCJpYXQiOjE3NDk2NDY1MzB9.OkebqwZnlttjqT-wNs_8OrVK2KEZ1GLmHLGml-JQpZY';
 
-// สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
-const viewer = new Cesium.Viewer("cesiumContainer", {
-    terrain: Cesium.Terrain.fromWorldTerrain(), // Cesium.Terrain.fromWorldTerrain(),
-    baseLayerPicker: false
-});
-
 // เก็บ basemap layers ไว้เพื่อสลับ
 const osmLayer = new Cesium.UrlTemplateImageryProvider({
     url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -14,6 +8,17 @@ const osmLayer = new Cesium.UrlTemplateImageryProvider({
 });
 const googleLayer = new Cesium.UrlTemplateImageryProvider({
     url: "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+});
+
+// สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
+// const viewer = new Cesium.Viewer("cesiumContainer", {
+//     terrain: Cesium.Terrain.fromWorldTerrain(), // Cesium.Terrain.fromWorldTerrain(),
+//     baseLayerPicker: false
+// });
+const viewer = new Cesium.Viewer("cesiumContainer", {
+  imageryProvider: googleLayer,             // ใช้ Google Maps tile
+  baseLayerPicker: false,                    // ปิด picker เพื่อป้องกัน user เปลี่ยน base layer
+  terrainProvider: new Cesium.EllipsoidTerrainProvider(),  // พื้นผิวเรียบ ไม่มี terrain จริง
 });
 
 // เพิ่ม OSM เป็นค่าเริ่มต้น
