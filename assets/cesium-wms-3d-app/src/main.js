@@ -114,16 +114,17 @@ document.querySelectorAll('#layerControls input[type="checkbox"]').forEach(check
         if (this.classList.contains('geojson-layer')) {
             const name = this.dataset.name || layerName;
             const url = this.dataset.url;
+            const stroke = this.dataset.stroke || '#000000';
 
             if (this.checked) {
                 const dataSource = await Cesium.GeoJsonDataSource.load(url, {
-                    stroke: Cesium.Color.RED,
+                    stroke: Cesium.Color.fromCssColorString(stroke),
                     fill: Cesium.Color.YELLOW.withAlpha(0.3),
                     strokeWidth: 2
                 });
                 geojsonSources[name] = dataSource;
                 viewer.dataSources.add(dataSource);
-                // viewer.flyTo(dataSource); // เพิ่มถ้าต้องการให้กล้องบินไป
+                viewer.flyTo(dataSource); // เพิ่มถ้าต้องการให้กล้องบินไป
             } else {
                 if (geojsonSources[name]) {
                     viewer.dataSources.remove(geojsonSources[name], true);
