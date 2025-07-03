@@ -12,10 +12,18 @@ const googleLayer = new Cesium.UrlTemplateImageryProvider({
     url: "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
     credit: '© Google Satellite'
 });
-
 const esri = new Cesium.UrlTemplateImageryProvider({
     url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     credit: '© Esri'
+});
+const cartoPositron = new Cesium.UrlTemplateImageryProvider({
+    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    subdomains: ['a', 'b', 'c', 'd'],
+    credit: '© CartoDB'
+});
+const googleLayer2 = new Cesium.UrlTemplateImageryProvider({
+    url: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+    credit: '© Google Satellite'
 });
 
 export const viewer = new Cesium.Viewer("cesiumContainer", {
@@ -36,15 +44,18 @@ function switchBaseMap(type) {
         case 'osm':
             currentBaseMapLayer = viewer.imageryLayers.addImageryProvider(osmLayer, 0);
             break;
-
         case 'google':
             currentBaseMapLayer = viewer.imageryLayers.addImageryProvider(googleLayer, 0);
             break;
-
         case 'esri':
             currentBaseMapLayer = viewer.imageryLayers.addImageryProvider(esri, 0);
             break;
-
+        case 'carto':
+            currentBaseMapLayer = viewer.imageryLayers.addImageryProvider(cartoPositron, 0);
+            break;
+        case 'google2':
+            currentBaseMapLayer = viewer.imageryLayers.addImageryProvider(googleLayer2, 0);
+            break;
         default:
             currentBaseMapLayer = viewer.imageryLayers.addImageryProvider(googleLayer, 0);
             break;
