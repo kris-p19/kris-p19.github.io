@@ -3,7 +3,7 @@ Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOi
 
 // สร้าง Viewer พร้อมตั้งค่าที่เหมาะกับเครื่องสเปกต่ำ
 const viewer = new Cesium.Viewer("cesiumContainer", {
-    terrain: false, // ไม่ใช้ terrain เพื่อลดโหลด
+    terrain: new Cesium.EllipsoidTerrainProvider(), // ไม่ใช้ terrain เพื่อลดโหลด
     baseLayerPicker: false,
     requestRenderMode: true,
     maximumRenderTimeChange: Infinity
