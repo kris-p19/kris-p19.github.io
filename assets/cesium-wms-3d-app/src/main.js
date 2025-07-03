@@ -45,7 +45,7 @@ viewer.imageryLayers.addImageryProvider(
 );
 
 // ปรับ Scene เพื่อให้ GeoJSON ชัดเจน
-viewer.scene.globe.depthTestAgainstTerrain = false;
+viewer.scene.globe.depthTestAgainstTerrain = true;
 
 // โหลด GeoJSON และจัดการ Error
 Promise.all([
