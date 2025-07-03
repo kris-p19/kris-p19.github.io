@@ -3,7 +3,7 @@ Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOi
 
 // สร้าง Viewer พร้อม Terrain และปิด baseLayerPicker
 const viewer = new Cesium.Viewer("cesiumContainer", {
-    terrain: false, // Cesium.Terrain.fromWorldTerrain(),
+    terrain: Cesium.Terrain.fromWorldTerrain(), // Cesium.Terrain.fromWorldTerrain(),
     baseLayerPicker: false
 });
 
