@@ -27,36 +27,6 @@ const wmsProvider = new Cesium.WebMapServiceImageryProvider({
     }
 });
 
-// รอให้ WMS พร้อมก่อนแสดง
-wmsProvider.readyPromise
-    .then(() => {
-        viewer.imageryLayers.addImageryProvider(wmsProvider);
-    })
-    .catch((error) => {
-        console.error("WMS provider โหลดไม่สำเร็จ:", error);
-    });
-
-// ปรับให้ GeoJSON ไม่ซ้อน Terrain
-viewer.scene.globe.depthTestAgainstTerrain = true;
-
-// โหลด GeoJSON 2 ชั้น พร้อมจัดการข้อผิดพลาด
-Promise.all([
-    Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Coasalline.geojson', {
-        stroke: Cesium.Color.RED,
-        fill: Cesium.Color.RED.withAlpha(0.5),
-        strokeWidth: 2
-    }),
-    Cesium.GeoJsonDataSource.load('/assets/cesium-wms-3d-app/Transect.geojson', {
-        stroke: Cesium.Color.BLUE,
-        fill: Cesium.Color.BLUE.withAlpha(0.5),
-        strokeWidth: 2
-    })
-]).then((dataSources) => {
-    dataSources.forEach((dataSource) => viewer.dataSources.add(dataSource));
-}).catch((error) => {
-    console.error("เกิดข้อผิดพลาดในการโหลด GeoJSON:", error);
-});
-
 // ปรับภาพให้เร็วขึ้น (ลดความละเอียดลงเล็กน้อย)
 viewer.resolutionScale = 0.75;
 viewer.scene.fxaa = false;
