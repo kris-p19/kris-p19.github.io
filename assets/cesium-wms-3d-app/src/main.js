@@ -66,10 +66,11 @@ Promise.all([
     console.error("เกิดข้อผิดพลาดในการโหลด GeoJSON:", error);
 });
 
+viewer.scene.fxaa = true; // เปิด Antialiasing
+viewer.scene.postProcessStages.fxaa.enabled = true;
+viewer.resolutionScale = window.devicePixelRatio; // ใช้ scale ตามจอแสดงผลจริง
+
 // กำหนดศูนย์กลางกล้อง + ความสูง
-// viewer.camera.flyTo({
-//     destination: Cesium.Cartesian3.fromDegrees(100.326790, 13.043242, 2000000)
-// });
 viewer.camera.flyTo({
     destination: Cesium.Cartesian3.fromDegrees(100.523186, 13.736717, 1500000),
     orientation: {
