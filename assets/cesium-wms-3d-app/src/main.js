@@ -114,7 +114,7 @@ document.querySelectorAll('#layerControls input[type="checkbox"]').forEach(check
         if (this.classList.contains('geojson-layer')) {
             const name = this.dataset.name || layerName;
             const url = this.dataset.url;
-            const stroke = this.dataset.stroke || '#000000';
+            const stroke = this.dataset.stroke || '#FFFFFF';
 
             if (this.checked) {
                 const dataSource = await Cesium.GeoJsonDataSource.load(url, {
