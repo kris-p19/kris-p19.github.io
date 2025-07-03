@@ -16,6 +16,7 @@
       }
       .cesium-viewer-animationContainer,
       .cesium-viewer-timelineContainer,
-      .cesium-viewer-fullscreenContainer {
+      .cesium-viewer-fullscreenContainer,
+      .cesium-viewer-bottom {
             display:none;
       }
