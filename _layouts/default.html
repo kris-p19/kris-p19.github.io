@@ -46,10 +46,36 @@
     </script>
     <!-- Google adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3203802670121740" crossorigin="anonymous"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <style>
+        .parent {
+          display: flex;
+          justify-content: center; /* horizontally center */
+          align-items: flex-start; /* align to top */
+          height: 100vh; /* or any height */
+          position: relative;
+        }
+        
+        .child {
+          /* optional styling */
+        }
 
+    </style>
 </head>
 
 <body class="starter-page-page">
+    <div class="parent">
+      <div class="child">
+          <amp-ad
+                 layout="fixed"
+                 width="600"
+                 height="70"
+                 type="adsense"
+                 data-ad-client="ca-pub-3203802670121740"
+                 data-ad-slot="4348689913">
+            </amp-ad>
+      </div>
+    </div>
     <header id="header" class="header position-relative">
         <div class="container-fluid container-xl position-relative">
 
