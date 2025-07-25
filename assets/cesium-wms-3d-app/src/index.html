@@ -31,11 +31,26 @@
             border: 1px solid #ccc;
             cursor: pointer;
         }
+        #basemap-select {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+            z-index: 1000;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 
 <body>
     <button id="toggle-3d">Toggle 3D</button>
+    <select id="basemap-select">
+        <option value="osm">🗺️ OpenStreetMap</option>
+        <option value="esri">🌎 Esri World Imagery</option>
+        <option value="google">🛰️ Google Satellite</option>
+    </select>
+
     <div id="map" class="map"></div>
     <script>
         // Register projection (EPSG:4326)
@@ -46,12 +61,26 @@
         const osmLayer = new ol.layer.Tile({
             source: new ol.source.OSM()
         });
+        const esriLayer = new ol.layer.Tile({
+            source: new ol.source.XYZ({
+                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                attributions: 'Tiles © Esri'
+            }),
+            visible: false
+        });
+        const googleLayer = new ol.layer.Tile({
+            source: new ol.source.XYZ({
+                url: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+                attributions: 'Map data © Google'
+            }),
+            visible: false
+        });
 
         // View with EPSG:4326
         const view = new ol.View({
             projection: proj4326,
-            center: [100.5018, 13.7563], // LonLat (Bangkok)
-            zoom: 1
+            center: [100.611793, 7.191323], // LonLat (Bangkok)
+            zoom: 10
         });
 
         const vectorSource = new ol.source.Vector({
@@ -71,7 +100,7 @@
 
         const map = new ol.Map({
             target: 'map',
-            layers: [osmLayer, vectorLayer],
+            layers: [osmLayer, esriLayer, googleLayer, vectorLayer],
             view: view
         });
 
@@ -85,18 +114,14 @@
         const modify = new ol.interaction.Modify({ source: vectorSource });
         map.addInteraction(modify);
 
-        // Select เส้นเพื่อรอการลบ
-        const select = new ol.interaction.Select();
-        map.addInteraction(select);
+        document.getElementById('basemap-select').addEventListener('change', function () {
+            const selected = this.value;
 
-        // ลบ feature เมื่อกดปุ่ม Delete
-        document.addEventListener('keydown', function (evt) {
-            if (evt.key === 'Delete') {
-                const selected = select.getFeatures();
-                selected.forEach(f => vectorSource.removeFeature(f));
-                selected.clear();
-            }
+            osmLayer.setVisible(selected === 'osm');
+            esriLayer.setVisible(selected === 'esri');
+            googleLayer.setVisible(selected === 'google');
         });
+
 
         document.getElementById('toggle-3d').addEventListener('click', function () {
             ol3d.setEnabled(!ol3d.getEnabled());
