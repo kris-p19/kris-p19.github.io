@@ -1,63 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>DroneDEV</title>
-    <link rel="stylesheet" href="styles.css?version=1.0">
-    <link href="/assets/img/logo.png" rel="icon">
-    <link href="/assets/img/logo.png" rel="apple-touch-icon">
-    <script src="/assets/cesium-wms-3d-app/src/Cesium-1.118/Build/Cesium/Cesium.js"></script>
-    <link href="/assets/cesium-wms-3d-app/src/Cesium-1.118/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
-</head>
-<body>
-    <div id="cesiumContainer" style="width: 100%; height: 100vh;"></div>
-    <div id="basemapControls">
-        <label for="basemapSelect">🗺️ Basemap:</label>
-        <select id="basemapSelect">
-            <option value="google2">Google Satellite</option>
-            <option value="google">Google Hybrid</option>
-            <option value="osm">OpenStreetMap</option>
-            <option value="esri">Esri World Imagery</option>
-            <option value="carto">Carto Positron</option>
-        </select>
-    </div>
-    <div id="layerControls">
-        <strong>เลือกชั้นข้อมูล (TCS.WMS):</strong><br>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2565" value="dmcr_postgres:etc_coastal_status_2565">สถานภาพชายฝั่ง ปี พ.ศ. 2565</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2566" value="dmcr_postgres:etc_coastal_status_2566_2">สถานภาพชายฝั่ง ปี พ.ศ. 2566</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2567" value="dmcr_postgres:coastline_2567_final">CM. Line ปี พ.ศ. 2567</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2566" value="dmcr_postgres:coastline_2566_nopord">CM. Line ปี พ.ศ. 2566</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2565" value="dmcr_postgres:coastline_2565_final_v2">CM. Line ปี พ.ศ. 2565</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2564" value="dmcr_postgres:coastline_2564_v2">CM. Line ปี พ.ศ. 2564</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2563" value="dmcr_postgres:coastline_2563">CM. Line ปี พ.ศ. 2563</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2562" value="dmcr_postgres:coastline_2562">CM. Line ปี พ.ศ. 2562</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2559" value="dmcr_postgres:shoreline_2559">Shoreline ปี พ.ศ. 2559</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2558" value="dmcr_postgres:shoreline_2558">Shoreline ปี พ.ศ. 2558</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2557" value="dmcr_postgres:shoreline_2557">Shoreline ปี พ.ศ. 2557</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2556" value="dmcr_postgres:shoreline_2556">Shoreline ปี พ.ศ. 2556</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2554" value="dmcr_postgres:shoreline_2554">Shoreline ปี พ.ศ. 2554</label>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://tcs.dmcr.go.th/geoserver/dmcr_postgres/wms" data-label="2548" value="dmcr_postgres:shoreline_2548">Shoreline ปี พ.ศ. 2548</label>
-        <hr>
-        <strong>เลือกชั้นข้อมูล (ออสเตรียเลีย.WMS):</strong>
-        <label><input type="checkbox" class="wms-layer" data-wmsuri="https://geoserver.dea.ga.gov.au/geoserver/dea/wms" data-label="2548" value="AnnualShorelines">AnnualShorelines</label>
-        <hr>
-        <strong>GeoJSON Layers:</strong><br>
-        <label><input type="checkbox" class="geojson-layer" data-label="2568" data-stroke="#F12B00" data-name="SKA_DEM_Clip" data-url="/assets/cesium-wms-3d-app/shoreline_0m4326.geojson">SKA_DEM_Clip GDAL_contour elevation = 0</label>
-        <label><input type="checkbox" class="geojson-layer" data-label="2567" data-stroke="#001AF1" data-name="Transect" data-url="/assets/cesium-wms-3d-app/Transect.geojson">Demo Transect ปี พ.ศ. 2567</label>
-    </div>
-    <div id="toolbar">
-        <button id="drawPoint">📍 Marker</button>
-        <button id="drawLine">📏 Line</button>
-        <button id="drawPolygon">🔺 Polygon</button>
-        <button id="measure">📐 วัดระยะ</button>
-        <button id="clearDrawings">🗑️ ล้างทั้งหมด</button>
-        <button id="rotateLeft">↶ หมุนซ้าย</button>
-        <button id="rotateRight">↷ หมุนขวา</button>
-        <button id="resetView">🔄 รีเซ็ตมุมกล้อง</button>
-    </div>
-    <div id="coords"></div>
+<html>
 
-    <script type="module" src="/assets/cesium-wms-3d-app/src/main.js?version=1.0"></script>
+<head>
+    <title>OL-Cesium - Custom Projection (EPSG:4326)</title>
+    <meta charset="utf-8" />
+
+    <script src="https://unpkg.com/ol@latest/dist/ol.js"></script>
+    <link href="https://unpkg.com/ol@latest/ol.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/ol-cesium@latest/dist/olcesium.js"></script>
+    <script src="https://unpkg.com/proj4@2.8.0/dist/proj4.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Cesium.js"></script>
+    <style>
+        html,
+        body,
+        #map {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        #toggle-3d {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+            z-index: 1000;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggle-3d">Toggle 3D</button>
+    <div id="map" class="map"></div>
+    <script>
+        // Register projection (EPSG:4326)
+        ol.proj.proj4.register(proj4);
+        const proj4326 = ol.proj.get('EPSG:4326');
+
+        // Base layer using OSM
+        const osmLayer = new ol.layer.Tile({
+            source: new ol.source.OSM()
+        });
+
+        // View with EPSG:4326
+        const view = new ol.View({
+            projection: proj4326,
+            center: [100.5018, 13.7563], // LonLat (Bangkok)
+            zoom: 1
+        });
+
+        const vectorSource = new ol.source.Vector({
+            url: 'shoreline_0m4326.geojson', // 🔁 Your file path here
+            format: new ol.format.GeoJSON()
+        });
+
+        const vectorLayer = new ol.layer.Vector({
+            source: vectorSource,
+            style: new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: 'red',
+                    width: 2
+                })
+            })
+        });
+
+        const map = new ol.Map({
+            target: 'map',
+            layers: [osmLayer, vectorLayer],
+            view: view
+        });
+
+        // Enable OL-Cesium 3D
+        const ol3d = new olcs.OLCesium({ map: map });
+        const scene = ol3d.getCesiumScene();
+        scene.globe.depthTestAgainstTerrain = true;
+        ol3d.setEnabled(false); // เปิดโหมด 3D
+
+        // Modify เส้น
+        const modify = new ol.interaction.Modify({ source: vectorSource });
+        map.addInteraction(modify);
+
+        // Select เส้นเพื่อรอการลบ
+        const select = new ol.interaction.Select();
+        map.addInteraction(select);
+
+        // ลบ feature เมื่อกดปุ่ม Delete
+        document.addEventListener('keydown', function (evt) {
+            if (evt.key === 'Delete') {
+                const selected = select.getFeatures();
+                selected.forEach(f => vectorSource.removeFeature(f));
+                selected.clear();
+            }
+        });
+
+        document.getElementById('toggle-3d').addEventListener('click', function () {
+            ol3d.setEnabled(!ol3d.getEnabled());
+            this.textContent = ol3d.getEnabled() ? 'Disable 3D' : 'Enable 3D';
+        });
+    </script>
 </body>
+
 </html>
