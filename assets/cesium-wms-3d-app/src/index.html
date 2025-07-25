@@ -91,6 +91,7 @@
         <option value="Box">กล่อง (Box)</option>
         <option value="Text">ข้อความ (Text)</option>
     </select>
+    <!-- <pre id="featureInfo"></pre> -->
 
     <div id="map" class="map"></div>
     <script>
@@ -170,11 +171,18 @@
         ol3d.setEnabled(false); // เปิดโหมด 3D
 
         // Modify เส้น
-        const modify = new ol.interaction.Modify({ source: vectorSource });
-        map.addInteraction(modify);
+        // const modify = new ol.interaction.Modify({ source: vectorSource });
+        // map.addInteraction(modify);
+
+        const allFeatures = new ol.Collection();
+        allFeatures.extend(drawSource.getFeatures());
+        allFeatures.extend(vectorSource.getFeatures());
+
+        drawSource.on('addfeature', e => allFeatures.push(e.feature));
+        vectorSource.on('addfeature', e => allFeatures.push(e.feature));
 
         // Modify & Select
-        const modifyDraw = new ol.interaction.Modify({ source: drawSource });
+        const modifyDraw = new ol.interaction.Modify({ features: allFeatures });
         map.addInteraction(modifyDraw);
 
         const select = new ol.interaction.Select();
@@ -232,6 +240,13 @@
             map.addInteraction(drawInteraction);
         }
 
+        function updateFeatureInfo() {
+            const features = vectorSource.getFeatures();
+            const info = features.map(f => f.getGeometry().getCoordinates());
+            console.log(JSON.stringify(info));
+            // document.getElementById("featureInfo").textContent = JSON.stringify(info); //JSON.stringify(info, null, 2);      
+        }
+
         document.getElementById('draw-type').addEventListener('change', function () {
             addDrawInteraction(this.value);
         });
@@ -252,6 +267,17 @@
             }
         });
 
+        // Bind update on every change of features in vectorSource
+        // vectorSource.on('changefeature', updateFeatureInfo);
+        // vectorSource.on('addfeature', updateFeatureInfo);
+        // vectorSource.on('removefeature', updateFeatureInfo);
+        // vectorSource.on('modifyend', updateFeatureInfo);
+        modifyDraw.on('modifyend', function (e) {
+            updateFeatureInfo();
+        });
+
+        // Call once on load
+        updateFeatureInfo();
 
         document.getElementById('toggle-3d').addEventListener('click', function () {
             ol3d.setEnabled(!ol3d.getEnabled());
