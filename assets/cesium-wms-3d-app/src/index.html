@@ -16,6 +16,7 @@
     <script src="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Cesium.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
         html,
         body,
         #map {
@@ -26,15 +27,20 @@
             font-family: 'Roboto', sans-serif;
         }
         #controls {
-            position: absolute;
-            top: 10px;
-            left: 50px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
             z-index: 1000;
             background-color: rgba(255, 255, 255, 0.8);
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             max-width: 80%;
+            height: 100%;
+            overflow: auto;
+        }
+        .ol-zoom.ol-unselectable.ol-control {
+            margin-right: 50px;
         }
         #toggle-3d {
             display: block;
@@ -45,6 +51,7 @@
             border: 1px solid #ccc;
             cursor: pointer;
             font-family: 'Roboto', sans-serif;
+            border-radius: 5px;
         }
         #basemap-select {
             display: block;
@@ -54,6 +61,7 @@
             background-color: white;
             border: 1px solid #ccc;
             font-family: 'Roboto', sans-serif;
+            border-radius: 5px;
         }
         #description {
             display: block;
@@ -63,6 +71,7 @@
             background-color: white;
             border: 1px solid #ccc;
             font-family: 'Roboto', sans-serif;
+            border-radius: 5px;
         }
         #draw-type {
             display: block;
@@ -72,11 +81,27 @@
             background-color: white;
             border: 1px solid #ccc;
             font-family: 'Roboto', sans-serif;
+            border-radius: 5px;
+        }
+        #toggle-control {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin: 0;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
+    <button id="toggle-control">
+        <span class="material-symbols-outlined">arrow_back</span>
+    </button>
     <div id="controls">
         <button id="toggle-3d">3D Disable</button>
         <select id="basemap-select">
@@ -289,6 +314,12 @@
         document.getElementById('toggle-3d').addEventListener('click', function () {
             ol3d.setEnabled(!ol3d.getEnabled());
             this.textContent = ol3d.getEnabled() ? '3D Enable' : '3D Disable';
+        });
+
+        document.getElementById('toggle-control').addEventListener('click', function () {
+            const controls = document.getElementById('controls');
+            controls.style.display = controls.style.display === 'none' ? 'block' : 'none';
+            this.querySelector('span').textContent = controls.style.display === 'none' ? 'menu' : 'arrow_back';
         });
     </script>
 </body>
