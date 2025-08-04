@@ -1,0 +1,31 @@
+#fbTopBar {
+    background-color: rgb(255, 255, 255) !important;
+    filter: drop-shadow(0px 0px 0px black) !important;
+}
+
+#fbToolBar {
+    background-color: #222B4D !important;
+    filter: drop-shadow(0px 0px 2px black) !important;
+}
+
+#logoBar>img {
+    margin-left: 35px !important;
+}
+
+#bookContainer {
+    background: rgb(255, 255, 255) !important;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+img.hover-effect {
+    transition: all 0.4s ease;
+    width: 100%;
+    filter: drop-shadow(0px 1px 1.5px black);
+    border-radius: 10px;
+}
+
+img.hover-effect:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05) contrast(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
