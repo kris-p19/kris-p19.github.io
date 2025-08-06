@@ -107,9 +107,11 @@
         $(document).ready(function() {
             $('.link-item-oo').each(function() {
                 let href = $(this).attr('href');
-                if (!href) return; // skip ถ้าไม่มี href
+                if (!href) return;
                 let separator = href.includes('?') ? '&' : '?';
-                let newHref = href + separator + 'v=' + new Date().getTime();
+                let timestamp = new Date().getTime();
+                let encoded = btoa(timestamp.toString()).replace(/=+$/, ''); // ลบ "=="
+                let newHref = href + separator + 'v=' + encoded;
                 $(this).attr('href', newHref);
             });
         });
