@@ -68,7 +68,7 @@ navTechnology: "active"
                 </label>
                 <textarea
                     id="qr_text"
-                    class="flex-1 min-h-[120px] resize-y rounded-xl bg-slate-950/70 border border-slate-700 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500 placeholder:text-slate-500"
+                    class="flex-1 min-h-[120px] resize-y rounded-xl bg-slate-950/20 border border-slate-700 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500 placeholder:text-slate-500"
                     placeholder="เช่น https://fintechxhub.com หรือ ข้อความทั่วไป"
                 >https://fintechxhub.com</textarea>
                 <p class="text-xs text-slate-500">
@@ -84,7 +84,7 @@ navTechnology: "active"
                     </label>
                     <select
                     id="qr_size"
-                    class="rounded-lg bg-slate-950/70 border border-slate-700 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500"
+                    class="rounded-lg bg-slate-950/20 border border-slate-700 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500"
                     >
                     <option value="180">เล็ก (180)</option>
                     <option value="240" selected>ปกติ (240)</option>
@@ -100,7 +100,7 @@ navTechnology: "active"
                     </label>
                     <select
                     id="qr_ecc"
-                    class="rounded-lg bg-slate-950/70 border border-slate-700 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500"
+                    class="rounded-lg bg-slate-950/20 border border-slate-700 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500"
                     >
                     <option value="L">L - ต่ำ (ข้อมูลเยอะ)</option>
                     <option value="M" selected>M - ปกติ</option>
@@ -119,7 +119,7 @@ navTechnology: "active"
                     min="0"
                     max="16"
                     value="4"
-                    class="rounded-lg bg-slate-950/70 border border-slate-700 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500"
+                    class="rounded-lg bg-slate-950/20 border border-slate-700 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-brand-500/80 focus:border-brand-500"
                     />
                 </div>
                 <!-- Color (dark) -->
@@ -131,7 +131,7 @@ navTechnology: "active"
                     type="color"
                     id="qr_color_dark"
                     value="#020617"
-                    class="rounded-lg bg-slate-950/70 border border-slate-700 px-2 py-1 h-[38px] outline-none cursor-pointer"
+                    class="rounded-lg bg-slate-950/20 border border-slate-700 px-2 py-1 h-[38px] outline-none cursor-pointer"
                     />
                 </div>
                 </div>
