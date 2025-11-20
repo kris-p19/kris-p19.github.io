@@ -6,7 +6,6 @@ keywords: "เรียนรู้ Forex, เทรด Forex สำหรับ
 author: "FintechXHub"
 canonical: "https://fintechxhub.com/investing/how-to-start-forex-trading"
 urlx: "https://fintechxhub.com/investing/how-to-start-forex-trading"
-image: "https://s6.imgcdn.dev/YwWn4h.jpg"
 ---
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -16,7 +15,7 @@ image: "https://s6.imgcdn.dev/YwWn4h.jpg"
                 <span>หมวดหมู่: Forex Guide</span>
                 <span>เผยแพร่: 2 พฤษภาคม 2025</span>
             </div>
-            <a href="https://one.exnesstrack.org/a/rql59dgwb3" target="_blank" rel="noopener noreferrer"><img src="https://s6.imgcdn.dev/YwWn4h.jpg" alt="How-to เรียนรู้ Forex สำหรับมือใหม่" class="img-fluid mb-4 featured-image"></a>
+            <a href="https://one.exnesstrack.org/a/rql59dgwb3" target="_blank" rel="noopener noreferrer"></a>
             <p>Forex หรือ Foreign Exchange คือการซื้อขายแลกเปลี่ยนสกุลเงินระหว่างประเทศ ซึ่งเป็นตลาดที่มีความผันผวนสูงและเปิดตลอด 24 ชั่วโมง การเริ่มต้นอย่างถูกวิธีจะช่วยลดความเสี่ยงและเพิ่มโอกาสในการทำกำไร</p>
             <h2>1. ทำความเข้าใจพื้นฐาน Forex คืออะไร?</h2>
             <ul>

@@ -52,9 +52,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://custdue.kbjcapital.co.th/dist/img/kashjoy-logo.png" alt="อัปเดตสถานการณ์โรคแอนแทรกซ์ พบป่วยเพิ่ม 1 ราย เสี่ยงสัมผัส 638 ราย" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Technology</span>
@@ -70,9 +67,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1E2J8b.img" alt="อัปเดตสถานการณ์โรคแอนแทรกซ์ พบป่วยเพิ่ม 1 ราย เสี่ยงสัมผัส 638 ราย" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Thailand News</span>
@@ -88,45 +82,36 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                    <img src="https://s6.imgcdn.dev/YwWn4h.jpg" alt="How-to เรียนรู้ Forex สำหรับมือใหม่" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
-                    <div class="category-meta">
-                        <span class="post-category">Forex Guide</span>
-                        <div class="author-meta">
-                        <span class="post-date">2 พฤษภาคม 2025</span>
+                        <div class="category-meta">
+                            <span class="post-category">Forex Guide</span>
+                            <div class="author-meta">
+                            <span class="post-date">2 พฤษภาคม 2025</span>
+                            </div>
                         </div>
-                    </div>
-                    <h2 class="title">
-                        <a href="/investing/how-to-start-forex-trading">How-to เรียนรู้ Forex สำหรับมือใหม่</a>
-                    </h2>
+                        <h2 class="title">
+                            <a href="/investing/how-to-start-forex-trading">How-to เรียนรู้ Forex สำหรับมือใหม่</a>
+                        </h2>
                     </div>
                 </article>
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                    <img src="https://s6.imgcdn.dev/YwWQrd.png" alt="How-to เขียนบทความให้ติดอันดับ Google" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
-                    <div class="category-meta">
-                        <span class="post-category">SEO & Content</span>
-                        <div class="author-meta">
-                        <span class="post-date">2 พฤษภาคม 2025</span>
+                        <div class="category-meta">
+                            <span class="post-category">SEO & Content</span>
+                            <div class="author-meta">
+                            <span class="post-date">2 พฤษภาคม 2025</span>
+                            </div>
                         </div>
-                    </div>
-                    <h2 class="title">
-                        <a href="/technology/เขียนบทความให้ติดอันดับ-google">How-to เขียนบทความให้ติดอันดับ Google</a>
-                    </h2>
+                        <h2 class="title">
+                            <a href="/technology/เขียนบทความให้ติดอันดับ-google">How-to เขียนบทความให้ติดอันดับ Google</a>
+                        </h2>
                     </div>
                 </article>
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1E0zFI.img" alt="ฉีดวัคซีนไข้หวัดใหญ่ฟรี 69 แห่งทั่ว กทม. ยื่นบัตรประชาชนใบเดียว" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Thailand News</span>
@@ -160,9 +145,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                    <img src="https://s6.imgcdn.dev/YwSbGe.jpg" alt="ซุปไก่สกัด แบรนด์ สูตรต้นตำรับ" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                     <div class="category-meta">
                         <span class="post-category">โปรโมชั่นพิเศษ</span>
@@ -180,9 +162,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://s6.imgcdn.dev/YwSRf8.jpg" alt="ซิมไม่ตรงชื่อ Mobile Banking เสี่ยงถูกปิดบัญชี" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Thailand News</span>
@@ -198,9 +177,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://s6.imgcdn.dev/YwGlT2.webp" alt="ข่าวเด่นประเทศไทย" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Thailand News</span>
@@ -216,9 +192,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://s6.imgcdn.dev/YwGN9L.jpg" alt="" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Life Style</span>
@@ -234,9 +207,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://s6.imgcdn.dev/YwB7uN.jpg" alt="" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Investing</span>
@@ -252,9 +222,6 @@ navIndex: "active"
             </div>
             <div class="col-lg-4">
                 <article class="featured-post">
-                    <div class="post-img">
-                        <img src="https://s6.imgcdn.dev/YwBzin.jpg" alt="" class="img-fluid" loading="lazy">
-                    </div>
                     <div class="post-content">
                         <div class="category-meta">
                             <span class="post-category">Technology</span>
