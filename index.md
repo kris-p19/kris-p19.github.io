@@ -12,6 +12,29 @@ navIndex: "active"
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 mb-4">
+            <!-- content -->
+            <div class="col-lg-4">
+                <article class="featured-post">
+                    <div class="post-img">
+                        <img src="https://cdn.pixabay.com/photo/2020/07/18/13/51/alipay-5417253_1280.jpg" alt="qr code" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <div class="category-meta">
+                            <span class="post-category">Technology</span>
+                            <div class="author-meta">
+                                <span class="post-date">20-11-2025</span>
+                            </div>
+                        </div>
+                        <p>
+                            QR Code Generator เครื่องมือสร้างคิวอาร์โค้ดออนไลน์ฟรี ใช้งานง่าย รองรับลิงก์ ข้อความ เบอร์โทร อีเมล และ Wi-Fi สร้าง QR Code ได้อย่างรวดเร็ว พร้อมปรับแต่งสี ใส่โลโก้ และดาวน์โหลดไฟล์คุณภาพสูง เหมาะสำหรับธุรกิจ การตลาด สื่อสิ่งพิมพ์ และงานส่วนตัว ใช้งานฟรี ไม่มีลายน้ำ และไม่จำกัดจำนวนการสร้าง
+                        </p>
+                        <h2 class="title">
+                            <a href="/technology/qrcode">QR Code Generator Pro</a>
+                        </h2>
+                    </div>
+                </article>
+            </div>
+            <!-- end content -->
             <div class="col-lg-4">
                 <article class="featured-post">
                     <div class="post-img">
