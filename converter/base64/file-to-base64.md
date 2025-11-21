@@ -1,9 +1,8 @@
 ---
 layout: default
-title: "Text / Base64 Converter"
-description: "ศูนย์กลางข้อมูลและความรู้ด้านฟินเทคที่ทันสมัย"
-keywords: ""
-navAbout: "active"
+title: "Text ↔ Base64 Converter | แปลงข้อความเป็น Base64 ออนไลน์"
+description: "Text / Base64 Converter ออนไลน์ แปลงข้อความเป็น Base64 และถอด Base64 กลับเป็นข้อความ ใช้งานง่าย รวดเร็ว ปลอดภัย ข้อมูลไม่ถูกอัปโหลดขึ้นเซิร์ฟเวอร์ รองรับภาษาไทย 100%"
+keywords: "base64, text to base64, base64 to text, แปลงข้อความเป็น base64, ถอด base64, base64 converter, online tool, convert text, base64 decode, base64 encode, แปลงไฟล์ base64, เครื่องมือแปลง base64, converter ไทย"
 ---
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
