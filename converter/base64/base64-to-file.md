@@ -4,7 +4,7 @@ title: "Base64 to File Converter | แปลง Base64 เป็นไฟล์ 
 description: "แปลง Base64 เป็นไฟล์ออนไลน์ฟรี เพียงวาง Base64 แล้วดาวน์โหลดไฟล์ได้ทันที รองรับไฟล์ภาพ เอกสาร ข้อความ PDF JPG PNG ZIP MP3 และอื่น ๆ ทำงานบนเบราว์เซอร์ ปลอดภัย ไม่อัปโหลดข้อมูลขึ้นเซิร์ฟเวอร์ ใช้งานง่ายและรวดเร็ว."
 keywords: "base64 to file, convert base64 to file, แปลง base64 เป็นไฟล์, decode base64, base64 decoder, base64 download file, online base64 converter, base64 tool, extract base64, base64 ไทย, convert base64, dataurl to file, base64 decode online"
 ---
-<div class="bg-slate-100 text-slate-800">
+<div class="container py-5">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <div class="max-w-3xl mx-auto mt-10 bg-white p-6 md:p-8 rounded-2xl shadow-lg">
