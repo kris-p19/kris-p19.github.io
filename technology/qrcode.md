@@ -7,22 +7,17 @@ urlx: "https://fintechxhub.com/technology/qrcode"
 image: "https://cdn.pixabay.com/photo/2020/07/18/13/51/alipay-5417253_1280.jpg"
 navTechnology: "active"
 ---
-<!DOCTYPE html>
-<html lang="th">
-<head>
+<div lang="th">
+<div>
   <meta charset="UTF-8" />
   <title>QR Code Generator Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Icon (optional, heroicons via CDN) -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
   <!-- QRCode.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
   <!-- Custom Tailwind config (optional) -->
   <script>
     tailwind.config = {
@@ -44,8 +39,8 @@ navTechnology: "active"
       }
     };
   </script>
-</head>
-<body class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-4">
+</div>
+<div class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-4">
 
   <div class="w-full max-w-5xl mx-auto">
     <!-- Header -->
@@ -346,5 +341,5 @@ navTechnology: "active"
     // สร้างตัวอย่างเริ่มต้น
     window.addEventListener('load', generateQr);
   </script>
-</body>
-</html>
+</div>
+</div>
