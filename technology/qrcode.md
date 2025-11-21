@@ -9,16 +9,16 @@ navTechnology: "active"
 ---
 <div lang="th">
 <div>
-  <meta charset="UTF-8" />
-  <title>QR Code Generator Pro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Icon (optional, heroicons via CDN) -->
+
+  <!-- Icon (Phosphor Icons) -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <!-- QRCode.js CDN -->
+
+  <!-- QRCode.js CDN (davidshimjs) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <!-- Custom Tailwind config (optional) -->
+
+  <!-- Custom Tailwind config -->
   <script>
     tailwind.config = {
       theme: {
@@ -50,10 +50,10 @@ navTechnology: "active"
         <span>QR Code Generator</span>
       </div>
       <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">
-        สร้าง <span class="text-brand-400">QR Code</span> แบบมืออาชีพ
+        สร้าง <span class="text-brand-400">QR Code</span> แบบมืออาชีพ พร้อมโลโก้
       </h1>
       <p class="text-sm md:text-base text-slate-400 max-w-xl mx-auto">
-        รองรับข้อความ, URL, เบอร์โทร หรืออะไรก็ได้ เพียงพิมพ์ด้านล่าง แล้วกดสร้างหรือระบบจะสร้างให้อัตโนมัติ
+        รองรับข้อความ, URL, เบอร์โทร หรืออะไรก็ได้ สามารถเพิ่มโลโก้ไว้ตรงกลาง QR เพื่อใช้กับแบรนด์หรือองค์กรของคุณได้ทันที
       </p>
     </header>
     <!-- Main layout -->
@@ -111,7 +111,7 @@ navTechnology: "active"
               <option value="L">L - ต่ำ (ข้อมูลเยอะ)</option>
               <option value="M" selected>M - ปกติ</option>
               <option value="Q">Q - สูง</option>
-              <option value="H">H - สูงมาก (ซ่อนโลโก้ได้)</option>
+              <option value="H">H - สูงมาก (เหมาะกับมีโลโก้)</option>
             </select>
           </div>
           <!-- Margin -->
@@ -140,6 +140,22 @@ navTechnology: "active"
               class="rounded-lg bg-slate-950/70 border border-slate-700 px-2 py-1 h-[38px] outline-none cursor-pointer"
             />
           </div>
+        </div>
+        <!-- Logo upload -->
+        <div class="mt-1 flex flex-col gap-1.5 text-sm">
+          <label for="qr_logo" class="font-medium text-slate-200 flex items-center gap-2">
+            โลโก้ตรงกลาง (ไม่บังคับ)
+            <span class="text-[10px] text-slate-500">(PNG / JPG)</span>
+          </label>
+          <input
+            type="file"
+            id="qr_logo"
+            accept="image/*"
+            class="rounded-lg bg-slate-950/70 border border-slate-700 px-3 py-2 text-xs file:mr-3 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:bg-slate-700 file:text-slate-100 file:cursor-pointer"
+          />
+          <p class="text-[11px] text-slate-500">
+            * แนะนำให้ใช้โลโก้พื้นหลังโปร่ง (PNG) และเลือก <span class="font-semibold">ความทนทาน H</span> เพื่อให้สแกนง่ายแม้มีโลโก้ทับ
+          </p>
         </div>
         <!-- Actions -->
         <div class="flex flex-wrap gap-3 pt-2 border-t border-slate-800 mt-2">
@@ -183,7 +199,7 @@ navTechnology: "active"
         </div>
         <div class="mt-5 w-full flex flex-wrap items-center justify-between gap-3 border-t border-slate-800 pt-4">
           <div class="text-[11px] text-slate-500">
-            แนะนำให้ทดสอบสแกนทุกครั้งก่อนนำไปใช้งานจริง
+            แนะนำให้ทดสอบสแกนทุกครั้งก่อนนำไปใช้งานจริง โดยเฉพาะเมื่อมีโลโก้ตรงกลาง
           </div>
           <div class="flex gap-2">
             <button
@@ -214,6 +230,7 @@ navTechnology: "active"
     const qrEccEl        = document.getElementById('qr_ecc');
     const qrMarginEl     = document.getElementById('qr_margin');
     const qrColorDarkEl  = document.getElementById('qr_color_dark');
+    const qrLogoEl       = document.getElementById('qr_logo');
     const qrContainer    = document.getElementById('qr_container');
     const btnGenerate    = document.getElementById('btn_generate');
     const btnClear       = document.getElementById('btn_clear');
@@ -242,7 +259,44 @@ navTechnology: "active"
         (isError ? 'text-rose-400' : 'text-emerald-400');
     }
 
-    function generateQr() {
+    // วาดโลโก้ทับบน QR (ถ้ามีไฟล์)
+    async function addLogoToQR() {
+      const logoFile = qrLogoEl.files && qrLogoEl.files[0];
+      if (!logoFile) return; // ถ้าไม่เลือกโลโก้ ก็ไม่ต้องทำอะไร
+
+      const canvas = qrContainer.querySelector('canvas');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      const size = canvas.width || canvas.height;
+
+      const logo = new Image();
+      const objectUrl = URL.createObjectURL(logoFile);
+      logo.src = objectUrl;
+
+      await new Promise((resolve, reject) => {
+        logo.onload = () => resolve();
+        logo.onerror = () => {
+          URL.revokeObjectURL(objectUrl);
+          reject(new Error('โหลดโลโก้ไม่สำเร็จ'));
+        };
+      });
+
+      const logoSize = size * 0.22; // 22% ของขนาด QR
+      const x = (size - logoSize) / 2;
+      const y = (size - logoSize) / 2;
+
+      // พื้นหลังสีขาวรองโลโก้ (ช่วยให้สแกนง่ายกว่า)
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(x - 6, y - 6, logoSize + 12, logoSize + 12);
+
+      // วาดโลโก้
+      ctx.drawImage(logo, x, y, logoSize, logoSize);
+
+      URL.revokeObjectURL(objectUrl);
+    }
+
+    async function generateQr() {
       const text = qrTextEl.value.trim();
 
       if (!text) {
@@ -271,13 +325,32 @@ navTechnology: "active"
         margin: margin,
       });
 
+      // รอให้ QR วาดเสร็จลง canvas ก่อนค่อยแปะโลโก้
+      await new Promise((resolve) => setTimeout(resolve, 80));
+
+      const hasLogo = qrLogoEl.files && qrLogoEl.files[0];
+
+      try {
+        if (hasLogo) {
+          await addLogoToQR();
+          updateStatus('สร้างแล้ว (พร้อมโลโก้)', false);
+        } else {
+          updateStatus('สร้างแล้ว (พร้อมใช้งาน)', false);
+        }
+      } catch (err) {
+        console.error(err);
+        updateStatus('สร้าง QR แล้ว แต่เพิ่มโลโก้ไม่สำเร็จ', true);
+      }
+
       btnDownload.disabled = false;
-      updateStatus('สร้างแล้ว (พร้อมใช้งาน)');
     }
 
     function debounceGenerate() {
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(generateQr, 400);
+      debounceTimer = setTimeout(() => {
+        // ไม่ต้องรอ await ก็ได้ ฟังก์ชันจะรันเอง
+        generateQr();
+      }, 400);
     }
 
     // Events
@@ -288,6 +361,9 @@ navTechnology: "active"
 
     btnClear.addEventListener('click', () => {
       qrTextEl.value = '';
+      if (qrLogoEl) {
+        qrLogoEl.value = '';
+      }
       clearQrContainer();
       qrContainer.innerHTML =
         '<span class="text-xs text-slate-500 text-center">ยังไม่มี QR Code<br />พิมพ์ข้อความหรือ URL แล้วกด “สร้าง QR Code”</span>';
@@ -301,17 +377,18 @@ navTechnology: "active"
     qrEccEl.addEventListener('change', generateQr);
     qrMarginEl.addEventListener('input', debounceGenerate);
     qrColorDarkEl.addEventListener('input', generateQr);
+    qrLogoEl.addEventListener('change', generateQr);
 
-    // Download PNG
+    // Download PNG (ใช้ canvas ที่มีโลโก้)
     btnDownload.addEventListener('click', () => {
-      const img = qrContainer.querySelector('img');
       const canvas = qrContainer.querySelector('canvas');
+      const img = qrContainer.querySelector('img');
       let dataUrl = null;
 
-      if (img && img.src) {
-        dataUrl = img.src;
-      } else if (canvas) {
+      if (canvas) {
         dataUrl = canvas.toDataURL('image/png');
+      } else if (img && img.src) {
+        dataUrl = img.src;
       }
 
       if (!dataUrl) return;
@@ -332,14 +409,19 @@ navTechnology: "active"
       try {
         await navigator.clipboard.writeText(text);
         updateStatus('คัดลอกข้อความแล้ว', false);
-        setTimeout(() => updateStatus('สร้างแล้ว (พร้อมใช้งาน)'), 1500);
+        setTimeout(() => {
+          qrStatus.textContent = 'พร้อมสร้าง';
+          qrStatus.className = 'text-xs text-slate-400';
+        }, 1500);
       } catch (err) {
         updateStatus('คัดลอกไม่สำเร็จ', true);
       }
     });
 
     // สร้างตัวอย่างเริ่มต้น
-    window.addEventListener('load', generateQr);
+    window.addEventListener('load', () => {
+      generateQr();
+    });
   </script>
 </div>
 </div>
