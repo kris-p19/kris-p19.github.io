@@ -71,6 +71,14 @@ navMinify: "active"
                   </label>
                 </div>
               </div>
+              <div class="col-12">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="optSingleLine">
+                      <label class="form-check-label" for="optSingleLine">
+                          แปลงผลลัพธ์เป็นโหมด Single Line (บรรทัดเดียว)
+                      </label>
+                  </div>
+              </div>
             </div>
           </div>
           <div class="d-flex gap-2">
