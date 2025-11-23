@@ -207,4 +207,4 @@ navPdfWord: "active"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.js"></script>
-<script src="pdf-to-docx.js?v=1"></script>
+<script src="pdf-to-docx.js?v=2"></script>
