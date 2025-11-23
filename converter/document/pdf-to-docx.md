@@ -129,7 +129,7 @@ navPdfWord: "active"
     <!-- RIGHT: OUTPUT / STATUS -->
     <div class="col-lg-6">
       <div class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
-        <div class="card-header border-0 bg-gradient-to-r py-3 text-white">
+        <div class="card-header border-0 bg-gradient-to-r py-3">
           <div class="d-flex justify-content-between align-items-center">
             <div>
               <h2 class="h6 mb-0 fw-semibold">สถานะการแปลงไฟล์</h2>
