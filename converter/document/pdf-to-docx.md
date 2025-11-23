@@ -206,5 +206,9 @@ navPdfWord: "active"
 <!-- Aspose PDF JS via C++ (WASM) from jsDelivr CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docx@9.5.1/build/index.umd.js"></script>
-<script src="pdf-to-docx.js?v=2"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/docx@9.5.1/build/index.umd.js"></script> -->
+<script type="module">
+  import * as docxModule from 'https://cdn.jsdelivr.net/npm/docx@9.5.1/+esm';
+  window.docx = docxModule;
+</script>
+<script src="pdf-to-docx.1.0.1.js"></script>

@@ -220,7 +220,11 @@ setTimeout(() => {
                 alert('กรุณาเลือกไฟล์ PDF ก่อน');
                 return;
             }
-            if (!window['pdfjsLib'] || !window['docx']) {
+            // if (!window['pdfjsLib'] || !window['docx']) {
+            //     alert('ไม่สามารถโหลดไลบรารี pdf.js หรือ docx.js ได้');
+            //     return;
+            // }
+            if (typeof pdfjsLib === 'undefined' || typeof docx === 'undefined') {
                 alert('ไม่สามารถโหลดไลบรารี pdf.js หรือ docx.js ได้');
                 return;
             }
