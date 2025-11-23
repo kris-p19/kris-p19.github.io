@@ -1,175 +1,33 @@
 (function ($) {
-  function isRegexAllowedAfter(ch) {
-    if (ch === null) return true;
-    return "([,{=:+-*%!&|^?;<>".indexOf(ch) !== -1;
+  // รวมโค้ดให้เป็นบรรทัดเดียว (ใช้กับโหมด Single Line)
+  function toSingleLine(source) {
+    let s = source.replace(/[\r\n]+/g, " ");       // ลบ line break
+    s = s.replace(/\s\s+/g, " ");                  // ลดช่องว่างซ้ำ
+    s = s.replace(/\s*([;:{}(),=+\-])\s*/g, "$1"); // ตัดช่องว่างรอบ ๆ symbol ทั่วไป
+    return s.trim();
   }
 
-  // ลบ comment โดยพยายามไม่ยุ่งกับ string, template, regex literal
-  function stripComments(source, options) {
-    if (!options.removeComments) return source;
-
-    let out = "";
-    let inSingle = false, inDouble = false, inTemplate = false, inRegex = false;
-    let inLineComment = false, inBlockComment = false;
-    let escapeNext = false;
-    let prevNonSpace = null;
-
-    for (let i = 0; i < source.length; i++) {
-      let c = source[i];
-      let next = source[i + 1];
-
-      if (inLineComment) {
-        if (c === "\\n" || c === "\\r" || c === "\n" || c === "\r") {
-          inLineComment = false;
-          out += c;
-        }
-        continue;
-      }
-
-      if (inBlockComment) {
-        if (c === "*" && next === "/") {
-          inBlockComment = false;
-          i++;
-        }
-        continue;
-      }
-
-      if (escapeNext) {
-        out += c;
-        escapeNext = false;
-        continue;
-      }
-
-      if (inSingle || inDouble || inTemplate || inRegex) {
-        out += c;
-        if (c === "\\\\") {
-          escapeNext = true;
-          continue;
-        }
-        if (inSingle && c === "'") inSingle = false;
-        else if (inDouble && c === '"') inDouble = false;
-        else if (inTemplate && c === "`") inTemplate = false;
-        else if (inRegex && c === "/") inRegex = false;
-        continue;
-      }
-
-      // ไม่ได้อยู่ใน string/comment/regex
-      if (c === "/" && next === "/") {
-        inLineComment = true;
-        i++;
-        continue;
-      }
-      if (c === "/" && next === "*") {
-        // ถ้าเลือกเก็บ /*! ... */ เอาไว้
-        if (options.keepLicense && source[i + 2] === "!") {
-          out += "/*!";
-          i += 2;
-          inBlockComment = true; // แต่เรายังเก็บไว้ทั้งก้อน
-          continue;
-        }
-        inBlockComment = true;
-        i++;
-        continue;
-      }
-
-      // เริ่ม string/template
-      if (c === "'") {
-        inSingle = true; out += c; continue;
-      }
-      if (c === '"') {
-        inDouble = true; out += c; continue;
-      }
-      if (c === "`") {
-        inTemplate = true; out += c; continue;
-      }
-
-      // ตรวจ regex literal
-      if (c === "/" && next !== "/" && next !== "*") {
-        if (isRegexAllowedAfter(prevNonSpace)) {
-          inRegex = true;
-          out += c;
-          continue;
-        }
-      }
-
-      out += c;
-      if (!/\\s/.test(c)) {
-        prevNonSpace = c;
-      }
-    }
-    return out;
-  }
-
-  // ตัดช่องว่างส่วนเกินต้น–ท้ายแต่ละบรรทัด
-  function trimLines(source) {
-    return source.split(/\\r?\\n/).map(function (line) {
-      return line.replace(/^\\s+|\\s+$/g, "");
-    }).join("\\n");
-  }
-
-  function minifyJs(source, opts) {
-    let originalLength = source.length;
-
-    let code = source;
-    code = stripComments(code, {
-      removeComments: opts.removeComments,
-      keepLicense: opts.keepLicense
-    });
-
-    if (opts.trimLines) {
-      code = trimLines(code);
-    }
-
-    if(opts.singleLine){
-      code = toSingleLine(code);
-    }
-
-    let minLength = code.length;
-    let saved = originalLength > 0 ? ((originalLength - minLength) / originalLength * 100) : 0;
-
-    return {
-      code: code,
-      originalLength: originalLength,
-      minLength: minLength,
-      savedPercent: Math.round(saved)
-    };
-  }
-
+  // อัปเดตสถิติความยาว
   function updateStats(stats) {
     $("#statOriginal").text(stats.originalLength);
     $("#statMinified").text(stats.minLength);
     $("#statSaved").text(stats.originalLength ? stats.savedPercent + "%" : "0%");
   }
 
-  function doMinify() {
-    const src = $("#inputCode").val() || "";
-    if (!src.trim()) {
-      alert("กรุณาวางโค้ด JavaScript ก่อนทำการแปลง");
-      return;
-    }
-    const opts = {
-      removeComments: $("#optRemoveComments").is(":checked"),
-      keepLicense: $("#optKeepLicense").is(":checked"),
-      trimLines: $("#optTrimLines").is(":checked"),
-      singleLine: $("#optSingleLine").is(":checked")
-    };
-
-    const stats = minifyJs(src, opts);
-    $("#outputCode").val(stats.code);
-    updateStats(stats);
+  // ดาวน์โหลดไฟล์ .js
+  function downloadFile(filename, text) {
+    const blob = new Blob([text], { type: "application/javascript;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 
-  function toSingleLine(source) {
-    // ลบ line break ทั้งหมด
-    let s = source.replace(/[\r\n]+/g, " ");
-    // ลดช่องว่างซ้ำให้เหลือช่องว่างเดียว
-    s = s.replace(/\s\s+/g, " ");
-    // ตัดช่องว่างหน้า ; , { } () =
-    s = s.replace(/\s*([;:{}(),=+\-])\s*/g, "$1");
-    return s.trim();
-  }
-
-
+  // โค้ดตัวอย่าง
   function fillSample() {
     const sample =
       `// ตัวอย่างโค้ด JavaScript
@@ -186,33 +44,108 @@ sayHello("World");`;
     $("#inputCode").val(sample);
   }
 
-  function downloadFile(filename, text) {
-    const blob = new Blob([text], { type: "application/javascript;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+  // ดึง options จาก UI
+  function getOptions() {
+    return {
+      removeComments: $("#optRemoveComments").is(":checked"),
+      keepLicense: $("#optKeepLicense").is(":checked"),
+      trimLines: $("#optTrimLines").is(":checked"),
+      singleLine: $("#optSingleLine").is(":checked")
+    };
+  }
+
+  // ใช้ Terser.minify จริงๆ ตรงนี้
+  async function doMinify() {
+    const src = $("#inputCode").val() || "";
+    if (!src.trim()) {
+      alert("กรุณาวางโค้ด JavaScript ก่อนทำการแปลง");
+      return;
+    }
+
+    const opts = getOptions();
+    const originalLength = src.length;
+
+    // ตั้งค่า options สำหรับ Terser
+    const terserOptions = {
+      compress: true,
+      mangle: false,    // ถ้าอยากให้เปลี่ยนชื่อตัวแปรให้สั้นลง ให้เปลี่ยนเป็น true
+      format: {}
+    };
+
+    // จัดการเรื่องคอมเมนต์
+    if (opts.removeComments) {
+      if (opts.keepLicense) {
+        // เก็บเฉพาะคอมเมนต์ที่ขึ้นต้นด้วย /*!
+        terserOptions.format.comments = /^!/;
+      } else {
+        // ลบทุกคอมเมนต์
+        terserOptions.format.comments = false;
+      }
+    }
+
+    try {
+      // เรียกใช้ Terser ผ่าน global Terser.minify (จาก CDN)
+      const result = await Terser.minify(src, terserOptions);
+
+      if (result.error) {
+        console.error(result.error);
+        alert("มีข้อผิดพลาดในโค้ด JavaScript ไม่สามารถ minify ได้");
+        return;
+      }
+
+      let code = result.code || "";
+
+      // ถ้าเลือก trimLines (แต่ไม่ single line) ก็เก็บบรรทัดไว้แต่ตัดช่องว่างหัวท้าย
+      if (opts.trimLines && !opts.singleLine) {
+        code = code
+          .split(/\r?\n/)
+          .map(line => line.replace(/^\s+|\s+$/g, ""))
+          .join("\n");
+      }
+
+      // โหมด Single Line
+      if (opts.singleLine) {
+        code = toSingleLine(code);
+      }
+
+      const minLength = code.length;
+      const saved = originalLength > 0
+        ? Math.round((originalLength - minLength) / originalLength * 100)
+        : 0;
+
+      $("#outputCode").val(code);
+      updateStats({
+        originalLength: originalLength,
+        minLength: minLength,
+        savedPercent: saved
+      });
+
+    } catch (e) {
+      console.error(e);
+      alert("เกิดข้อผิดพลาดระหว่างเรียก Terser.minify กรุณาตรวจสอบโค้ดอีกครั้ง");
+    }
   }
 
   $(function () {
+    // ปุ่มแปลงโค้ด
     $("#btnMinify, #btnMinifyNow").on("click", function () {
+      // ใช้ async function แยกอยู่แล้ว
       doMinify();
     });
 
+    // ล้างโค้ด
     $("#btnClear").on("click", function () {
       $("#inputCode").val("");
       $("#outputCode").val("");
       updateStats({ originalLength: 0, minLength: 0, savedPercent: 0 });
     });
 
+    // ใส่โค้ดตัวอย่าง
     $("#btnSample").on("click", function () {
       fillSample();
     });
 
+    // คัดลอกผลลัพธ์
     $("#btnCopyOutput").on("click", function () {
       const out = $("#outputCode").val();
       if (!out) {
@@ -226,6 +159,7 @@ sayHello("World");`;
       });
     });
 
+    // ดาวน์โหลด .js
     $("#btnDownload").on("click", function () {
       const out = $("#outputCode").val();
       if (!out) {
@@ -235,7 +169,7 @@ sayHello("World");`;
       downloadFile("minified.js", out);
     });
 
-    // ค่าเริ่มต้น
+    // ค่าเริ่มต้นสถิติ
     updateStats({ originalLength: 0, minLength: 0, savedPercent: 0 });
   });
 })(jQuery);

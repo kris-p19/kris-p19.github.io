@@ -142,4 +142,6 @@ navMinify: "active"
   </div>
 </div>
 <!-- JS: Minify Engine -->
-<script src="javascript-to-minify.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/source-map@0.7.3/dist/source-map.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/terser/dist/bundle.min.js"></script>
+<script src="javascript-to-minify.js?v=1"></script>
