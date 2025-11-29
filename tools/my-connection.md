@@ -5,7 +5,7 @@ description: "หน้าเว็บสำหรับตรวจสอบข
 keyworkd: "ตรวจสอบอินเทอร์เน็ต, connection info, network information API, public IP, IP location, พิกัด IP, แผนที่ IP, แผนที่ออนไลน์, Leaflet, OpenStreetMap, ความเร็วอินเทอร์เน็ต, ประเภทการเชื่อมต่อ, ISP, ตรวจสอบ IP, ipapi, ipify"
 ---
 
-<head>
+<div>
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -14,13 +14,6 @@ keyworkd: "ตรวจสอบอินเทอร์เน็ต, connection
   />
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.6;
-    }
     h1, h2 {
       margin-bottom: 0.3em;
     }
@@ -59,8 +52,8 @@ keyworkd: "ตรวจสอบอินเทอร์เน็ต, connection
       color: #555;
     }
   </style>
-</head>
-<body>
+</div>
+<div>
   <h1>ข้อมูลการเชื่อมต่ออินเทอร์เน็ตของคุณ</h1>
   <p>
     หน้านี้จะแสดงข้อมูลเน็ตของคุณเท่าที่เบราว์เซอร์อนุญาตให้ดูได้<br>
@@ -252,4 +245,4 @@ keyworkd: "ตรวจสอบอินเทอร์เน็ต, connection
     showConnectionInfo();
     getPublicIP();
   </script>
-</body>
+</div>
