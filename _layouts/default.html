@@ -62,9 +62,9 @@
                     mangle: false,      // ป้องกันการเปลี่ยนชื่อ anchor
                     sanitize: false     // ❌ ต้องปิด sanitize เพื่อให้ HTML render ได้
                 });
-                document.addEventListener("DOMContentLoaded", function(){
+                setTimeout(() => {
                     document.getElementById("contentmd").innerHTML = marked.parse(text);
-                });
+                }, 500);
             } catch (error) {
                 document.getElementById("contentmd").innerHTML = "<p style='color:red;'>❌ ไม่สามารถโหลดไฟล์ได้</p>";
                 console.error("Error loading markdown:", error);
