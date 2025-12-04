@@ -62,9 +62,17 @@
                     mangle: false,      // ป้องกันการเปลี่ยนชื่อ anchor
                     sanitize: false     // ❌ ต้องปิด sanitize เพื่อให้ HTML render ได้
                 });
-                setTimeout(() => {
-                    document.getElementById("contentmd").innerHTML = marked.parse(text);
-                }, 500);
+                document.getElementById("contentmd").innerHTML = marked.parse(text);
+                const scripts = document.getElementById("contentmd").querySelectorAll("script");
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src; // ถ้ามี src
+                    } else {
+                        newScript.textContent = oldScript.textContent; // inline script
+                    }
+                    document.body.appendChild(newScript); // append ให้ browser execute
+                });
             } catch (error) {
                 document.getElementById("contentmd").innerHTML = "<p style='color:red;'>❌ ไม่สามารถโหลดไฟล์ได้</p>";
                 console.error("Error loading markdown:", error);
