@@ -36,6 +36,27 @@
     <!-- Main CSS File -->
     <link href="/assets/css/main.css" rel="stylesheet">
 
+    <!-- โหลดไลบรารี marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        async function loadMarkdown(md) {
+            try {
+                const response = await fetch(`https://raw.githubusercontent.com/kris-p19/cdncontent/refs/heads/main/${md}.md`);
+                const text = await response.text();
+                marked.setOptions({
+                    gfm: true,          // รองรับ GitHub Flavored Markdown
+                    breaks: true,       // แปลง newline เป็น <br>
+                    headerIds: true,    // สร้าง id ให้ heading
+                    mangle: false,      // ป้องกันการเปลี่ยนชื่อ anchor
+                    sanitize: false     // ❌ ต้องปิด sanitize เพื่อให้ HTML render ได้
+                });
+                document.getElementById("contentmd").innerHTML = marked.parse(text);
+            } catch (error) {
+                document.getElementById("contentmd").innerHTML = "<p style='color:red;'>❌ ไม่สามารถโหลดไฟล์ได้</p>";
+                console.error("Error loading markdown:", error);
+            }
+        }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SST527V99N"></script>
     <script>
