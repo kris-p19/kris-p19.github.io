@@ -13,19 +13,22 @@ image: ""
 </header>
 <main class="w-full p-4 mt-5">
     <div class="text-left">
-        <a href="https://crd.go.th/bg/landing" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://crd.go.th/bg/landing" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="ตรวจสอบประวัติอาชญากรรม - CRD Check">ตรวจสอบประวัติอาชญากรรม - CRD Check</a>
-        <a href="https://govtransfer.baac.or.th/login" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://govtransfer.baac.or.th/login" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="ระบบรายงานผลการโอนเงินโครงการนโยบายรัฐ (Government Transfer)" >ระบบรายงานผลการโอนเงินโครงการนโยบายรัฐ (Government Transfer)</a>
-        <a href="https://efarmer.doae.go.th" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://efarmer.doae.go.th" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="ตรวจสอบสถานะทะเบียนเกษตรกร" >ตรวจสอบสถานะทะเบียนเกษตรกร</a>
-        <a href="https://xn--72cst3czdd.com" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://xn--72cst3czdd.com" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="เว็บไซต์ทางรัฐ">เว็บไซต์ทางรัฐ</a>
-        <a href="https://srmcitizen.nhso.go.th" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://srmcitizen.nhso.go.th" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="ระบบตรวจสอบสิทธิและลงทะเบียนภาคประชาชน">ระบบตรวจสอบสิทธิและลงทะเบียนภาคประชาชน</a>
-        <a href="https://govwelfare.cgd.go.th" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://govwelfare.cgd.go.th" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="e-Social Welfare - ระบบบูรณาการฐานข้อมูลสวัสดิการสังคม">e-Social Welfare - ระบบบูรณาการฐานข้อมูลสวัสดิการสังคม</a>
-        <a href="https://csgcheck.dcy.go.th" target="_blank" rel="noopener" class="block items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        <a href="https://csgcheck.dcy.go.th" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
         title="ระบบกรมกิจการเด็ก และเยาวชน (ดย.)">ระบบกรมกิจการเด็ก และเยาวชน (ดย.)</a>
+        <a href="https://flood68.disaster.go.th" target="_blank" rel="noopener" class="inline-flex items-center mb-3 px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        title="ลงทะเบียนขอรับความช่วยเหลือน้ำท่วม">ลงทะเบียนขอรับความช่วยเหลือน้ำท่วม</a>
+        
     </div>
 </main>
