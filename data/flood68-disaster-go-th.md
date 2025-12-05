@@ -33,7 +33,7 @@ keywords: "น้ำท่วม, อุทกภัย, ลงทะเบี�
         </div>
     </div>
     <!-- Iframe Section -->
-    <div class="iframe-container_">
+    <div class="text-center">
         <a 
             href="https://flood68.disaster.go.th" 
             target="_blank" 
