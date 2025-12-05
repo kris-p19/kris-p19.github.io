@@ -33,6 +33,13 @@ keywords: "น้ำท่วม, อุทกภัย, ลงทะเบี�
     </div>
     <!-- Iframe Section -->
     <div class="iframe-container">
-        <iframe src="https://flood68.disaster.go.th" title="ลงทะเบียนขอรับความช่วยเหลือน้ำท่วม - ระบบช่วยเหลือผู้ประสบอุทกภัยออนไลน์"></iframe>
+        <a 
+            href="https://flood68.disaster.go.th" 
+            target="_blank" 
+            rel="noopener" 
+            class="inline-flex items-center px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-xl shadow-md transition"
+        >
+        ไปยังระบบลงทะเบียนน้ำท่วม Flood68
+        </a>
     </div>
 </main>
