@@ -4,11 +4,11 @@ title: "DeepSeek คืออะไร? เจาะลึก AI จากจี
 description: "อธิบาย DeepSeek แบบเข้าใจง่าย: คืออะไร ทำงานอย่างไร ต่างจาก ChatGPT ไหม มีรุ่นอะไร ใช้ทำอะไรได้บ้าง พร้อมแนวทางใช้งานอย่างปลอดภัยและตัวอย่าง Prompt"
 keywords: "DeepSeek, AI"
 urlx: "https://fintechxhub.com/technology/deepseek"
-image: "https://cdn.pixabay.com/photo/2019/04/26/07/13/laptop-4156928_1280.png"
+image: "https://cdn.deepseek.com/logo.png"
 navTechnology: "active"
 ---
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="bg-slate-950 text-slate-100">
+<div class="bg-slate-950 text-black-100 pb-1">
   <!-- Top bar -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
@@ -16,14 +16,14 @@ navTechnology: "active"
         <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">🤖</span>
         <span class="font-semibold tracking-tight">DeepSeek Guide</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-200">
+      <nav class="hidden md:flex items-center gap-6 text-sm text-black-200">
         <a class="hover:text-white" href="#overview">ภาพรวม</a>
         <a class="hover:text-white" href="#howitworks">วิธีทำงาน</a>
         <a class="hover:text-white" href="#usecases">การใช้งาน</a>
         <a class="hover:text-white" href="#prompts">ตัวอย่าง Prompt</a>
         <a class="hover:text-white" href="#faq">FAQ</a>
       </nav>
-      <a href="#prompts" class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200">
+      <a href="#prompts" class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black-900 hover:bg-slate-200">
         ไปที่ Prompt
       </a>
     </div>
@@ -40,36 +40,36 @@ navTechnology: "active"
         <div>
           <div class="flex flex-wrap items-center gap-2">
             <span class="badge bg-blue-500/15 text-blue-200 border border-blue-400/20">⚡ อัปเดต 2025</span>
-            <span class="badge bg-emerald-500/15 text-emerald-200 border border-emerald-400/20">📌 อ่านง่าย</span>
+            <span class="badge bg-emerald-500/15 text-black-200 border border-emerald-400/20">📌 อ่านง่าย</span>
             <span class="badge bg-fuchsia-500/15 text-fuchsia-200 border border-fuchsia-400/20">🧠 เน้นเข้าใจ</span>
           </div>
           <h1 class="mt-4 text-3xl font-extrabold tracking-tight md:text-5xl">
             DeepSeek คืออะไร?
-            <span class="block text-slate-200/90 text-xl md:text-2xl font-semibold mt-2">
+            <span class="block text-black-200/90 text-xl md:text-2xl font-semibold mt-2">
               คู่มือแบบละเอียด: วิธีทำงาน จุดเด่น การใช้งานจริง และข้อควรระวัง
             </span>
           </h1>
-          <p class="mt-4 text-slate-200/90 leading-relaxed">
+          <p class="mt-4 text-black-200/90 leading-relaxed">
             หน้านี้อธิบาย <strong>AI DeepSeek</strong> ตั้งแต่พื้นฐานไปจนถึงการนำไปใช้จริง
             โดยใช้ภาษาที่เข้าใจง่าย พร้อมตัวอย่าง Prompt และ FAQ เพื่อให้คุณเริ่มใช้งานได้ทันที
             (เหมาะทั้งมือใหม่ ผู้ทำคอนเทนต์ และสายเทคนิค)
           </p>
           <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a href="#overview" class="rounded-2xl bg-white px-5 py-3 text-sm font-bold text-slate-900 hover:bg-slate-200">
+            <a href="#overview" class="rounded-2xl bg-white px-5 py-3 text-sm font-bold text-black-900 hover:bg-slate-200">
               เริ่มอ่านภาพรวม
             </a>
             <a href="#faq" class="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">
               ไปที่ FAQ
             </a>
           </div>
-          <div class="mt-6 text-xs text-slate-300/80">
+          <div class="mt-6 text-xs text-black-300/80">
             เคล็ดลับอ่านไว: กด <span class="kbd">Ctrl</span> + <span class="kbd">F</span> แล้วค้นคำว่า “Prompt” หรือ “Use case”
           </div>
         </div>
         <div class="relative">
           <div class="rounded-3xl border border-white/10 bg-slate-900/40 p-5">
             <h2 class="text-lg font-bold">สรุปไฮไลต์ใน 30 วินาที</h2>
-            <ul class="mt-4 space-y-3 text-slate-200/90 text-sm leading-relaxed">
+            <ul class="mt-4 space-y-3 text-black-200/90 text-sm leading-relaxed">
               <li class="flex gap-3">
                 <span class="mt-0.5">✅</span>
                 <span><strong>DeepSeek</strong> คือกลุ่มโมเดล AI แนว LLM ที่ช่วย “คิด-เขียน-สรุป-โค้ด” ได้</span>
@@ -89,21 +89,21 @@ navTechnology: "active"
             </ul>
             <div class="mt-5 grid grid-cols-3 gap-3">
               <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <div class="text-xs text-slate-300">เหมาะกับ</div>
+                <div class="text-xs text-black-300">เหมาะกับ</div>
                 <div class="mt-1 font-bold">คอนเทนต์</div>
               </div>
               <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <div class="text-xs text-slate-300">เด่นใน</div>
+                <div class="text-xs text-black-300">เด่นใน</div>
                 <div class="mt-1 font-bold">โค้ด</div>
               </div>
               <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <div class="text-xs text-slate-300">โฟกัส</div>
+                <div class="text-xs text-black-300">โฟกัส</div>
                 <div class="mt-1 font-bold">เหตุผล</div>
               </div>
             </div>
           </div>
           <div class="mt-4 rounded-3xl border border-white/10 bg-white/5 p-5">
-            <p class="text-sm text-slate-200/90 leading-relaxed">
+            <p class="text-sm text-black-200/90 leading-relaxed">
               ต้องการให้หน้าเว็บนี้เป็น “หน้า Landing” สำหรับธุรกิจ/คอร์ส/บล็อก?
               คุณสามารถแก้ <strong>canonical URL</strong> และเพิ่มส่วน “รีวิว/ผลงาน/ปุ่ม CTA” ได้ทันที
             </p>
@@ -117,7 +117,7 @@ navTechnology: "active"
       <aside class="lg:col-span-4">
         <div class="toc sticky top-20 rounded-3xl border border-white/10 bg-white/5 p-6">
           <h2 class="text-base font-bold">สารบัญ</h2>
-          <ol class="mt-4 space-y-2 text-sm text-slate-200/90">
+          <ol class="mt-4 space-y-2 text-sm text-black-200/90">
             <li><a href="#overview" class="block rounded-xl px-3 py-2 hover:bg-white/10">1) DeepSeek คืออะไร (ภาพรวม)</a></li>
             <li><a href="#models" class="block rounded-xl px-3 py-2 hover:bg-white/10">2) รุ่น/แนวคิดของโมเดล (เข้าใจแบบไม่หนัก)</a></li>
             <li><a href="#howitworks" class="block rounded-xl px-3 py-2 hover:bg-white/10">3) DeepSeek ทำงานอย่างไร</a></li>
@@ -127,7 +127,7 @@ navTechnology: "active"
             <li><a href="#safety" class="block rounded-xl px-3 py-2 hover:bg-white/10">7) ความปลอดภัย/ความเป็นส่วนตัว</a></li>
             <li><a href="#faq" class="block rounded-xl px-3 py-2 hover:bg-white/10">8) คำถามที่พบบ่อย (FAQ)</a></li>
           </ol>
-          <div class="mt-6 rounded-2xl border border-white/10 bg-slate-900/40 p-4 text-xs text-slate-200/90">
+          <div class="mt-6 rounded-2xl border border-white/10 bg-slate-900/40 p-4 text-xs text-black-200/90">
             <div class="font-semibold mb-1">SEO Checklist (On-page)</div>
             <ul class="list-disc pl-4 space-y-1">
               <li>H1 ชัด + H2/H3 เป็นโครง</li>
@@ -155,7 +155,7 @@ navTechnology: "active"
           </p>
           <div class="mt-6 rounded-3xl border border-white/10 bg-slate-900/40 p-5">
             <h3 class="text-lg">LLM คืออะไรใน 1 นาที</h3>
-            <ul class="mt-3 list-disc pl-5 text-sm text-slate-200/90">
+            <ul class="mt-3 list-disc pl-5 text-sm text-black-200/90">
               <li>LLM เรียนรู้จากข้อความจำนวนมาก เพื่อจับ “รูปแบบภาษา” และ “ความสัมพันธ์ของคำ”</li>
               <li>เวลาคุณถาม มันจะคาดเดาคำ/ประโยคถัดไปที่เหมาะสม จึงตอบได้ลื่นไหล</li>
               <li>บางรุ่นถูกฝึกให้ “เหตุผล” ดีขึ้น (reasoning) หรือ “โค้ด” เก่งขึ้น (coding)</li>
@@ -170,7 +170,7 @@ navTechnology: "active"
             มีรุ่น/แนวทางที่เน้นความสามารถหลายด้าน เช่น การเขียนโค้ดและการให้เหตุผล
           </p>
           <h3 class="text-xl">คำที่ควรรู้ (สั้น ๆ แต่สำคัญ)</h3>
-          <ul class="list-disc pl-5 text-slate-200/90">
+          <ul class="list-disc pl-5 text-black-200/90">
             <li><strong>Reasoning</strong>: การอธิบายตรรกะ วางแผน แยกปัญหาเป็นขั้นตอน</li>
             <li><strong>Coding</strong>: ช่วยเขียนโค้ด สร้างฟังก์ชัน อธิบายโค้ด และดีบัก</li>
             <li><strong>Context</strong>: ปริมาณข้อมูลที่โมเดล “จำได้” ในหนึ่งบทสนทนา (ยิ่งมากยิ่งใส่ข้อมูลได้มาก)</li>
@@ -179,7 +179,7 @@ navTechnology: "active"
           <div class="mt-6 grid gap-4 md:grid-cols-2">
             <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
               <h3 class="text-lg">เลือกโมเดลแบบเร็ว</h3>
-              <ul class="mt-3 space-y-2 text-sm text-slate-200/90">
+              <ul class="mt-3 space-y-2 text-sm text-black-200/90">
                 <li>✅ งานเขียนทั่วไป/ตอบแชท → เลือกรุ่น “ทั่วไป”</li>
                 <li>✅ งานคิดเป็นขั้นตอน/แก้โจทย์ → เลือกรุ่น “reasoning”</li>
                 <li>✅ งานเขียนโค้ด/ดีบัก → เลือกรุ่น “coding”</li>
@@ -187,7 +187,7 @@ navTechnology: "active"
             </div>
             <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
               <h3 class="text-lg">ความจริงที่ควรรู้</h3>
-              <p class="text-sm text-slate-200/90">
+              <p class="text-sm text-black-200/90">
                 ไม่มีโมเดลไหน “ถูกทุกครั้ง” — วิธีทำให้ผลลัพธ์ดีคือ
                 ใส่บริบทให้พอ, สั่งงานให้ชัด, ขอแหล่งอ้างอิงเมื่อจำเป็น และตรวจทานก่อนใช้งานจริง
               </p>
@@ -202,7 +202,7 @@ navTechnology: "active"
             <strong>ข้อมูลที่ใช้ฝึก</strong>, <strong>เทคนิคการฝึก</strong>, และ <strong>การปรับให้ตอบได้ดีในงานเฉพาะทาง</strong>
           </p>
           <h3 class="text-xl">ขั้นตอนการทำงานแบบเข้าใจง่าย</h3>
-          <ol class="list-decimal pl-5 text-slate-200/90">
+          <ol class="list-decimal pl-5 text-black-200/90">
             <li><strong>รับอินพุต</strong>: คำถาม + บริบท + ตัวอย่าง + เงื่อนไข</li>
             <li><strong>ทำความเข้าใจ</strong>: แยกหัวข้อ จับเจตนา และเชื่อมโยงความรู้</li>
             <li><strong>สร้างคำตอบ</strong>: เลือกคำ/ประโยคที่เหมาะสมตามความน่าจะเป็น</li>
@@ -210,7 +210,7 @@ navTechnology: "active"
           </ol>
           <div class="mt-6 rounded-3xl border border-white/10 bg-slate-900/40 p-5">
             <h3 class="text-lg">ทำไม Prompt สำคัญมาก?</h3>
-            <p class="text-sm text-slate-200/90">
+            <p class="text-sm text-black-200/90">
               เพราะโมเดลไม่ได้ “อ่านใจ” — มันทำงานตามสิ่งที่คุณให้มา
               ถ้าคุณบอกเป้าหมาย ชิ้นงาน รูปแบบ ภาษา กลุ่มเป้าหมาย และข้อจำกัดชัด ๆ
               คุณจะได้คำตอบที่ตรงและใช้ได้จริงมากขึ้น
@@ -221,8 +221,8 @@ navTechnology: "active"
           <h2 class="text-2xl md:text-3xl">4) จุดเด่นและข้อจำกัด (พูดตรง ๆ)</h2>
           <div class="mt-6 grid gap-4 md:grid-cols-2">
             <div class="rounded-3xl border border-emerald-400/20 bg-emerald-500/10 p-5">
-              <h3 class="text-lg text-emerald-100">จุดเด่นที่มักพบ</h3>
-              <ul class="mt-3 list-disc pl-5 text-sm text-emerald-100/90">
+              <h3 class="text-lg text-black-100">จุดเด่นที่มักพบ</h3>
+              <ul class="mt-3 list-disc pl-5 text-sm text-black-100/90">
                 <li>ช่วยคิดเป็นขั้นตอน แยกปัญหาได้ดีขึ้นเมื่อสั่งงานชัด</li>
                 <li>ช่วยโค้ด: สร้างตัวอย่าง, อธิบาย, แนะนำแนวทาง, ช่วยดีบัก</li>
                 <li>ทำเอกสาร/คอนเทนต์เร็ว: สรุป ประมวล สร้างโครงบทความ</li>
@@ -230,8 +230,8 @@ navTechnology: "active"
               </ul>
             </div>
             <div class="rounded-3xl border border-amber-400/20 bg-amber-500/10 p-5">
-              <h3 class="text-lg text-amber-100">ข้อจำกัดที่ต้องรู้</h3>
-              <ul class="mt-3 list-disc pl-5 text-sm text-amber-100/90">
+              <h3 class="text-lg text-black-100">ข้อจำกัดที่ต้องรู้</h3>
+              <ul class="mt-3 list-disc pl-5 text-sm text-black-100/90">
                 <li>อาจ “มั่ว” ได้ (hallucination) โดยเฉพาะเรื่องตัวเลข/อ้างอิง</li>
                 <li>ไม่ได้รู้ข้อมูลเรียลไทม์เสมอไป (ขึ้นกับระบบที่คุณใช้)</li>
                 <li>ถ้าโจทย์กว้างเกินไป จะตอบกว้างและไม่ลงมือทำ</li>
@@ -243,21 +243,21 @@ navTechnology: "active"
         <section id="usecases">
           <h2 class="text-2xl md:text-3xl">5) Use Cases ที่ใช้ได้จริง (พร้อมแนวทางเริ่มต้น)</h2>
           <h3 class="text-xl">5.1 งานเขียนและคอนเทนต์ (Content/SEO)</h3>
-          <ul class="list-disc pl-5 text-slate-200/90">
+          <ul class="list-disc pl-5 text-black-200/90">
             <li>ทำโครงบทความ (Outline) แบบ H1/H2/H3</li>
             <li>เขียนบทความตาม Persona (มือใหม่/มือโปร)</li>
             <li>ทำ Meta title/description, FAQ, สรุปสั้นสำหรับโซเชียล</li>
             <li>รีไรต์ให้กระชับ/โทนแบรนด์/หลีกเลี่ยงคำซ้ำ</li>
           </ul>
           <h3 class="text-xl">5.2 งานเอกสารและธุรกิจ</h3>
-          <ul class="list-disc pl-5 text-slate-200/90">
+          <ul class="list-disc pl-5 text-black-200/90">
             <li>สรุปรายงานการประชุม → Action items</li>
             <li>ทำ SOP/คู่มือการทำงาน</li>
             <li>ร่างอีเมล/ข้อเสนอ/ข้อความตอบลูกค้า</li>
             <li>ช่วยวิเคราะห์ความต้องการลูกค้า (Requirement) และเขียน Spec</li>
           </ul>
           <h3 class="text-xl">5.3 งานโค้ดและเทคนิค</h3>
-          <ul class="list-disc pl-5 text-slate-200/90">
+          <ul class="list-disc pl-5 text-black-200/90">
             <li>อธิบายโค้ดที่อ่านยากให้เข้าใจ</li>
             <li>สร้างตัวอย่างโค้ด + unit test</li>
             <li>ช่วยดีบักด้วยการอธิบายสาเหตุและแนวแก้</li>
@@ -265,7 +265,7 @@ navTechnology: "active"
           </ul>
           <div class="mt-6 rounded-3xl border border-white/10 bg-slate-900/40 p-5">
             <h3 class="text-lg">สูตรใช้ AI ให้ “ได้งานจริง”</h3>
-            <ol class="mt-3 list-decimal pl-5 text-sm text-slate-200/90">
+            <ol class="mt-3 list-decimal pl-5 text-sm text-black-200/90">
               <li>บอก “เป้าหมายชิ้นงาน” (อยากได้อะไร)</li>
               <li>บอก “บริบท” (กลุ่มเป้าหมาย/ข้อมูลพื้นฐาน)</li>
               <li>บอก “รูปแบบผลลัพธ์” (หัวข้อ/ความยาว/โทน)</li>
@@ -278,7 +278,7 @@ navTechnology: "active"
           <div class="mt-6 space-y-4">
             <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
               <h3 class="text-lg">Prompt: เขียนบทความ SEO แบบโครงชัด</h3>
-              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-slate-100"><code>คุณคือผู้เชี่ยวชาญ SEO ภาษาไทย
+              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-black-100"><code>คุณคือผู้เชี่ยวชาญ SEO ภาษาไทย
 ช่วยเขียนบทความหัวข้อ: "DeepSeek คืออะไร"
 เงื่อนไข:
 - โครงสร้าง H1/H2/H3 ชัดเจน
@@ -289,14 +289,14 @@ navTechnology: "active"
             </div>
             <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
               <h3 class="text-lg">Prompt: ช่วยวางแผนคอนเทนต์ 30 วัน</h3>
-              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-slate-100"><code>ช่วยทำ Content Plan 30 วันเกี่ยวกับ "AI DeepSeek"
+              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-black-100"><code>ช่วยทำ Content Plan 30 วันเกี่ยวกับ "AI DeepSeek"
 รูปแบบ: ตาราง (Day / Topic / Hook / CTA / Keyword)
 กลุ่มเป้าหมาย: คนทำงานสายออฟฟิศ + เจ้าของธุรกิจเล็ก
 เป้าหมาย: เพิ่มทราฟฟิกและให้คนเซฟโพสต์</code></pre>
             </div>
             <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
               <h3 class="text-lg">Prompt: ช่วยดีบักโค้ดแบบเป็นขั้นตอน</h3>
-              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-slate-100"><code>นี่คือ error ที่เจอ: (วาง error)
+              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-black-100"><code>นี่คือ error ที่เจอ: (วาง error)
 นี่คือโค้ด: (วางโค้ด)
 ช่วย:
 1) อธิบายสาเหตุที่เป็นไปได้ (เรียงตามความน่าจะเป็น)
@@ -306,7 +306,7 @@ navTechnology: "active"
             </div>
             <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
               <h3 class="text-lg">Prompt: สรุปเอกสารให้ผู้บริหาร</h3>
-              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-slate-100"><code>สรุปเอกสารนี้สำหรับผู้บริหาร (Executive Summary)
+              <pre class="mt-3 overflow-auto rounded-2xl bg-slate-950/60 p-4 text-xs leading-relaxed text-black-100"><code>สรุปเอกสารนี้สำหรับผู้บริหาร (Executive Summary)
 ต้องมี:
 - TL;DR 5 บรรทัด
 - ประเด็นสำคัญ 7 ข้อ
@@ -325,7 +325,7 @@ navTechnology: "active"
             หากระบบที่คุณใช้ไม่ได้รับรองด้านการจัดการข้อมูลอย่างชัดเจน
           </p>
           <h3 class="text-xl">แนวทางปลอดภัยแบบทำได้ทันที</h3>
-          <ul class="list-disc pl-5 text-slate-200/90">
+          <ul class="list-disc pl-5 text-black-200/90">
             <li>แทนชื่อจริง/ข้อมูลลูกค้าเป็นรหัส เช่น “ลูกค้า A, เคส #1024”</li>
             <li>ลบข้อมูลส่วนตัวก่อนส่งให้ AI (redact)</li>
             <li>ขอให้ AI “สรุปเชิงหลักการ” แทนการวิเคราะห์ข้อมูลดิบละเอียด</li>
@@ -337,28 +337,28 @@ navTechnology: "active"
           <div class="mt-6 space-y-3">
             <details class="rounded-2xl border border-white/10 bg-white/5 p-4">
               <summary class="cursor-pointer font-semibold">DeepSeek เหมาะกับคนเริ่มต้นไหม?</summary>
-              <p class="text-sm text-slate-200/90 mt-2">
+              <p class="text-sm text-black-200/90 mt-2">
                 เหมาะมาก เพราะสามารถให้ตัวอย่างและอธิบายเป็นขั้นตอน แนะนำให้เริ่มจากงานง่าย ๆ เช่น
                 สรุปบทความ ร่างอีเมล หรือทำโครงคอนเทนต์ แล้วค่อยขยับไปงานโค้ด/วิเคราะห์
               </p>
             </details>
             <details class="rounded-2xl border border-white/10 bg-white/5 p-4">
               <summary class="cursor-pointer font-semibold">ถ้าต้องการคำตอบแม่น ๆ ควรสั่งงานยังไง?</summary>
-              <p class="text-sm text-slate-200/90 mt-2">
+              <p class="text-sm text-black-200/90 mt-2">
                 ให้ใส่บริบทที่จำเป็น, ระบุข้อจำกัด, ขอรูปแบบผลลัพธ์ และขอให้แสดงสมมติฐาน/ขั้นตอนตรวจสอบ
                 โดยเฉพาะถ้าเป็นตัวเลขหรือข้อเท็จจริง
               </p>
             </details>
             <details class="rounded-2xl border border-white/10 bg-white/5 p-4">
               <summary class="cursor-pointer font-semibold">DeepSeek ใช้ทำ SEO ได้จริงไหม?</summary>
-              <p class="text-sm text-slate-200/90 mt-2">
+              <p class="text-sm text-black-200/90 mt-2">
                 ใช้ช่วยได้มาก เช่น ทำโครงบทความ ทำ FAQ ทำสรุป ทำคลัสเตอร์คีย์เวิร์ด
                 แต่คุณยังต้องตรวจคุณภาพ ความถูกต้อง ความซ้ำ และความเป็นประโยชน์ต่อผู้ใช้จริง
               </p>
             </details>
             <details class="rounded-2xl border border-white/10 bg-white/5 p-4">
               <summary class="cursor-pointer font-semibold">ต้องระวังอะไรเป็นพิเศษ?</summary>
-              <p class="text-sm text-slate-200/90 mt-2">
+              <p class="text-sm text-black-200/90 mt-2">
                 ระวังข้อมูลส่วนตัว/ความลับองค์กร และระวังการตอบมั่วในเรื่องที่ต้องการอ้างอิง
                 ถ้าเป็นเรื่องสำคัญ ควรมีแหล่งข้อมูลประกอบหรือให้ AI ช่วยทำรายการสิ่งที่ต้องตรวจทาน
               </p>
@@ -366,7 +366,7 @@ navTechnology: "active"
           </div>
           <div class="mt-8 rounded-3xl border border-white/10 bg-slate-900/40 p-5">
             <h3 class="text-lg">สรุปท้ายบท (จำแค่นี้พอ)</h3>
-            <ul class="mt-3 list-disc pl-5 text-sm text-slate-200/90">
+            <ul class="mt-3 list-disc pl-5 text-sm text-black-200/90">
               <li>DeepSeek คือ LLM ที่ช่วยคิด-เขียน-สรุป-โค้ดได้</li>
               <li>ผลลัพธ์ขึ้นกับ “รุ่นโมเดล” และ “ความชัดของ Prompt”</li>
               <li>เหมาะกับงานคอนเทนต์ เอกสาร ธุรกิจ และโค้ด</li>
@@ -382,7 +382,7 @@ navTechnology: "active"
       <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div class="flex gap-3 text-sm">
           <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="#top">กลับขึ้นบน</a>
-          <a class="rounded-xl bg-white px-4 py-2 font-semibold text-slate-900 hover:bg-slate-200" href="#prompts">ดู Prompt</a>
+          <a class="rounded-xl bg-white px-4 py-2 font-semibold text-black-900 hover:bg-slate-200" href="#prompts">ดู Prompt</a>
         </div>
       </div>
     </footer>
