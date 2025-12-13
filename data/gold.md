@@ -7,108 +7,160 @@ urlx: "https://fintechxhub.com/data/gold"
 image: ""
 ---
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<header class="bg-amber-600 text-white text-center py-4 shadow-sm">
-  <div class="mx-auto max-w-6xl px-4">
-    <h1 class="text-xl md:text-2xl font-semibold">ทองคำ</h1>
-    <p class="mt-1 text-sm md:text-base text-amber-50/90">
-      ติดตามราคาทองคำแบบเรียลไทม์ • ราคาซื้อ-ขาย • ทองคำแท่ง • ทองรูปพรรณ
-    </p>
+<header class="bg-amber-600 text-white shadow-sm">
+  <div class="mx-auto max-w-6xl px-4 py-4 sm:py-5">
+    <div class="flex items-center justify-between gap-3">
+      <div>
+        <h1 class="text-lg sm:text-xl md:text-2xl font-semibold leading-tight">ทองคำ</h1>
+        <p class="mt-1 text-xs sm:text-sm md:text-base text-amber-50/90">
+          ติดตามราคาทองคำเรียลไทม์ • ราคาซื้อ-ขาย • ทองคำแท่ง • ทองรูปพรรณ
+        </p>
+      </div>
+
+      <span
+        class="hidden sm:inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs sm:text-sm">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        เรียลไทม์
+      </span>
+    </div>
   </div>
 </header>
-<main class="w-full mt-6">
-    <div class="mx-auto max-w-6xl px-4 space-y-6">
-        <section class="rounded-2xl border bg-white shadow-sm p-5 md:p-6">
-            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-                <div>
-                    <h2 class="text-lg md:text-xl font-semibold text-gray-900">
-                        ราคาทองคำวันนี้ (อัปเดตล่าสุด: <span id="updatedAt">—</span>)
+<!-- Mobile sticky actions -->
+<div class="sm:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+  <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-2">
+    <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs">
+      <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      เรียลไทม์
+    </span>
+    <button id="refreshBtnMobile"
+      class="rounded-xl bg-amber-600 text-white px-4 py-2 text-xs font-medium hover:bg-amber-700 active:scale-[0.99]">
+      รีเฟรชราคา
+    </button>
+  </div>
+</div>
+<main class="w-full mt-5 sm:mt-6">
+    <div class="mx-auto max-w-6xl px-4 space-y-5 sm:space-y-6">
+        <!-- Summary -->
+        <section class="rounded-2xl border bg-white shadow-sm p-4 sm:p-5 md:p-6">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+                <div class="min-w-0">
+                    <h2 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900">
+                        ราคาทองคำวันนี้
                     </h2>
-                    <p class="mt-1 text-sm text-gray-600">
-                        ดูราคา “ซื้อ/ขาย” แยกตามประเภททอง พร้อมสรุปการเปลี่ยนแปลงรายวัน
+                    <p class="mt-1 text-xs sm:text-sm text-gray-600">
+                        อัปเดตล่าสุด: <span id="updatedAt" class="font-medium text-gray-800">—</span>
                     </p>
                 </div>
-                <div class="flex items-center gap-2">
-                    <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-sm">
-                        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        เรียลไทม์
-                    </span>
+                <div class="hidden sm:flex items-center gap-2">
                     <button id="refreshBtn"
                         class="rounded-xl bg-amber-600 text-white px-4 py-2 text-sm font-medium hover:bg-amber-700 active:scale-[0.99]">
                         รีเฟรชราคา
                     </button>
                 </div>
             </div>
-            <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="rounded-2xl border p-5">
-                    <div class="flex items-center justify-between">
-                        <h3 class="font-semibold text-gray-900">ทองคำแท่ง</h3>
-                        <span class="text-xs rounded-full bg-gray-100 text-gray-700 px-2 py-1">บาททองคำ</span>
+            <!-- Price Cards -->
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                <!-- Gold Bar -->
+                <div class="rounded-2xl border p-4 sm:p-5">
+                    <div class="flex items-center justify-between gap-2">
+                        <h3 class="font-semibold text-gray-900 text-sm sm:text-base">ทองคำแท่ง</h3>
+                        <span class="text-[11px] sm:text-xs rounded-full bg-gray-100 text-gray-700 px-2 py-1 whitespace-nowrap">
+                            บาททองคำ
+                        </span>
                     </div>
-                    <div class="mt-4 grid grid-cols-2 gap-3">
-                        <div class="rounded-xl bg-gray-50 p-4">
-                            <p class="text-xs text-gray-500">ราคารับซื้อ</p>
-                            <p id="barBuy" class="mt-1 text-2xl font-semibold text-gray-900">—</p>
+                    <div class="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
+                        <div class="rounded-xl bg-gray-50 p-3 sm:p-4">
+                        <p class="text-[11px] sm:text-xs text-gray-500">ราคารับซื้อ</p>
+                        <p id="barBuy" class="mt-1 text-xl sm:text-2xl font-semibold text-gray-900 break-words">—</p>
                         </div>
-                        <div class="rounded-xl bg-gray-50 p-4">
-                            <p class="text-xs text-gray-500">ราคาขายออก</p>
-                            <p id="barSell" class="mt-1 text-2xl font-semibold text-gray-900">—</p>
+                        <div class="rounded-xl bg-gray-50 p-3 sm:p-4">
+                        <p class="text-[11px] sm:text-xs text-gray-500">ราคาขายออก</p>
+                        <p id="barSell" class="mt-1 text-xl sm:text-2xl font-semibold text-gray-900 break-words">—</p>
                         </div>
                     </div>
-                    <p id="barChange" class="mt-3 text-sm text-gray-600">เปลี่ยนแปลง: —</p>
+                    <p id="barChange" class="mt-3 text-xs sm:text-sm text-gray-600">เปลี่ยนแปลง: —</p>
                 </div>
-                <div class="rounded-2xl border p-5">
-                    <div class="flex items-center justify-between">
-                        <h3 class="font-semibold text-gray-900">ทองรูปพรรณ</h3>
-                        <span class="text-xs rounded-full bg-gray-100 text-gray-700 px-2 py-1">บาททองคำ</span>
+                <!-- Gold Ornament -->
+                <div class="rounded-2xl border p-4 sm:p-5">
+                    <div class="flex items-center justify-between gap-2">
+                        <h3 class="font-semibold text-gray-900 text-sm sm:text-base">ทองรูปพรรณ</h3>
+                        <span class="text-[11px] sm:text-xs rounded-full bg-gray-100 text-gray-700 px-2 py-1 whitespace-nowrap">
+                        บาททองคำ
+                        </span>
                     </div>
-                    <div class="mt-4 grid grid-cols-2 gap-3">
-                        <div class="rounded-xl bg-gray-50 p-4">
-                            <p class="text-xs text-gray-500">ราคารับซื้อ</p>
-                            <p id="ornBuy" class="mt-1 text-2xl font-semibold text-gray-900">—</p>
+                    <div class="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
+                        <div class="rounded-xl bg-gray-50 p-3 sm:p-4">
+                        <p class="text-[11px] sm:text-xs text-gray-500">ราคารับซื้อ</p>
+                        <p id="ornBuy" class="mt-1 text-xl sm:text-2xl font-semibold text-gray-900 break-words">—</p>
                         </div>
-                        <div class="rounded-xl bg-gray-50 p-4">
-                            <p class="text-xs text-gray-500">ราคาขายออก</p>
-                            <p id="ornSell" class="mt-1 text-2xl font-semibold text-gray-900">—</p>
+                        <div class="rounded-xl bg-gray-50 p-3 sm:p-4">
+                        <p class="text-[11px] sm:text-xs text-gray-500">ราคาขายออก</p>
+                        <p id="ornSell" class="mt-1 text-xl sm:text-2xl font-semibold text-gray-900 break-words">—</p>
                         </div>
                     </div>
-                    <p id="ornChange" class="mt-3 text-sm text-gray-600">เปลี่ยนแปลง: —</p>
+                    <p id="ornChange" class="mt-3 text-xs sm:text-sm text-gray-600">เปลี่ยนแปลง: —</p>
                 </div>
             </div>
-            <div id="statusNote" class="mt-4 text-xs text-gray-500">
-                แหล่งข้อมูล: thaigold.info (RealTimeDataV2)
+            <div id="statusNote" class="mt-4 text-[11px] sm:text-xs text-gray-500">
+                แหล่งข้อมูล: thaigold.info • RealTimeDataV2
             </div>
         </section>
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <div class="lg:col-span-2 rounded-2xl border bg-white shadow-sm p-5 md:p-6">
-                <h2 class="text-lg font-semibold text-gray-900">กราฟแนวโน้มราคา</h2>
-                <p class="mt-1 text-sm text-gray-600">
-                    (พื้นที่กราฟ — ถ้าต้องการ ผมทำให้ plot จากข้อมูลที่เก็บเป็น time series ได้)
-                </p>
-                <div class="mt-5 rounded-2xl bg-gradient-to-b from-amber-50 to-white border p-4 md:p-6">
-                    <div class="mt-4 h-48 rounded-xl bg-white border grid place-items-center text-sm text-gray-500">
+        <!-- Tools (responsive layout) -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4">
+            <!-- Chart -->
+            <div class="lg:col-span-2 rounded-2xl border bg-white shadow-sm p-4 sm:p-5 md:p-6">
+                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+                    <div class="min-w-0">
+                        <h2 class="text-base sm:text-lg font-semibold text-gray-900">กราฟแนวโน้มราคา</h2>
+                        <p class="mt-1 text-xs sm:text-sm text-gray-600">
+                        พื้นที่กราฟ (ถ้าต้องการ ผมทำกราฟจริงจาก time series ให้ได้)
+                        </p>
+                    </div>
+                    <div class="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none]">
+                        <style>
+                        .no-scrollbar::-webkit-scrollbar {
+                            display: none;
+                        }
+                        </style>
+                        <div class="no-scrollbar flex gap-2">
+                        <button
+                            class="px-3 py-1.5 text-xs sm:text-sm rounded-xl border hover:bg-white whitespace-nowrap">1D</button>
+                        <button
+                            class="px-3 py-1.5 text-xs sm:text-sm rounded-xl border hover:bg-white whitespace-nowrap">1W</button>
+                        <button class="px-3 py-1.5 text-xs sm:text-sm rounded-xl border bg-white whitespace-nowrap">1M</button>
+                        <button
+                            class="px-3 py-1.5 text-xs sm:text-sm rounded-xl border hover:bg-white whitespace-nowrap">1Y</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 rounded-2xl bg-gradient-to-b from-amber-50 to-white border p-3 sm:p-4 md:p-6">
+                    <div
+                        class="h-40 sm:h-48 md:h-56 rounded-xl bg-white border grid place-items-center text-xs sm:text-sm text-gray-500">
                         พื้นที่กราฟ (Chart Placeholder)
                     </div>
                 </div>
             </div>
-            <div class="rounded-2xl border bg-white shadow-sm p-5 md:p-6">
-                <h2 class="text-lg font-semibold text-gray-900">คำนวณราคาทอง</h2>
-                <p class="mt-1 text-sm text-gray-600">คำนวณคร่าว ๆ ตามน้ำหนักที่ต้องการ</p>
+            <!-- Calculator -->
+            <div class="rounded-2xl border bg-white shadow-sm p-4 sm:p-5 md:p-6">
+                <h2 class="text-base sm:text-lg font-semibold text-gray-900">คำนวณราคาทอง</h2>
+                <p class="mt-1 text-xs sm:text-sm text-gray-600">คำนวณคร่าว ๆ ตามน้ำหนักที่ต้องการ</p>
                 <div class="mt-4 space-y-3">
-                    <label class="block text-sm font-medium text-gray-800">เลือกประเภท</label>
+                    <label class="block text-xs sm:text-sm font-medium text-gray-800">เลือกประเภท</label>
                     <select id="typeSelect" class="w-full rounded-xl border px-3 py-2 text-sm">
                         <option value="bar">ทองคำแท่ง (ขายออก)</option>
                         <option value="orn">ทองรูปพรรณ (ขายออก)</option>
                     </select>
-                    <label class="block text-sm font-medium text-gray-800">น้ำหนัก (บาททองคำ)</label>
+                    <label class="block text-xs sm:text-sm font-medium text-gray-800">น้ำหนัก (บาททองคำ)</label>
                     <input id="weightInput" type="number" min="0" step="0.01" placeholder="เช่น 1, 2, 0.50"
                         class="w-full rounded-xl border px-3 py-2 text-sm" />
+
                     <button id="calcBtn"
                         class="w-full rounded-xl bg-gray-900 text-white px-4 py-2 text-sm font-medium hover:bg-black">
                         คำนวณ
                     </button>
                     <div class="rounded-xl bg-gray-50 border p-4">
-                        <p class="text-xs text-gray-500">ประมาณการราคา</p>
-                        <p id="calcResult" class="mt-1 text-xl font-semibold text-gray-900">—</p>
+                        <p class="text-[11px] sm:text-xs text-gray-500">ประมาณการราคา</p>
+                        <p id="calcResult" class="mt-1 text-lg sm:text-xl font-semibold text-gray-900 break-words">—</p>
                     </div>
                 </div>
             </div>
