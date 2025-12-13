@@ -451,7 +451,7 @@
                     </div>
                     <div class="stat">
                         <div class="k">Location</div>
-                        <div class="v">Bangkok</div>
+                        <div class="v">นครศรีธรรมราช</div>
                     </div>
                     <div class="stat">
                         <div class="k">Mood</div>
@@ -499,8 +499,8 @@
     <script>
         // 🔁 แก้ URL รูปตรงนี้ (ตัวอย่างใช้รูป placeholder แบบสุ่ม)
         const photos = [
-            { src: "/assets/img/card-front.png", title: "Ceremony – Vows", cat: "Ceremony", tags: ["ceremony", "vows"] },
-            { src: "/assets/img/card-back.png", title: "Ceremony – Blessing", cat: "Ceremony", tags: ["blessing"] },
+            // { src: "/assets/img/wedding/card-front.png", title: "bb", cat: "vv", tags: ["a"] },
+            // { src: "/assets/img/wedding/card-back.png", title: "bb", cat: "vv", tags: ["a"] },
             // { src: "/assets/img/card-front.png", title: "Portrait – Soft smile", cat: "Portrait", tags: ["portrait"] },
             // { src: "/assets/img/card-front.png", title: "Details – Rings", cat: "Details", tags: ["ring", "details"] },
             // { src: "/assets/img/card-front.png", title: "Reception – First dance", cat: "Reception", tags: ["dance", "reception"] },
@@ -509,6 +509,10 @@
             // { src: "/assets/img/card-back.png", title: "Reception – Cheers", cat: "Reception", tags: ["toast"] },
             // { src: "/assets/img/card-back.png", title: "Portrait – Candid", cat: "Portrait", tags: ["candid"] },
         ];
+
+        for (let index = 1; index <= 37; index++) {
+            photos.push({ src: `/assets/img/wedding/wedding (${index}).jpg`, title: "Wedding", cat: "vv", tags: ["a"] });
+        }
 
         const cats = ["All", ...Array.from(new Set(photos.map(p => p.cat)))];
         const filtersEl = document.getElementById("filters");
