@@ -2,7 +2,7 @@
 layout: default
 title: "ราคาทองคำวันนี้ | ติดตามราคาทองคำเรียลไทม์ (ทองแท่ง/รูปพรรณ)"
 description: "แพลตฟอร์มติดตามราคาทองคำแบบเรียลไทม์ อัปเดตราคาซื้อ-ขายทองคำแท่งและทองรูปพรรณ พร้อมสรุปแนวโน้ม กราฟราคา และเครื่องมือคำนวณน้ำหนักทอง ใช้งานง่าย ปลอดภัย บนระบบออนไลน์"
-keywords: "ราคาทองคำ, ราคาทองวันนี้, ทองคำเรียลไทม์, ราคาทองแท่ง, ราคาทองรูปพรรณ, ซื้อขายทอง, กราฟราคาทอง, คำนวณทอง, ติดตามราคาทอง"
+keywords: "ราคาทองคำ, ราคาทองวันนี้, ทองคำเรียลไทม์, ราคาทองแท่ง, ราคาทองรูปพรรณ, ซื้อขายทอง, กราฟราคาทอง, คำนวณทอง, ติดตามราคาทองม, สมาคมค้าทองคำ"
 urlx: "https://fintechxhub.com/data/gold"
 image: ""
 ---
@@ -16,7 +16,6 @@ image: ""
           ติดตามราคาทองคำเรียลไทม์ • ราคาซื้อ-ขาย • ทองคำแท่ง • ทองรูปพรรณ
         </p>
       </div>
-
       <span
         class="hidden sm:inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs sm:text-sm">
         <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -102,7 +101,7 @@ image: ""
                 </div>
             </div>
             <div id="statusNote" class="mt-4 text-[11px] sm:text-xs text-gray-500">
-                แหล่งข้อมูล: thaigold.info • RealTimeDataV2
+                แหล่งข้อมูล: thaigold • สมาคมค้าทองคำ
             </div>
         </section>
         <!-- Tools (responsive layout) -->
