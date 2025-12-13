@@ -62,7 +62,7 @@ image: ""
                 <!-- Gold Bar -->
                 <div class="rounded-2xl border p-4 sm:p-5">
                     <div class="flex items-center justify-between gap-2">
-                        <h3 class="font-semibold text-gray-900 text-sm sm:text-base">ทองคำแท่ง</h3>
+                        <h3 class="font-semibold text-gray-900 text-sm sm:text-base">ทองคำแท่ง 96.5%</h3>
                         <span class="text-[11px] sm:text-xs rounded-full bg-gray-100 text-gray-700 px-2 py-1 whitespace-nowrap">
                             บาททองคำ
                         </span>
@@ -82,7 +82,7 @@ image: ""
                 <!-- Gold Ornament -->
                 <div class="rounded-2xl border p-4 sm:p-5">
                     <div class="flex items-center justify-between gap-2">
-                        <h3 class="font-semibold text-gray-900 text-sm sm:text-base">ทองรูปพรรณ</h3>
+                        <h3 class="font-semibold text-gray-900 text-sm sm:text-base">ทองรูปพรรณ 96.5%</h3>
                         <span class="text-[11px] sm:text-xs rounded-full bg-gray-100 text-gray-700 px-2 py-1 whitespace-nowrap">
                         บาททองคำ
                         </span>
