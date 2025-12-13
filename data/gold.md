@@ -108,7 +108,7 @@ image: ""
         <!-- Tools (responsive layout) -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4">
             <!-- Chart -->
-            <div class="lg:col-span-2 rounded-2xl border bg-white shadow-sm p-4 sm:p-5 md:p-6">
+            <div class="hidden lg:col-span-2 rounded-2xl border bg-white shadow-sm p-4 sm:p-5 md:p-6">
                 <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
                     <div class="min-w-0">
                         <h2 class="text-base sm:text-lg font-semibold text-gray-900">กราฟแนวโน้มราคา</h2>
@@ -171,7 +171,7 @@ image: ""
     // ========= Config =========
     // ถ้า CORS ไม่ให้ยิงตรง ๆ ให้เปลี่ยนเป็น proxy ของคุณ เช่น "/api/gold"
     const GOLD_URL = "https://nodejsapix.vercel.app/api/gold";
-    const REFRESH_MS = 15000; // 15s
+    const REFRESH_MS = 1000 * 60;
     // ========= Helpers =========
     const fmt = (n) => (typeof n === "number"
         ? n.toLocaleString("th-TH", { maximumFractionDigits: 2 })
