@@ -118,14 +118,12 @@ image: ""
 <script>
     // ========= Config =========
     // ถ้า CORS ไม่ให้ยิงตรง ๆ ให้เปลี่ยนเป็น proxy ของคุณ เช่น "/api/gold"
-    const GOLD_URL = "https://www.thaigold.info/RealTimeDataV2/gtdata_.txt";
+    const GOLD_URL = "https://nodejsapix.vercel.app/api/gold";
     const REFRESH_MS = 15000; // 15s
-
     // ========= Helpers =========
     const fmt = (n) => (typeof n === "number"
         ? n.toLocaleString("th-TH", { maximumFractionDigits: 2 })
         : "—");
-
     const toNumber = (v) => {
         if (v === null || v === undefined) return null;
         if (typeof v === "number") return Number.isFinite(v) ? v : null;
@@ -135,17 +133,14 @@ image: ""
         const x = Number(s);
         return Number.isFinite(x) ? x : null;
     };
-
     function setUpdated(text) {
         document.getElementById("updatedAt").textContent = text || "—";
     }
-
     function setStatus(msg, isError = false) {
         const el = document.getElementById("statusNote");
         el.textContent = msg;
         el.className = "mt-4 text-xs " + (isError ? "text-rose-700" : "text-gray-500");
     }
-
     // ========= State =========
     // จะพยายาม map จากชื่อในไฟล์:
     // - "สมาคมฯ" = ทองคำแท่ง
@@ -154,7 +149,6 @@ image: ""
         bar: { buy: null, sell: null, change: null },
         orn: { buy: null, sell: null, change: null }
     };
-
     function applyChangeClass(el, change) {
         const base = "mt-3 text-sm ";
         if (typeof change !== "number") {
@@ -163,84 +157,69 @@ image: ""
         }
         el.className = base + (change >= 0 ? "text-emerald-700" : "text-rose-700");
     }
-
     function render() {
         document.getElementById("barBuy").textContent = fmt(state.bar.buy);
         document.getElementById("barSell").textContent = fmt(state.bar.sell);
         document.getElementById("ornBuy").textContent = fmt(state.orn.buy);
         document.getElementById("ornSell").textContent = fmt(state.orn.sell);
-
         const barChangeEl = document.getElementById("barChange");
         const ornChangeEl = document.getElementById("ornChange");
-
         const barCh = state.bar.change;
         const ornCh = state.orn.change;
-
         const barText = (typeof barCh === "number")
         ? (barCh >= 0 ? `+${fmt(barCh)}` : `${fmt(barCh)}`)
         : "—";
         const ornText = (typeof ornCh === "number")
         ? (ornCh >= 0 ? `+${fmt(ornCh)}` : `${fmt(ornCh)}`)
         : "—";
-
         barChangeEl.textContent = `เปลี่ยนแปลง: ${barText}`;
         ornChangeEl.textContent = `เปลี่ยนแปลง: ${ornText}`;
-
         applyChangeClass(barChangeEl, barCh);
         applyChangeClass(ornChangeEl, ornCh);
     }
-
     // ========= Fetch + Parse =========
     function indexByName(arr) {
         const map = new Map();
         for (const it of arr) {
-        if (it && typeof it.name === "string") map.set(it.name, it);
+            if (it && typeof it.name === "string") map.set(it.name, it);
         }
         return map;
     }
-
     async function fetchGold() {
         try {
-        setStatus("กำลังดึงข้อมูลล่าสุด…");
-        const res = await fetch(GOLD_URL, { cache: "no-store" });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const text = await res.text();
-
-        // บางครั้งปลายทางอาจส่งเป็น text ที่เป็น JSON อยู่แล้ว
-        const arr = JSON.parse(text);
-        if (!Array.isArray(arr)) throw new Error("Invalid data: not an array");
-
-        const m = indexByName(arr);
-
-        // Update time: ในไฟล์มี item ชื่อ "Update" และ ask เป็นเวลา เช่น "13:15"
-        const upd = m.get("Update");
-        const updatedAt = upd?.ask ? String(upd.ask) : null;
-        setUpdated(updatedAt || new Date().toLocaleString("th-TH", { dateStyle: "medium", timeStyle: "short" }));
-
-        // ทองคำแท่ง: "สมาคมฯ"
-        const bar = m.get("สมาคมฯ") || m.get("\u0e2a\u0e21\u0e32\u0e04\u0e21\u0e2f");
-        state.bar.buy = toNumber(bar?.bid);
-        state.bar.sell = toNumber(bar?.ask);
-        state.bar.change = toNumber(bar?.diff);
-
-        // ทองรูปพรรณ: "96.5%"
-        const orn = m.get("96.5%");
-        state.orn.buy = toNumber(orn?.bid);
-        state.orn.sell = toNumber(orn?.ask);
-        state.orn.change = toNumber(orn?.diff);
-
-        render();
-        setStatus("แหล่งข้อมูล: thaigold.info (RealTimeDataV2) • อัปเดตสำเร็จ");
+            setStatus("กำลังดึงข้อมูลล่าสุด…");
+            const res = await fetch(GOLD_URL, { cache: "no-store" });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const text = await res.text();
+            // บางครั้งปลายทางอาจส่งเป็น text ที่เป็น JSON อยู่แล้ว
+            const arr = JSON.parse(text);
+            if (!Array.isArray(arr)) throw new Error("Invalid data: not an array");
+            const m = indexByName(arr);
+            // Update time: ในไฟล์มี item ชื่อ "Update" และ ask เป็นเวลา เช่น "13:15"
+            const upd = m.get("Update");
+            const updatedAt = upd?.ask ? String(upd.ask) : null;
+            setUpdated(updatedAt || new Date().toLocaleString("th-TH", { dateStyle: "medium", timeStyle: "short" }));
+            // ทองคำแท่ง: "สมาคมฯ"
+            const bar = m.get("สมาคมฯ") || m.get("\u0e2a\u0e21\u0e32\u0e04\u0e21\u0e2f");
+            state.bar.buy = toNumber(bar?.bid);
+            state.bar.sell = toNumber(bar?.ask);
+            state.bar.change = toNumber(bar?.diff);
+            // ทองรูปพรรณ: "96.5%"
+            const orn = m.get("96.5%");
+            state.orn.buy = toNumber(orn?.bid);
+            state.orn.sell = toNumber(orn?.ask);
+            state.orn.change = toNumber(orn?.diff);
+            render();
+            setStatus("แหล่งข้อมูล: thaigold.info (RealTimeDataV2) • อัปเดตสำเร็จ");
         } catch (err) {
-        console.error(err);
-        setStatus(
-            "ดึงข้อมูลไม่สำเร็จ (อาจถูก CORS หรือปลายทางไม่พร้อม) — แนะนำทำ proxy เช่น /api/gold แล้วเปลี่ยน GOLD_URL",
-            true
-        );
-        // ไม่ทับค่าที่มีอยู่เดิม เพื่อให้หน้าไม่ว่าง
+            console.error(err);
+            setStatus(
+                "ดึงข้อมูลไม่สำเร็จ (อาจถูก CORS หรือปลายทางไม่พร้อม) — แนะนำทำ proxy เช่น /api/gold แล้วเปลี่ยน GOLD_URL",
+                true
+            );
+            // ไม่ทับค่าที่มีอยู่เดิม เพื่อให้หน้าไม่ว่าง
         }
     }
-
     // ========= Calculator =========
     document.getElementById("calcBtn").addEventListener("click", () => {
         const t = document.getElementById("typeSelect").value;
@@ -249,9 +228,7 @@ image: ""
         const total = w > 0 && typeof price === "number" ? w * price : 0;
         document.getElementById("calcResult").textContent = total > 0 ? `${fmt(total)} บาท` : "—";
     });
-
     document.getElementById("refreshBtn").addEventListener("click", fetchGold);
-
     // ========= Auto refresh =========
     fetchGold();
     setInterval(fetchGold, REFRESH_MS);
