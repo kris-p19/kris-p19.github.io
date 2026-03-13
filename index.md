@@ -28,6 +28,28 @@ navIndex: "active"
   </div>
 </section>
 
+<section class="py-10 bg-white">
+  <div class="container">
+    <div class="row align-items-center justify-content-between g-5">
+      <div class="col-lg-6">
+        <div class="p-2 bg-light rounded-5 shadow-sm">
+           <img id="picsum-img" src="https://picsum.photos/800/500?grayscale" class="img-fluid rounded-5 shadow-sm" alt="Short URL Dashboard">
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">Smart Link Management</h6>
+        <h2 class="display-5 fw-medium mb-4" style="color: #202124;">ย่อลิงก์ให้สั้นลง<br>จัดการได้ง่ายกว่าที่เคย</h2>
+        <p class="fs-5 text-secondary mb-5" style="line-height: 1.6;">
+          เปลี่ยนลิงก์ที่ยาวและซับซ้อน ให้เป็น URL ที่จดจำง่าย พร้อมระบบติดตามสถิติที่ช่วยให้คุณวิเคราะห์ทุกการคลิกได้ทันทีจากทุกอุปกรณ์
+        </p>
+        <div class="d-flex gap-3">
+          <a href="/shorturl" class="btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">สร้างลิงก์ของคุณ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="py-10 bg-white text-center">
     <div class="container">
         <div class="row align-items-center justify-content-between g-5">
@@ -43,7 +65,7 @@ navIndex: "active"
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <section class="py-5 bg-light">
   <div class="container">
