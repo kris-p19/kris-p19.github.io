@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "หน้าแรก"
-description: "เรามุ่งมั่นในการนำเสนอข้อมูลที่ทันสมัยและเป็นประโยชน์เกี่ยวกับเทคโนโลยีทางการเงิน (Fintech) ทั้งในด้านข่าวสาร บทความ การวิเคราะห์ และความรู้ต่างๆ เพื่อช่วยให้ผู้อ่านของเราเข้าใจโลกฟินเทคที่เต็มไปด้วยการเปลี่ยนแปลงและนวัตกรรมใหม่ๆ อยู่เสมอ"
+description: "ข่าวสาร บทความ การวิเคราะห์ และความรู้ต่างๆ เพื่อช่วยให้ผู้อ่านของเราเข้าใจโลกฟินเทคที่เต็มไปด้วยการเปลี่ยนแปลงและนวัตกรรมใหม่ๆ อยู่เสมอ"
 keywords: "fintechxhub,fin tech,tech,technology,investing"
 navIndex: "active"
 ---
@@ -20,8 +20,8 @@ navIndex: "active"
           ออกแบบมาเพื่อช่วยให้คุณโฟกัสกับสิ่งที่สำคัญที่สุด ด้วยเครื่องมือที่ชาญฉลาดและเข้าถึงได้จากทุกที่
         </p>
         <div class="d-flex gap-3">
-          <a href="#" class="btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
-          <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-1 shadow-none">เรียนรู้เพิ่มเติม</a>
+          <a href="/" class="btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
+          <a href="/" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-1 shadow-none">เรียนรู้เพิ่มเติม</a>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ navIndex: "active"
             </div>
             <h5 class="card-title fw-bold mb-3">ปลอดภัยทุกที่</h5>
             <p class="card-text text-muted">เข้าถึงข้อมูลของคุณได้อย่างปลอดภัยด้วยระบบการยืนยันตัวตนหลายชั้นที่เป็นมาตรฐานสากล</p>
-            <a href="#" class="text-primary text-decoration-none fw-medium mt-3 d-inline-block">ดูรายละเอียด <i class="bi bi-arrow-right ms-1"></i></a>
+            <a href="/" class="text-primary text-decoration-none fw-medium mt-3 d-inline-block">ดูรายละเอียด <i class="bi bi-arrow-right ms-1"></i></a>
           </div>
         </div>
       </div>
