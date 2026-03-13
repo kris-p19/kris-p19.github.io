@@ -9,20 +9,16 @@ navIndex: "active"
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
-                <div class="p-4 p-md-5 bg-light rounded-5 shadow-sm border mb-5">
-                    <form id="searchForm" class="row g-3">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                <input type="text" id="jobSearchInput" class="form-control border-0 shadow-none ps-2" placeholder="พิมพ์ชื่อตำแหน่งงาน หรือหน่วยงานที่ต้องการค้นหา..." style="border-radius: 0 50px 50px 0;">
+                <form id="searchForm">
+                        <div class="text-center">
+                                <input type="text" id="jobSearchInput" class="" placeholder="พิมพ์ชื่อตำแหน่งงาน หรือหน่วยงานที่ต้องการค้นหา..." style="">
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary btn-lg w-100 fw-medium rounded-pill shadow-none">
+                                <button type="submit" class="">
                                     ค้นหางาน
                                 </button>
                             </div>
-                        </div>
                     </form>
-                </div>
                 <div id="resultsContent">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <h4 class="fw-bold mb-0">ประกาศงานล่าสุด</h4>
