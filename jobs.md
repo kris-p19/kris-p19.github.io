@@ -12,10 +12,10 @@ navIndex: "active"
                 <div class="p-4 p-md-5 bg-light rounded-5 shadow-sm border mb-5">
                     <form id="searchForm" class="row g-3">
                         <div class="col-md-12">
-                            <div>
+                            <div class="text-center">
                                 <input type="text" id="jobSearchInput" class="form-control border-0 shadow-none ps-2" placeholder="พิมพ์ชื่อตำแหน่งงาน หรือหน่วยงานที่ต้องการค้นหา..." style="border-radius: 0 50px 50px 0;">
                             </div>
-                            <div>
+                            <div class="text-center">
                                 <button type="submit" class="btn btn-primary btn-lg w-100 fw-medium rounded-pill shadow-none">
                                     ค้นหางาน
                                 </button>
