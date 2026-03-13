@@ -10,7 +10,7 @@ navIndex: "active"
     <div class="row align-items-center justify-content-between g-5">
       <div class="col-lg-6">
         <div class="p-2 bg-light rounded-5 shadow-sm">
-           <img src="https://via.placeholder.com/800x500" class="img-fluid rounded-5 shadow-sm" alt="Product View">
+           <img src="https://picsum.photos/800/500" class="img-fluid rounded-5 shadow-sm" alt="Product View">
         </div>
       </div>
       <div class="col-lg-5">
