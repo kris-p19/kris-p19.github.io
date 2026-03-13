@@ -112,7 +112,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
             return;
         }
         let html = '';
-        jobs.forEach(job => {
+        jobs.forEach((job, index) => {
             html += `
             <div class="col-12 mb-3">
                 <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-primary border-4">
