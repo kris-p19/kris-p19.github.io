@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "หน้าแรก"
-description: "ข่าวสาร บทความ การวิเคราะห์ และความรู้ต่างๆ เพื่อช่วยให้ผู้อ่านของเราเข้าใจโลกฟินเทคที่เต็มไปด้วยการเปลี่ยนแปลงและนวัตกรรมใหม่ๆ อยู่เสมอ"
-keywords: "fintechxhub,fin tech,tech,technology,investing"
+description: "ข่าวสาร บทความ การวิเคราะห์ และความรู้ต่างๆ"
+keywords: "fintechxhub.com"
 navIndex: "active"
 ---
 <section class="py-10 bg-white">
@@ -10,7 +10,7 @@ navIndex: "active"
     <div class="row align-items-center justify-content-between g-5">
       <div class="col-lg-6">
         <div class="p-2 bg-light rounded-5 shadow-sm">
-           <img src="https://picsum.photos/800/500" class="img-fluid rounded-5 shadow-sm" alt="Product View">
+           <img id="picsum-img" src="https://picsum.photos/800/500" class="img-fluid rounded-5 shadow-sm" alt="Product View">
         </div>
       </div>
       <div class="col-lg-5">
@@ -20,8 +20,8 @@ navIndex: "active"
           ออกแบบมาเพื่อช่วยให้คุณโฟกัสกับสิ่งที่สำคัญที่สุด ด้วยเครื่องมือที่ชาญฉลาดและเข้าถึงได้จากทุกที่
         </p>
         <div class="d-flex gap-3">
-          <a href="/" class="btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
-          <a href="/" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-1 shadow-none">เรียนรู้เพิ่มเติม</a>
+          <a href="/#picsum-img" class="btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
+          <a href="/#picsum-img" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-1 shadow-none">เรียนรู้เพิ่มเติม</a>
         </div>
       </div>
     </div>
