@@ -144,5 +144,5 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
         jobList.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
     }
 });
-settimeout(async ()=>{ await queryJobs(); },500);
+settimeout(()=>{ document.getElementById('searchForm').submit(); },500);
 </script>
