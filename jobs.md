@@ -71,7 +71,7 @@ navIndex: "active"
 async function queryJobs(keyword) {
     try {
         // เรียก API โดยใช้ keyword
-        const response = await fetch(`https://jobapp.ocsc.go.th/jobapi/portal/jobs?query=${encodeURIComponent(keyword)}`);
+        const response = await fetch(`https://nodejsapix.vercel.app/api/load-scaping-a?url=https://jobapp.ocsc.go.th/jobapi/portal/jobs?query=${encodeURIComponent(keyword)}`);
         
         // ตรวจสอบสถานะการเชื่อมต่อ
         if (!response.ok) {
