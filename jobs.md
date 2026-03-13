@@ -79,7 +79,7 @@ navIndex: "active"
         display: block !important;
     } */
 </style>
-<script src="/assets/js/getcode.js"></script>
+<script src="/assets/js/getcode.js?v=1"></script>
 <script>
 async function queryJobs(keyword) {
     try {
