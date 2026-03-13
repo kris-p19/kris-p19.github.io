@@ -68,6 +68,29 @@ navIndex: "active"
   }
 </style>
 <script>
+async function queryJobs(keyword) {
+    try {
+        // เรียก API โดยใช้ keyword
+        const response = await fetch(`https://jobapp.ocsc.go.th/jobapi/portal/jobs?query=${encodeURIComponent(keyword)}`);
+        
+        // ตรวจสอบสถานะการเชื่อมต่อ
+        if (!response.ok) {
+            throw new Error("ไม่สามารถเชื่อมต่อกับฐานข้อมูลงานราชการได้");
+        }
+
+        const data = await response.json();
+
+        // ตรวจสอบว่ามีข้อมูลกลับมาหรือไม่ (data เป็น Array)
+        if (Array.isArray(data)) {
+            return data;
+        } else {
+            throw new Error("รูปแบบข้อมูลที่ได้รับไม่ถูกต้อง");
+        }
+    } catch (err) {
+        console.error("Fetch Error:", err);
+        throw err;
+    }
+}
 // เมื่อมีการกดปุ่มค้นหา
 document.getElementById('searchForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -121,4 +144,5 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
         jobList.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
     }
 });
+settimeout(async ()=>{ await queryJobs(); },500);
 </script>
