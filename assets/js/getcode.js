@@ -5,7 +5,7 @@ function getAdCode() {
                 <div class="card-body p-3 text-center ad-container">
                     <small class="text-muted d-block mb-2">โฆษณาจากผู้สนับสนุน</small>
                     <ins class="adsbygoogle" 
-                        style="display:block" 
+                        style="display:block;width:100%;min-height:90px;" 
                         data-ad-format="fluid"
                         data-ad-client="ca-pub-320380267012174" 
                         data-ad-slot="6393733209" 
