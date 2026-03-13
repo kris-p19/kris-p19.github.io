@@ -153,7 +153,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
             let s_t = 1000;
             const ads = document.querySelectorAll('.ad-container ins');
             ads.forEach(() => {
-                setTimeout(()=>{ (window.adsbygoogle = window.adsbygoogle || []).push({}); },(s_t*2));
+                setTimeout(()=>{ (adsbygoogle = window.adsbygoogle || []).push({}); },(s_t*2));
             });
         } catch (e) {
             console.error("AdSense error:", e);
