@@ -73,11 +73,11 @@ navIndex: "active"
         transform: translateY(-5px);
         box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
     }
-    ins.adsbygoogle {
+    /* ins.adsbygoogle {
         background: #f0f0f0;
         min-height: 100px;
         display: block !important;
-    }
+    } */
 </style>
 <script src="/assets/js/getcode.js"></script>
 <script>
@@ -150,9 +150,10 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
         });
         jobList.innerHTML = html;
         try {
+            let s_t = 1000;
             const ads = document.querySelectorAll('.ad-container ins');
             ads.forEach(() => {
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                setTimeout(()=>{ (window.adsbygoogle = window.adsbygoogle || []).push({}); },(s_t*2));
             });
         } catch (e) {
             console.error("AdSense error:", e);
