@@ -55,7 +55,7 @@ navIndex: "active"
 </style>
 <script>
     $('.randomimg').on('click',()=>{
-        window.location.href = '/?date=' + Date.now() + '&#picsum-img';
+        window.location.href = '/';
     });
 </script>
 <!-- /Category Section Section -->
