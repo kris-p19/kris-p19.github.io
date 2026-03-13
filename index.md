@@ -20,8 +20,8 @@ navIndex: "active"
           ออกแบบมาเพื่อช่วยให้คุณโฟกัสกับสิ่งที่สำคัญที่สุด ด้วยเครื่องมือที่ชาญฉลาดและเข้าถึงได้จากทุกที่
         </p>
         <div class="d-flex gap-3">
-          <a href="#" class="randomimg btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
-          <a href="#" class="randomimg btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-1 shadow-none">เรียนรู้เพิ่มเติม</a>
+          <a href="javascript:void(0);" class="randomimg btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
+          <a href="javascript:void(0);" class="randomimg btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-1 shadow-none">เรียนรู้เพิ่มเติม</a>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ navIndex: "active"
   }
 </style>
 <script>
-    $('#randomimg').on('click',()=>{
+    $('.randomimg').on('click',()=>{
         window.location.href = '/?date=' + Date.now() + '&#picsum-img';
     });
 </script>
