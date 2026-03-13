@@ -74,19 +74,17 @@ navIndex: "active"
     box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
   }
 </style>
+<script src="/assets/js/getcode.js"></script>
 <script>
 async function queryJobs(keyword) {
     try {
         // เรียก API โดยใช้ keyword
         const response = await fetch(`https://nodejsapix.vercel.app/api/load-scaping-a?url=https://jobapp.ocsc.go.th/jobapi/portal/jobs?query=${encodeURIComponent(keyword)}`);
-        
         // ตรวจสอบสถานะการเชื่อมต่อ
         if (!response.ok) {
             throw new Error("ไม่สามารถเชื่อมต่อกับฐานข้อมูลงานราชการได้");
         }
-
         const data = await response.json();
-
         // ตรวจสอบว่ามีข้อมูลกลับมาหรือไม่ (data เป็น Array)
         if (Array.isArray(data)) {
             return data;
@@ -104,19 +102,15 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
     const keyword = document.getElementById('jobSearchInput').value;
     const jobList = document.getElementById('jobList');
     const jobCount = document.getElementById('jobCount');
-
     // แสดงสถานะกำลังโหลด
     jobList.innerHTML = '<div class="col-12 text-center py-5"><div class="spinner-border text-primary" role="status"></div></div>';
-
     try {
         const jobs = await queryJobs(keyword);
         jobCount.innerText = `พบ ${jobs.length} รายการ`;
-
         if (jobs.length === 0) {
             jobList.innerHTML = '<div class="col-12 text-center py-5">ไม่พบข้อมูลงานที่คุณค้นหา</div>';
             return;
         }
-
         let html = '';
         jobs.forEach(job => {
             html += `
@@ -150,15 +144,9 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
             }
         });
         jobList.innerHTML = html;
-
     } catch (error) {
         jobList.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
     }
 });
 setTimeout(()=>{ document.getElementById('myButton').click(); },500);
-{% raw %}
-function getAdCode() {
-    return `<div class="col-12 mb-3"><div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-light border"><div class="card-body p-3 text-center"><small class="text-muted d-block mb-2">โฆษณาจากผู้สนับสนุน</small><ins class="adsbygoogle" style="display:block" data-ad-format="fluid"  data-ad-client="ca-pub-320380267012174" data-ad-slot="6393733209" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div>`;
-}
-{% endraw %}
 </script>
