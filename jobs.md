@@ -144,13 +144,16 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
                     </div>
                 </div>
             </div>`;
-            if ((index + 1) % 3 === 0 && index !== jobs.length - 1) {
+            if(index == 0){
                 html += getAdCode();
             }
+            /*if ((index + 1) % 3 === 0 && index !== jobs.length - 1) {
+                html += getAdCode();
+            }*/
         });
         jobList.innerHTML = html;
         try {
-            let s_t = 1000;
+            let s_t = 2000;
             const ads = document.querySelectorAll('.ad-container ins');
             ads.forEach(() => {
                 setTimeout(()=>{ (adsbygoogle = window.adsbygoogle || []).push({}); },(s_t*2));
