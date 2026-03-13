@@ -17,7 +17,7 @@ navIndex: "active"
         <h3 class="display-4 fw-bold mb-3" style="color: #202124;">ค้นหางานราชการ</h3>
         <div class="p-4 p-md-5 bg-light rounded-5 shadow-sm border">
           <div class="input-group input-group-lg mb-3">
-            <input type="url" id="jobSearchInput" class="form-control border-0 shadow-none ps-4" placeholder="พิมพ์ชื่อตำแหน่งงาน" style="border-radius: 50px 0 0 50px;">
+            <input type="text" id="jobSearchInput" class="form-control border-0 shadow-none ps-4" placeholder="พิมพ์ชื่อตำแหน่งงาน" style="border-radius: 50px 0 0 50px;">
             <button class="btn btn-primary px-4 fw-medium" type="submit" id="myButton" style="border-radius: 0 50px 50px 0;">
               ค้นหา
             </button>
