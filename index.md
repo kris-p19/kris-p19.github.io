@@ -31,14 +31,16 @@ navIndex: "active"
 <section class="py-10 bg-white">
     <div class="container">
         <div class="row align-items-center justify-content-between g-5">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-format="autorelaxed"
-                data-ad-client="ca-pub-3203802670121740"
-                data-ad-slot="6661184954"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="col-lg-12">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-3203802670121740"
+                    data-ad-slot="6661184954"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     </div>
 </div>
