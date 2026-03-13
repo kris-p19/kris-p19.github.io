@@ -50,6 +50,29 @@ navIndex: "active"
   </div>
 </section>
 
+<section class="py-10 bg-white">
+  <div class="container">
+    <div class="row align-items-center justify-content-between g-5">
+      <div class="col-lg-6">
+        <div class="p-2 bg-light rounded-5 shadow-sm">
+           <img id="picsum-img" src="https://picsum.photos/800/500?grayscale" class="img-fluid rounded-5 shadow-sm" alt="Thai Government Job Search">
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">Thailand Government Jobs Center</h6>
+        <h1 class="display-5 fw-medium mb-4" style="color: #202124;">ค้นหางานราชการ<br>และรัฐวิสาหกิจทั่วไทย</h1>
+        <p class="fs-5 text-secondary mb-5" style="line-height: 1.6;">
+          ศูนย์รวมประกาศรับสมัครงานจากทุกหน่วยงานภาครัฐ อัปเดตล่าสุดทุกวัน ช่วยให้คุณเข้าถึงโอกาสการทำงานที่มั่นคงได้ง่ายและรวดเร็วในที่เดียว
+        </p>
+        <div class="d-flex gap-3">
+          <a href="/jobs" class="btn btn-primary rounded-pill px-5 py-2 fw-medium shadow-none">เริ่มต้นค้นหางาน</a>
+          <a href="#how-to" class="btn btn-link text-decoration-none text-secondary fw-medium">วิธีการเตรียมตัวสอบ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="py-10 bg-white text-center">
     <div class="container">
         <div class="row align-items-center justify-content-between g-5">
