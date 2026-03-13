@@ -28,7 +28,7 @@ navIndex: "active"
   </div>
 </section>
 
-<section class="py-10 bg-white">
+<section class="py-10 bg-white text-center">
     <div class="container">
         <div class="row align-items-center justify-content-between g-5">
             <div class="col-lg-12">
