@@ -154,7 +154,8 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
         jobList.innerHTML = html;
         try {
             let s_t = 2000;
-            const ads = document.querySelectorAll('.ad-container ins');
+            // const ads = document.querySelectorAll('.ad-container ins');
+            const ads = document.querySelectorAll('.ad-container ins.adsbygoogle:not([data-adsbygoogle-status="done"])');
             ads.forEach(() => {
                 setTimeout(()=>{ (adsbygoogle = window.adsbygoogle || []).push({}); },(s_t*2));
             });
