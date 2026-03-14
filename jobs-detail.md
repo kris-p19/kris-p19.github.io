@@ -120,4 +120,7 @@ async function queryJobs() {
         throw err;
     }
 }
+document.addEventListener('DOMContentLoaded', async () => {
+    await queryJobs();
+});
 </script>
