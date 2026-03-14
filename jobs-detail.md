@@ -8,13 +8,8 @@ navIndex: "active"
 <form id="searchForm">
 <section class="py-10 bg-white">
   <div class="container">
-    <div class="row align-items-center justify-content-center g-5">
-      <div class="col-lg-8 text-center">
-        <div class="d-inline-flex align-items-center mb-3 px-3 py-1 bg-success-subtle text-success rounded-pill border border-success-subtle">
-          <i class="bi bi-check-circle-fill me-2"></i>
-          <span class="small fw-medium">ข้อมูลเชื่อมต่อตรงจากระบบ Job API ของ สำนักงาน ก.พ.</span>
-        </div>
-        <h3 class="display-4 fw-bold mb-3" style="color: #202124;">ค้นหางานราชการ</h3>
+    <div class="row g-5">
+      <div class="col-lg-12">
         <div id="job-detail-container"></div>
       </div>
     </div>
@@ -61,9 +56,9 @@ async function queryJobs() {
         if (!response.ok) {
             throw new Error("ไม่สามารถเชื่อมต่อกับฐานข้อมูลงานราชการได้");
         }
-        const dataRes = await response.json();
+        const data = await response.json();
         // if (Array.isArray(dataRes)) {
-            dataRes.forEach((data, index) => {
+            // data.forEach((data, index) => {
                 const container = document.getElementById('job-detail-container');
                 const formatMoney = (num) => new Intl.NumberFormat('th-TH').format(num);
                 const html = `
@@ -111,7 +106,7 @@ async function queryJobs() {
                 </div>
                 `;
                 container.innerHTML = html;
-            });
+            // });
         // } else {
         //     throw new Error("รูปแบบข้อมูลที่ได้รับไม่ถูกต้อง");
         // }
