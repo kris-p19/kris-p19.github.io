@@ -61,10 +61,57 @@ async function queryJobs() {
         if (!response.ok) {
             throw new Error("ไม่สามารถเชื่อมต่อกับฐานข้อมูลงานราชการได้");
         }
-        const data = await response.json();
-        // ตรวจสอบว่ามีข้อมูลกลับมาหรือไม่ (data เป็น Array)
-        if (Array.isArray(data)) {
-            return data;
+        const dataRes = await response.json();
+        if (Array.isArray(dataRes)) {
+            dataRes.forEach((data, index) => {
+                const container = document.getElementById('job-detail-container');
+                const formatMoney = (num) => new Intl.NumberFormat('th-TH').format(num);
+                const html = `
+                <div class="container my-5">
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <div class="card shadow-sm p-4 mb-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="${data.seal}" class="me-3" style="width: 70px;">
+                                    <div>
+                                        <h2 class="fw-bold text-primary mb-0">${data.position}</h2>
+                                        <p class="text-muted mb-0">${data.department} | ${data.ministry}</p>
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold border-start border-primary border-4 ps-2 mb-3">รายละเอียดงาน</h5>
+                                <div class="job-content mb-4">${data.civilJobDescription}</div>
+                                <h5 class="fw-bold border-start border-primary border-4 ps-2 mb-3">คุณสมบัติผู้สมัคร</h5>
+                                <div class="p-3 bg-light rounded">${data.civilJobEducation}</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card shadow-sm border-top border-primary border-5">
+                                <div class="card-body p-4">
+                                    <div class="mb-4 text-center">
+                                        <span class="text-muted small">เงินเดือนเริ่มต้น</span>
+                                        <h3 class="fw-bold text-success">${formatMoney(data.salaryMin)} - ${formatMoney(data.salaryMax)} ฿</h3>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">จำนวนที่รับ:</span>
+                                        <span class="fw-bold text-dark">${data.positionAmount} อัตรา</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <span class="text-muted">ปิดรับสมัคร:</span>
+                                        <span class="fw-bold text-danger">${data.applicationEndPrint}</span>
+                                    </div>
+                                    <a href="${data.url.trim()}" target="_blank" class="btn btn-primary w-100 py-3 fw-bold mb-2">สมัครงานออนไลน์</a>
+                                    <a href="${data.fileName}" target="_blank" class="btn btn-outline-danger w-100">
+                                        <i class="bi bi-file-pdf"></i> อ่านประกาศฉบับเต็ม
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-center mt-3 text-muted small">ID ประกาศ: ${data.id}</p>
+                        </div>
+                    </div>
+                </div>
+                `;
+                container.innerHTML = html;
+            });
         } else {
             throw new Error("รูปแบบข้อมูลที่ได้รับไม่ถูกต้อง");
         }
@@ -73,55 +120,4 @@ async function queryJobs() {
         throw err;
     }
 }
-const jobs = await queryJobs(keyword);
-jobs.forEach((data, index) => {
-    const container = document.getElementById('job-detail-container');
-    // จัดรูปแบบตัวเลขเงินเดือน (เช่น 18,150)
-    const formatMoney = (num) => new Intl.NumberFormat('th-TH').format(num);
-    const html = `
-    <div class="container my-5">
-        <div class="row g-4">
-            <div class="col-lg-8">
-                <div class="card shadow-sm p-4 mb-4">
-                    <div class="d-flex align-items-center mb-4">
-                        <img src="${data.seal}" class="me-3" style="width: 70px;">
-                        <div>
-                            <h2 class="fw-bold text-primary mb-0">${data.position}</h2>
-                            <p class="text-muted mb-0">${data.department} | ${data.ministry}</p>
-                        </div>
-                    </div>
-                    <h5 class="fw-bold border-start border-primary border-4 ps-2 mb-3">รายละเอียดงาน</h5>
-                    <div class="job-content mb-4">${data.civilJobDescription}</div>
-                    <h5 class="fw-bold border-start border-primary border-4 ps-2 mb-3">คุณสมบัติผู้สมัคร</h5>
-                    <div class="p-3 bg-light rounded">${data.civilJobEducation}</div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card shadow-sm border-top border-primary border-5">
-                    <div class="card-body p-4">
-                        <div class="mb-4 text-center">
-                            <span class="text-muted small">เงินเดือนเริ่มต้น</span>
-                            <h3 class="fw-bold text-success">${formatMoney(data.salaryMin)} - ${formatMoney(data.salaryMax)} ฿</h3>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">จำนวนที่รับ:</span>
-                            <span class="fw-bold text-dark">${data.positionAmount} อัตรา</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-4">
-                            <span class="text-muted">ปิดรับสมัคร:</span>
-                            <span class="fw-bold text-danger">${data.applicationEndPrint}</span>
-                        </div>
-                        <a href="${data.url.trim()}" target="_blank" class="btn btn-primary w-100 py-3 fw-bold mb-2">สมัครงานออนไลน์</a>
-                        <a href="${data.fileName}" target="_blank" class="btn btn-outline-danger w-100">
-                            <i class="bi bi-file-pdf"></i> อ่านประกาศฉบับเต็ม
-                        </a>
-                    </div>
-                </div>
-                <p class="text-center mt-3 text-muted small">ID ประกาศ: ${data.id}</p>
-            </div>
-        </div>
-    </div>
-    `;
-    container.innerHTML = html;
-});
 </script>
