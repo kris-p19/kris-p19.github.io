@@ -62,7 +62,7 @@ async function queryJobs() {
             throw new Error("ไม่สามารถเชื่อมต่อกับฐานข้อมูลงานราชการได้");
         }
         const dataRes = await response.json();
-        if (Array.isArray(dataRes)) {
+        // if (Array.isArray(dataRes)) {
             dataRes.forEach((data, index) => {
                 const container = document.getElementById('job-detail-container');
                 const formatMoney = (num) => new Intl.NumberFormat('th-TH').format(num);
@@ -112,9 +112,9 @@ async function queryJobs() {
                 `;
                 container.innerHTML = html;
             });
-        } else {
-            throw new Error("รูปแบบข้อมูลที่ได้รับไม่ถูกต้อง");
-        }
+        // } else {
+        //     throw new Error("รูปแบบข้อมูลที่ได้รับไม่ถูกต้อง");
+        // }
     } catch (err) {
         console.error("Fetch Error:", err);
         throw err;
