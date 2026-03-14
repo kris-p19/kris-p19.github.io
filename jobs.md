@@ -136,7 +136,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
                             </div>
                             <div class="col-md-3 text-md-end">
                                 <p class="text-danger small mb-2 fw-bold">ปิดรับสมัคร: ${job.applicationEndPrint}</p>
-                                <a href="https://job.ocsc.go.th/portal/jobs/${job.id}" target="_blank" class="btn btn-primary rounded-pill btn-sm px-4 m-1">อ่านรายละเอียด</a>
+                                <a href="/jobs-detail#${job.id}" data-href="https://job.ocsc.go.th/portal/jobs/${job.id}" target="_blank" class="btn btn-primary rounded-pill btn-sm px-4 m-1">อ่านรายละเอียด</a>
                                 <a href="${job.url}" target="_blank" class="btn btn-primary rounded-pill btn-sm px-4 m-1">สมัครออนไลน์</a>
                                 <a href="${job.fileName}" target="_blank" class="btn btn-outline-secondary rounded-pill btn-sm px-4 m-1">อ่านประกาศ</a>
                             </div>
