@@ -65,8 +65,7 @@ navIndex: "active"
           ศูนย์รวมประกาศรับสมัครงานจากทุกหน่วยงานภาครัฐ อัปเดตล่าสุดทุกวัน ช่วยให้คุณเข้าถึงโอกาสการทำงานที่มั่นคงได้ง่ายและรวดเร็วในที่เดียว
         </p>
         <div class="d-flex gap-3">
-          <a href="/jobs" class="btn btn-primary rounded-pill px-5 py-2 fw-medium shadow-none">เริ่มต้นค้นหางาน</a>
-          <a href="#how-to" class="btn btn-link text-decoration-none text-secondary fw-medium">วิธีการเตรียมตัวสอบ</a>
+          <a href="/jobs" class="btn btn-primary rounded-pill px-5 py-2 fw-medium shadow-none">ค้นหางาน</a>
         </div>
       </div>
     </div>
