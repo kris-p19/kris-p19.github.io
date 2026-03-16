@@ -1,4 +1,4 @@
-const APPSCRIPT = "https://script.google.com/macros/s/AKfycby9DTBXmJv68ktXLw_JbGom2-kljXPN5EkiLk5zQnnG_H5ZCE02U6dmgGc0ueXaF1hgdw/exec";
+const APPSCRIPT = "https://script.google.com/macros/s/AKfycbw9VxkTBKKf7jDfKOLYEYCUW3oiCJ24168muHgpM92s7ZjffxZ56_xN0lb00ud3vvLCNQ/exec";
 
 const fullPath = window.location.pathname;
 const cleanPath = fullPath.replace(/^\/|\/$/g, '') || '/';
@@ -20,7 +20,7 @@ async function loadData(cleanPath) {
     const dataSort = data.sort((a, b) => b.timestamp - a.timestamp);
     // ปรับการ Mapping ข้อมูลตามโครงสร้างใหม่ (ชื่อ, สกุล, ตำแหน่ง, หน่วยงาน, รอบ)
     list.innerHTML = dataSort.length ? dataSort.map(i => `
-                    ${i.id}
+                    ${i.content}
                 `).join('') : '';
 
   } catch (e) {
