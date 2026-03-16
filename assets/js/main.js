@@ -8,7 +8,7 @@ async function loadData(cleanPath) {
 
   try {
     // นำ mode: 'no-cors' ออก เพื่อให้สามารถอ่าน json ได้
-    const res = await fetch(`${SCRIPT_URL}?id=${encodeURIComponent(cleanPath)}`);
+    const res = await fetch(`${APPSCRIPT}?id=${encodeURIComponent(cleanPath)}`);
 
     // ตรวจสอบว่า Response โอเคไหม
     if (!res.ok) throw new Error('Network response was not ok');
