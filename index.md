@@ -10,7 +10,29 @@ navIndex: "active"
     <div class="row align-items-center justify-content-between g-5">
       <div class="col-lg-6">
         <div class="p-2 bg-light rounded-5 shadow-sm">
-           <img id="picsum-img" src="https://picsum.photos/800/500?1" class="img-fluid rounded-5 shadow-sm" alt="Product View">
+           <img id="picsum-img" src="https://picsum.photos/800/500?4" class="img-fluid rounded-5 shadow-sm" alt="Product View">
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">Productivity</h6>
+        <h2 class="display-5 fw-medium mb-4" style="color: #202124;">ระบบสร้างคิวอาร์โค้ด รองรับโลโก้</h2>
+        <p class="fs-5 text-secondary mb-5" style="line-height: 1.6;">
+          สร้าง QR Code สำหรับเว็บไซต์ ข้อความ เบอร์โทร SMS Email หรือ WiFi พร้อมวางโลโก้แบรนด์ไว้กลาง QR ได้ทันที รองรับการดาวน์โหลดเป็นรูปภาพ
+        </p>
+        <div class="d-flex gap-3">
+          <a href="/tools/ระบบสร้างคิวอาร์โค้ด" class="btn btn-primary rounded-pill px-4 py-2 fw-medium shadow-none">เริ่มต้นใช้งาน</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-3 bg-white">
+  <div class="container">
+    <div class="row align-items-center justify-content-between g-5">
+      <div class="col-lg-6">
+        <div class="p-2 bg-light rounded-5 shadow-sm">
+           <img id="picsum-img" src="https://picsum.photos/800/500?3" class="img-fluid rounded-5 shadow-sm" alt="Product View">
         </div>
       </div>
       <div class="col-lg-5">
@@ -28,7 +50,7 @@ navIndex: "active"
   </div>
 </section>
 
-<section class="py-10 bg-white">
+<section class="py-3 bg-white">
   <div class="container">
     <div class="row align-items-center justify-content-between g-5">
       <div class="col-lg-6">
@@ -50,12 +72,12 @@ navIndex: "active"
   </div>
 </section>
 
-<section class="py-10 bg-white">
+<section class="py-3 bg-white">
   <div class="container">
     <div class="row align-items-center justify-content-between g-5">
       <div class="col-lg-6">
         <div class="p-2 bg-light rounded-5 shadow-sm">
-           <img id="picsum-img" src="https://picsum.photos/800/500?3" class="img-fluid rounded-5 shadow-sm" alt="Thai Government Job Search">
+           <img id="picsum-img" src="https://picsum.photos/800/500?1" class="img-fluid rounded-5 shadow-sm" alt="Thai Government Job Search">
         </div>
       </div>
       <div class="col-lg-5">
@@ -72,7 +94,7 @@ navIndex: "active"
   </div>
 </section>
 
-<section class="py-10 bg-white text-center">
+<section class="py-3 bg-white text-center">
     <div class="container">
         <div class="row align-items-center justify-content-between g-5">
             <div class="col-lg-12">
