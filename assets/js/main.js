@@ -1,4 +1,4 @@
-const APPSCRIPT = "https://script.google.com/macros/s/AKfycbwRA9jzOlgIsxwcB-v-yonZumoolBYj1C0ZO8VUq5t7oZdT4nkytbcdvw1zGQdQjZYoTg/exec";
+const APPSCRIPT = "https://script.google.com/macros/s/AKfycbzkyqXUM5VcQT0cXP4APE8LyZLAWpR7jYgiPvTU1F4JZFtdnZZlXHrJiT6NRSEnQWmH3w/exec";
 
 const fullPath = window.location.pathname;
 const cleanPath = fullPath.replace(/^\/|\/$/g, '') || '/';
