@@ -6,7 +6,7 @@ keywords: "fintechxhub.com"
 navIndex: "active"
 ---
 <form id="searchForm">
-<section class="py-10 bg-white">
+<section class="py-3 bg-white">
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-12">
