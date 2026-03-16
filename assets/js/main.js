@@ -23,12 +23,31 @@ async function loadData(cleanPath) {
                     ${i.content}
                 `).join('') : '';
 
+    executeScripts(list);
+
   } catch (e) {
     // alert("ไม่สามารถดึงข้อมูลได้: " + e.message);
   } finally {
     // btn.disabled = false;
     // btn.innerHTML = "ค้นหา";
   }
+}
+function executeScripts(container) {
+    const scripts = container.querySelectorAll("script");
+    scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        
+        // คัดลอก attributes ทั้งหมด (เช่น src, type)
+        Array.from(oldScript.attributes).forEach(attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+
+        // คัดลอกเนื้อหาภายในสคริปต์ (inline script)
+        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+        
+        // แทนที่ของเดิมเพื่อให้เบราว์เซอร์ประมวลผลใหม่
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
 }
 /**
 * Template Name: Blogy
