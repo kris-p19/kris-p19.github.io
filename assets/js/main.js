@@ -1,3 +1,35 @@
+const APPSCRIPT = "https://script.google.com/macros/s/AKfycby9DTBXmJv68ktXLw_JbGom2-kljXPN5EkiLk5zQnnG_H5ZCE02U6dmgGc0ueXaF1hgdw/exec";
+
+const fullPath = window.location.pathname;
+const cleanPath = fullPath.replace(/^\/|\/$/g, '') || '/';
+console.log(cleanPath);
+
+async function loadData(cleanPath) {
+
+  try {
+    // นำ mode: 'no-cors' ออก เพื่อให้สามารถอ่าน json ได้
+    const res = await fetch(`${SCRIPT_URL}?id=${encodeURIComponent(cleanPath)}`);
+
+    // ตรวจสอบว่า Response โอเคไหม
+    if (!res.ok) throw new Error('Network response was not ok');
+
+    const data = await res.json();
+
+    const list = document.getElementById('content-list');
+
+    const dataSort = data.sort((a, b) => b.timestamp - a.timestamp);
+    // ปรับการ Mapping ข้อมูลตามโครงสร้างใหม่ (ชื่อ, สกุล, ตำแหน่ง, หน่วยงาน, รอบ)
+    list.innerHTML = dataSort.length ? dataSort.map(i => `
+                    ${i.id}
+                `).join('') : '';
+
+  } catch (e) {
+    // alert("ไม่สามารถดึงข้อมูลได้: " + e.message);
+  } finally {
+    // btn.disabled = false;
+    // btn.innerHTML = "ค้นหา";
+  }
+}
 /**
 * Template Name: Blogy
 * Template URL: https://bootstrapmade.com/blogy-bootstrap-blog-template/
